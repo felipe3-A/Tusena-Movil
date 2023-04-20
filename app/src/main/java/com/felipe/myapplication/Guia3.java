@@ -11,11 +11,17 @@ import android.widget.VideoView;
 
 public class Guia3 extends AppCompatActivity {
 
-
+VideoView video;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guia3);
+
+video = findViewById(R.id.video);
+MediaPlayer v ;
+
+        video.setVideoPath("android.resource://" + getPackageName() + "/"+R.raw.prueba);
+        video.start();
 
     }
     public void Manual1(View view){

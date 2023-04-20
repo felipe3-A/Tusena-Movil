@@ -21,6 +21,11 @@
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold" />
-
+<VideoView
+    android:layout_width="300dp"
+    android:layout_marginTop="30dp"
+    android:layout_height="490dp"
+    android:layout_gravity="center"
+    android:id="@+id/video"/>
 
 </LinearLayout>
