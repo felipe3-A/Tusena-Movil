@@ -26,37 +26,52 @@
         android:layout_marginTop="20dp"
 />
     <TextView
-        android:layout_width="290dp"
+        android:layout_width="350dp"
         android:textAlignment="center"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif"
-
         android:text="@string/comienza_esta_increible_expreriencia_de_la_mano_de_los_mejores"
 />
 
     <TextView
-        android:layout_width="290dp"
+        android:layout_width="360dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:text="!Tu app confiable para calcular y saber el puntaje de todos tus proyectos¡"
         android:textAlignment="center"
         android:fontFamily="sans-serif"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/Boton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="guia1"
-        android:text="Omitir"
-/>
-
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="250dp"
+       android:layout_gravity="center"
+>
+       <Button
+           android:id="@+id/Boton1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:onClick="guia1"
+           android:text="Seguir recorrido"
+           android:layout_marginTop="60dp"
+           />
+       <Button
+           android:id="@+id/Boton2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Omitir"
+           android:backgroundTint="@color/color_boton_omitir"
+           android:onClick="Registro"
+           android:layout_marginStart="30dp"
+           android:layout_marginTop="60dp"
+           />
+   </LinearLayout>
 
 </LinearLayout>

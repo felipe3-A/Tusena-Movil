@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Intent primer_guia= new Intent(this,Guia1.class);
         startActivity(primer_guia);
     }
+    public void Registro(View view){
+        Intent primer_guia= new Intent(this,Register.class);
+        startActivity(primer_guia);
+    }
 }

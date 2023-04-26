@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Manual1 extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manual1);
+        setContentView(R.layout.activity_register);
     }
-    public void Registro(View view){
-        Intent primer_guia= new Intent(this,Register.class);
-        startActivity(primer_guia);
+    public void login(View view){
+        Intent login =new Intent(this,SignUp.class);
+        startActivity(login);
     }
 }
