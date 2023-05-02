@@ -13,5 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+<!--Para el inicio-->
 
+    <style name="SplasTheme" parent="Theme.AppCompat.Light.NoActionBar">
+<item name="android:windowBackground">@drawable/inicio</item>
+        
+    </style>
 </resources>
