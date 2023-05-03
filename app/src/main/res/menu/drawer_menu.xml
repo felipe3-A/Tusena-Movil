@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Principal">
+<menu>
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"/>
+</menu>
+</item>
+    <item android:title="Principal">
+        <menu>
+            <item
+                android:id="@+id/person"
+                android:icon="@drawable/baseline_person_24"
+                android:title="Persona"/>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Secundario">
+        <menu>
+            <item
+                android:id="@+id/home1"
+                android:icon="@drawable/baseline_home_24"
+                android:title="Home"/>
+        </menu>
+    </item>
+    <item android:title="Principal">
+        <menu>
+            <item
+                android:id="@+id/person1"
+                android:icon="@drawable/baseline_person_24"
+                android:title="Persona"/>
+        </menu>
+    </item>
+</menu>

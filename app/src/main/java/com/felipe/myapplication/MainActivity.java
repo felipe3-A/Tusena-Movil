@@ -21,4 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Intent primer_guia= new Intent(this,Register.class);
         startActivity(primer_guia);
     }
+    public void login(View view){
+        Intent login =new Intent(this,SignUp.class);
+        startActivity(login);
+    }
 }

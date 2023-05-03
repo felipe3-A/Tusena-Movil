@@ -2,7 +2,9 @@ package com.felipe.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class SignUp extends AppCompatActivity {
 
@@ -10,5 +12,9 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+    }
+    public void Menu(View view){
+        Intent login =new Intent(this,Menu.class);
+        startActivity(login);
     }
 }
