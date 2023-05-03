@@ -11,21 +11,22 @@
     tools:context=".Guia1">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:text="@string/conoce_cual_es_el_estado_de_tus_proyectos_en_tiempo_real"
+        android:text="Tusena es una aplicacion creada para mejorar y agilizar el proceso de evaluacion de proyectos"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:textStyle="bold" />
+       />
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="500dp"
+        android:layout_width="320dp"
+        android:layout_height="600dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+
         android:src="@drawable/img_2" />
 
 </LinearLayout>

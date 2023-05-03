@@ -14,7 +14,8 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
     public void login(View view){
-        Intent login =new Intent(this,SignUp.class);
+        Intent login =new Intent(this, Login.class);
         startActivity(login);
+
     }
 }

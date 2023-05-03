@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(primer_guia);
     }
     public void login(View view){
-        Intent login =new Intent(this,SignUp.class);
+        Intent login =new Intent(this, Login.class);
         startActivity(login);
     }
 }

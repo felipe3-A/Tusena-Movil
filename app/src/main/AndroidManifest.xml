@@ -11,14 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tusena_Movil"
         tools:targetApi="31">
-<<<<<<< HEAD
+
         <activity android:name=".Menu"
             android:exported="false"
-            android:theme="@style/Theme.Tusena_Movil1"/>
-=======
+            android:theme="@style/Theme.Tusena_Movil.Noactionbar"/>
+
 
         <activity android:name=".SplasScreem"
             android:theme="@style/SplasTheme"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,30 +28,32 @@
             </intent-filter>
         </activity>
 
->>>>>>> 3cac2301be20d9c202f54708ef191cf40e1d6bff
         <activity
             android:name=".Register"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Tusena_Movil1"/>
         <activity
-            android:name=".SignUp"
-            android:exported="false" />
+            android:name=".Login"
+            android:exported="false"
+            android:theme="@style/Theme.Tusena_Movil1"/>
         <activity
             android:name=".Manual1"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Tusena_Movil1"/>
         <activity
             android:name=".Guia3"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Tusena_Movil1"/>
         <activity
             android:name=".Guia1"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Tusena_Movil1"/>
         <activity
             android:name=".MainActivity"
-<<<<<<< HEAD
-            android:exported="true">
+            android:exported="false"
+            android:theme="@style/Theme.Tusena_Movil1">
 
-=======
-            android:exported="false">
->>>>>>> 3cac2301be20d9c202f54708ef191cf40e1d6bff
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
