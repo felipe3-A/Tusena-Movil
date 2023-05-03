@@ -13,7 +13,9 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+<!--Para el inicio-->
 
+<<<<<<< HEAD
 
     <style name="Theme.Tusena_Movil1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -29,4 +31,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+=======
+    <style name="SplasTheme" parent="Theme.AppCompat.Light.NoActionBar">
+<item name="android:windowBackground">@drawable/inicio</item>
+        
+    </style>
+>>>>>>> 3cac2301be20d9c202f54708ef191cf40e1d6bff
 </resources>
