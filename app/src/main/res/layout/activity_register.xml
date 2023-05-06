@@ -12,11 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
-            <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
                 android:layout_width="360dp"
-                android:layout_height="505dp"
+                android:layout_height="400dp"
                 android:layout_gravity="center"
                 app:cardCornerRadius="30dp">
 
@@ -27,7 +25,7 @@
 
                     <LinearLayout
                         android:layout_width="403dp"
-                        android:layout_height="90dp"
+                        android:layout_height="60dp"
                         android:animationCache="false"
                         android:background="@drawable/img_5"
                         android:orientation="horizontal">
@@ -37,110 +35,154 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="30sp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="3dp"
                             android:text="Sign Up"
                             android:textColor="@color/white"
-                            android:textSize="40sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/color_boton_omitir"
+                        android:layout_marginTop="10dp"
+                        android:inputType="text"
                         android:hint="Nombres"
                         app:boxCornerRadiusBottomEnd="50px"
                         app:boxCornerRadiusBottomStart="50px">
-
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-
-                            />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="350dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:hint="Apellidos"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:boxCornerRadiusBottomStart="50px">
-
-
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text" />
-
                     </com.google.android.material.textfield.TextInputLayout>
 
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:hint="Correo electronico"
+                        android:backgroundTint="@color/color_boton_omitir"
+                        android:layout_marginTop="10dp"
+                        android:inputType="text"
+                        android:hint="@string/apellidos"
                         app:boxCornerRadiusBottomEnd="50px"
                         app:boxCornerRadiusBottomStart="50px">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
 
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/email"
+                        android:backgroundTint="@color/color_boton_omitir"
+                        app:boxCornerRadiusBottomEnd="50px"
+                        app:boxCornerRadiusBottomStart="50px">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/numero_identificacion"
+                        android:backgroundTint="@color/color_boton_omitir"
+                        app:boxCornerRadiusBottomEnd="50px"
+                        app:boxCornerRadiusBottomStart="50px">
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textEmailAddress" />
-
                     </com.google.android.material.textfield.TextInputLayout>
+
+
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:hint="Telefono"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/color_boton_omitir"
+                        android:hint="@string/password"
                         app:boxCornerRadiusBottomEnd="50px"
                         app:boxCornerRadiusBottomStart="50px">
-
-
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:inputType="number"
                             app:boxCornerRadiusBottomEnd="@dimen/material_emphasis_high_type" />
-
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="30dp"
-                        android:text="¿Nesecitas Ayuda?"
-                        android:textColorLink="@color/purple_700"
-                        android:textSize="18sp" />
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/color_boton_omitir"
+                        android:hint="@string/cpassword"
+                        app:boxCornerRadiusBottomEnd="50px"
+                        app:boxCornerRadiusBottomStart="50px">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            app:boxCornerRadiusBottomEnd="@dimen/material_emphasis_high_type" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
 
                     <Button
-                        android:layout_width="190dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:backgroundTint="@color/color_boton"
                         android:onClick="login"
-                        android:text="Login"
-                        android:textSize="20dp"
+                        android:text="@string/login"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
                         app:cornerRadius="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ya_tienes_cuenta" />
+                        <TextView
+                            android:id="@+id/inicio_ya"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/inicia_sesión_ahora"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

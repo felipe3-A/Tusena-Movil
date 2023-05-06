@@ -5,4 +5,13 @@
     <string name="no_olvides_completar_los_formulario_de_entrada_para_que_asi_puedas_ingresar_al_aplicativo">No olvides completar los formulario de entrada para que asi puedas ingresar al aplicativo</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes cuenta?</string>
+    <string name="inicia_sesión_ahora">Inicia sesión ahora</string>
+    <string name="login">Login</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="nombres">Nombres</string>
+    <string name="email">Email</string>
+    <string name="numero_identificacion">Numero Identificacion</string>
+    <string name="password">Password</string>
+    <string name="cpassword">Confirmar Contraseña</string>
 </resources>
