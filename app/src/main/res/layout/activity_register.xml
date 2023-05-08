@@ -13,22 +13,23 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-                android:layout_width="360dp"
-                android:layout_height="400dp"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
                 android:layout_gravity="center"
                 app:cardCornerRadius="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="578dp"
+                    android:layout_height="650dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="403dp"
-                        android:layout_height="45dp"
+                        android:layout_height="65dp"
                         android:animationCache="false"
                         android:background="@drawable/img_5"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="2dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
                             android:layout_marginTop="3dp"
                             android:text="Sign Up"
                             android:textColor="@color/white"
-                            android:textSize="15sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -95,7 +96,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="textEmailAddress" />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -113,7 +114,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textEmailAddress" />
+                            android:inputType="number" />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -127,6 +128,7 @@
                         android:layout_marginTop="10dp"
                         android:backgroundTint="@color/color_boton_omitir"
                         android:hint="@string/password"
+                        app:passwordToggleEnabled = "false"
                         app:boxCornerRadiusBottomEnd="50px"
                         app:boxCornerRadiusBottomStart="50px">
                         <com.google.android.material.textfield.TextInputEditText
@@ -143,6 +145,7 @@
                         android:layout_width="350dp"
                         android:layout_height="65dp"
                         android:layout_gravity="center"
+                        app:passwordToggleEnabled = "false"
                         android:layout_marginTop="10dp"
                         android:backgroundTint="@color/color_boton_omitir"
                         android:hint="@string/cpassword"
@@ -158,8 +161,8 @@
 
                     <Button
                         android:id="@+id/btn_registar"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
+                        android:layout_width="160dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:backgroundTint="@color/color_boton"
@@ -175,7 +178,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_gravity="center"
-                        android:layout_marginTop="1dp">
+                        android:layout_marginTop="9dp">
 
                         <TextView
                             android:layout_width="wrap_content"

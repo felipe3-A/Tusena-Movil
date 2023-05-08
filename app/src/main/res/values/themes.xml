@@ -16,7 +16,7 @@
 
 
 <!--Para el inicio-->
-    <style name="Theme.Tusena_Movil1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Sin_Header" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

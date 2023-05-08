@@ -76,6 +76,7 @@
                  android:backgroundTint="@color/color_boton_omitir"
                  android:id="@+id/password_login"
                  android:hint="Contraseña"
+                 app:passwordToggleEnabled = "false"
                  android:layout_marginTop="35dp"
                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
@@ -85,12 +86,6 @@
              </com.google.android.material.textfield.TextInputLayout>
 
 
-             <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="40dp"
-                 android:layout_gravity="center"
-                 android:layout_marginTop="40dp"
-                 android:text="¿Olvidaste tu contraseña?"/>
 
              <Button
                  android:id="@+id/login_btn"
@@ -110,7 +105,7 @@
                  android:layout_height="wrap_content"
                  android:orientation="horizontal"
                  android:layout_gravity="center"
-                 android:layout_marginTop="10dp">
+                 android:layout_marginTop="40dp">
 
                 <TextView
                     android:layout_width="wrap_content"

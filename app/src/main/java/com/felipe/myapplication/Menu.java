@@ -3,6 +3,7 @@ package com.felipe.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
+import com.felipe.myapplication.Framents.FragmentPerfil;
 import com.felipe.myapplication.Framents.Mainfragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -53,18 +55,22 @@ fragmentTransaction.commit();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        drawerLayout.closeDrawer(GravityCompat.START);
         if(item.getItemId()==R.id.home){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Mainfragment());
             fragmentTransaction.commit();
         }
-        if(item.getItemId()==R.id.home){
+        if(item.getItemId()==R.id.Perfil){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Mainfragment());
+            fragmentTransaction.replace(R.id.container,new FragmentPerfil());
             fragmentTransaction.commit();
         }
+
+
+
         return false;
 
     }
