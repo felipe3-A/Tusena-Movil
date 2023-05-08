@@ -15,6 +15,10 @@
       android:icon="@drawable/baseline_calculate_24"
       android:title="Calculadora">
   </item>
+  <item android:id="@+id/Investigadores"
+      android:icon="@drawable/baseline_person_search_24"
+      android:title="Investigadores">
+  </item>
 </menu>
 </item>
 
