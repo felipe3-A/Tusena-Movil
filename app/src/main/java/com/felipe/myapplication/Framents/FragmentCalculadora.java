@@ -14,7 +14,7 @@ public class FragmentCalculadora extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View view=inflater.inflate(R.layout.fragment_calculadora,container,false);
+       View view=inflater.inflate(R.layout.fragment_calculadora_trl1,container,false);
        return view;
     }
 
