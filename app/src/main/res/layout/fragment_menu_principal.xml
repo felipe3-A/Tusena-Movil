@@ -16,26 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:text="Perfil"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:text="Modo Oscuro"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:text="Calculadora"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:text="Manual de uso"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:text="Cerrar Secion"/>
+
             </LinearLayout>
 
 

@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
+import com.felipe.myapplication.Framents.FragmentCalculadora;
 import com.felipe.myapplication.Framents.FragmentPerfil;
 import com.felipe.myapplication.Framents.Mainfragment;
 import com.google.android.material.navigation.NavigationView;
@@ -66,6 +67,12 @@ fragmentTransaction.commit();
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new FragmentPerfil());
+            fragmentTransaction.commit();
+        }
+        if(item.getItemId()==R.id.Calculadora){
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container,new FragmentCalculadora());
             fragmentTransaction.commit();
         }
 

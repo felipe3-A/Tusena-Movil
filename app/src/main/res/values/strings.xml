@@ -25,4 +25,12 @@
     <string name="apellido">Apellidos</string>
     <string name="numero_indentificacion">Identificación</string>
     <string name="confirmar_contrase_a">Confirmar contraseña</string>
+
+    <string name="tr1_p1">¿Ha identificado claramente el problema o necesidad existente que su solución ayudará a resolver?</string>
+    <string name="tr1_p2">¿Realizó vigilancia tecnológica para conocer el entorno de la solución propuesta?</string>
+    <string name="tr1_p3">¿Existen principios científicos básicos que avalan la solución propuesta?</string>
+    <string name="tr1_p4">¿Elaboró el estado del arte sobre el tema en el que se enfoca su solución, revisando fuentes confiables y actuales?</string>
+    <string name="tr1_p5">Sabe en términos generales, ¿cómo funcionará y los resultados esperados de la solución propuesta?</string>
+    <string name="tr1_p6">¿Sabe qué recursos económicos, financieros, técnicos y de personal requiere para desarrollar su solución?</string>
+    <string name="tr1_p7">¿Construyó un documento con  toda la información recopilada en los items anteriores?</string>
 </resources>

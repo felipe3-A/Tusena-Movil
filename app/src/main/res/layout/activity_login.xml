@@ -76,7 +76,7 @@
                  android:backgroundTint="@color/color_boton_omitir"
                  android:id="@+id/password_login"
                  android:hint="Contraseña"
-                 app:passwordToggleEnabled = "false"
+                 app:passwordToggleEnabled = "true"
                  android:layout_marginTop="35dp"
                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
