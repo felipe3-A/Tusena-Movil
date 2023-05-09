@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity {
 
                                 if (getPassword.equals(passwordTxt)) {
                                     Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Login.this,Menu.class));
+                                    startActivity(new Intent(Login.this,Menu_Principal.class));
                                     finish();
                                 } else {
                                     Toast.makeText(Login.this, "contraseña incorrecta", Toast.LENGTH_SHORT).show();

@@ -16,16 +16,18 @@ public class Trl1 extends AppCompatActivity {
     DatabaseReference myRef;
 
     List<Preguntas> list = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trl1);
-        
-       referenciar();
-    }
+        referenciar();
 
-    private void referenciar() {
     }
+    private void referenciar() {}
+
 
 
 }
+
+
