@@ -6,25 +6,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login">
 
+
+
+    tools:context=".Login">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
    <ScrollView
        android:layout_width="match_parent"
+       android:layout_gravity="center"
        android:layout_height="match_parent">
 
        <androidx.cardview.widget.CardView
-           android:layout_width="370dp"
-           android:layout_height="505dp"
-           android:layout_gravity="center"
+           android:layout_width="match_parent"
+           android:layout_marginTop="70dp"
+           android:layout_marginStart="1dp"
+           android:layout_height="match_parent"
            app:cardCornerRadius="30dp">
 
           <LinearLayout
-              android:layout_width="wrap_content"
-              android:layout_height="500dp"
+              android:layout_width="match_parent"
+              android:layout_height="480dp"
               android:orientation="vertical">
 
              <LinearLayout
-                 android:layout_width="403dp"
+                 android:layout_width="match_parent"
                  android:layout_height="70dp"
                  android:animationCache="false"
                  android:background="@drawable/img_5"
@@ -48,6 +56,7 @@
                  android:layout_gravity="center"
                  android:backgroundTint="@color/color_boton_omitir"
                  android:id="@+id/usuario"
+                 app:endIconMode="clear_text"
                  android:hint="Usuario"
                  app:startIconDrawable="@drawable/baseline_person_24"
                  app:boxCornerRadiusBottomEnd="50px"
@@ -73,6 +82,7 @@
                  app:startIconDrawable="@drawable/baseline_password_24"
                  app:boxCornerRadiusBottomEnd="50px"
                  app:boxCornerRadiusBottomStart="50px"
+                 app:endIconMode="clear_text"
                  android:backgroundTint="@color/color_boton_omitir"
                  android:id="@+id/password_login"
                  android:hint="Contraseña"
@@ -125,4 +135,5 @@
        </androidx.cardview.widget.CardView>
 
    </ScrollView>
+   </LinearLayout>
 </LinearLayout>
