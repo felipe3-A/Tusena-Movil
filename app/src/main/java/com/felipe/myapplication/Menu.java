@@ -31,6 +31,8 @@ NavigationView navigationView;
     FragmentTransaction fragmentTransaction;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,19 +41,22 @@ NavigationView navigationView;
         setSupportActionBar(toolbar);
         drawerLayout=findViewById(R.id.drawer);
         navigationView=findViewById(R.id.navigationview);
+
         //Estableser el evento para el navigation view
         navigationView.setNavigationItemSelectedListener(this);
 
         actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
-   actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
-   actionBarDrawerToggle.syncState();
+       actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
+       actionBarDrawerToggle.syncState();
 
    //Cargar fragmentos
-fragmentManager=getSupportFragmentManager();
-fragmentTransaction=fragmentManager.beginTransaction();
-fragmentTransaction.add(R.id.container,new Mainfragment());
-fragmentTransaction.commit();
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.container,new Mainfragment());
+        fragmentTransaction.commit();
+
+//Cargar vistas desdee fragmentos
 
     }
 
@@ -80,6 +85,12 @@ fragmentTransaction.commit();
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new FragmentInvestigadores());
+            fragmentTransaction.commit();
+        }
+        if(item.getItemId()==R.id.Manual){
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container,new Manual_Usuario());
             fragmentTransaction.commit();
         }
 
