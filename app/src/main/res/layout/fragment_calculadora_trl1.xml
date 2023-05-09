@@ -31,7 +31,6 @@
                      android:background="@color/color_boton"
                      android:text="@string/tr1_p1" />
                  <RadioGroup
-                     android:id="@+id/trl1_p1"
                      android:layout_width="match_parent"
                      android:layout_height="120dp"
                      android:layout_marginTop="80dp"

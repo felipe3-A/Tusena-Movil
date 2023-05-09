@@ -17,6 +17,9 @@
             android:name=".Manual_Usuario"
             android:exported="false" />
         <activity
+            android:name=".Trl1"
+            android:exported="false" />
+        <activity
             android:name=".Registro5"
             android:exported="true"
             android:theme="@style/Sin_Header" />
