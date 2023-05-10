@@ -14,8 +14,20 @@
         android:theme="@style/Theme.Tusena_Movil"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".Admin"
             android:exported="false" />
+=======
+            android:name=".Menu_Principal"
+            android:exported="false" />
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
+
+        <activity
+            android:name=".Trl2"
+            android:exported="false" />
+>>>>>>> 098330e363bb9c570f1aa27ec687e4182a4b641e
         <activity
             android:name=".Manual_Usuario"
             android:exported="false" />
@@ -26,10 +38,6 @@
             android:name=".Registro5"
             android:exported="true"
             android:theme="@style/Sin_Header" />
-        <activity
-            android:name=".Menu"
-            android:exported="false"
-            android:theme="@style/Theme.Tusena_Movil.Noactionbar" />
         <activity
             android:name=".SplasScreem"
             android:exported="true"

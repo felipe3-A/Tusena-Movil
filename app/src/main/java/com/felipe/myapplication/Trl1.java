@@ -22,10 +22,12 @@ public class Trl1 extends AppCompatActivity {
     DatabaseReference myRef;
 
     List<Preguntas> list = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trl1);
+<<<<<<< HEAD
         
        referenciar();
     }
@@ -38,7 +40,15 @@ public class Trl1 extends AppCompatActivity {
         txt_trl1=findViewById(R.id.txt_trl5);
         txt_trl1=findViewById(R.id.txt_trl6);
         txt_trl1=findViewById(R.id.txt_trl7);
+=======
+        referenciar();
+
+>>>>>>> 098330e363bb9c570f1aa27ec687e4182a4b641e
     }
+    private void referenciar() {}
+
 
 
 }
+
+
