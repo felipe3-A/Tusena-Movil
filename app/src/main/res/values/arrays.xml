@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Trl">trl
+        <item>SELECCIONE TLR</item>
+        <item>Tlr1</item>
+        <item>Tlr2</item>
+        <item>Tlr3</item>
+        <item>Tlr4</item>
+        <item>Tlr5</item>
+        <item>Tlr6</item>
+        <item>Tlr7</item>
+        <item>Tlr8</item>
+        <item>Tlr9</item>
+    </string-array>
+</resources>

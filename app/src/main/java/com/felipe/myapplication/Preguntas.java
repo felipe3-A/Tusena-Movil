@@ -5,15 +5,17 @@ public class Preguntas {
     String pregunta;
     String respuesta1;
     String respuesta2;
+    String nivel;
 
     public Preguntas() {
     }
 
-    public Preguntas(String id, String pregunta, String respuesta1, String respuesta2) {
+    public Preguntas(String id, String pregunta, String respuesta1, String respuesta2, String nivel) {
         this.id = id;
         this.pregunta = pregunta;
         this.respuesta1 = respuesta1;
         this.respuesta2 = respuesta2;
+        this.nivel = nivel;
     }
 
     public String getId() {
@@ -48,6 +50,16 @@ public class Preguntas {
         this.respuesta2 = respuesta2;
     }
 
+    public String getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(String nivel) {
+        this.nivel=nivel;
+
+
+    }
+
     @Override
     public String toString() {
         return "Preguntas{" +
@@ -55,10 +67,7 @@ public class Preguntas {
                 ", pregunta='" + pregunta + '\'' +
                 ", respuesta1='" + respuesta1 + '\'' +
                 ", respuesta2='" + respuesta2 + '\'' +
+                ", nivel=" + nivel +
                 '}';
     }
 }
-
-
-
-

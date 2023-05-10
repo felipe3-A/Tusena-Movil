@@ -10,7 +10,7 @@ public class SplasScreem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent=new Intent(this,Login.class);
+        Intent intent=new Intent(this,Admin.class);
         startActivity(intent);
         finish();
     }
