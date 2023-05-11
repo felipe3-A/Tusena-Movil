@@ -16,12 +16,12 @@
         android:textSize="15sp" />
 
     <Spinner
-        android:id="@+id/sp_trl"
+        android:id="@+id/sp_investogador"
         android:layout_width="250dp"
         android:layout_height="41dp"
         android:layout_marginTop="20dp"
+        android:entries="@array/investigadores"
         android:textAlignment="center"
-        android:entries="@array/Trl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
@@ -31,32 +31,27 @@
 
     <EditText
         android:layout_marginTop="40dp"
-        android:id="@+id/edtx_nivel_relativo"
+        android:id="@+id/edtx_nombre_proyecto"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="@string/nivel_relativo"
+        android:hint="@string/nombre_de_proyecto"
         android:layout_gravity="center"
         android:textSize="20sp" />
 
     <EditText
         android:layout_marginTop="40dp"
-        android:id="@+id/edtx_pregtunta"
+        android:id="@+id/edtx_n_producto"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="@string/preguntas"
+        android:hint="@string/producto"
         android:layout_gravity="center"
         android:textSize="20sp" />
 
-
-
-
-
-
     <Button
-        android:id="@+id/btn_agregarp"
+        android:id="@+id/btn_agregarinvestigador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/agregar_pregunta"
+        android:text="AGREGAR"
         android:layout_marginTop="20dp"
         />
 

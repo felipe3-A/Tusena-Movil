@@ -41,7 +41,6 @@
     <string name="agregar_pregunta">AGREGAR PREGUNTA</string>
 
 
-
     <string-array name="estado_civil">
 
     </string-array>
@@ -53,5 +52,9 @@
     <string name="trl2_p5"></string>
     <string name="trl2_p6"></string>
     <string name="trl2_p7"></string>
+    <string name="calculadora_nivel_trl_de_sennova">CALCULADORA NIVEL TRL DE SENNOVA</string>
+    <string name="nivel_relativo">Nivel relativo</string>
+    <string name="nombre_de_proyecto">Nombre de Proyecto</string>
+    <string name="producto">Producto</string>
 
 </resources>

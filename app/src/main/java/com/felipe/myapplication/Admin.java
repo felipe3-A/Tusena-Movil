@@ -24,13 +24,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class Admin extends AppCompatActivity {
-    EditText edtx_pregtunta;
-    RadioGroup radioGroup;
-    RadioButton radioButton3;
-    RadioButton radioButton4;
-
+    EditText edtx_pregtunta,edtx_nivel_relativo;
     Spinner sp_trl;
-
     Button btn_agregar;
 
     FirebaseDatabase database;
@@ -50,11 +45,10 @@ public class Admin extends AppCompatActivity {
 
     private void referenciar() {
         edtx_pregtunta = findViewById(R.id.edtx_pregtunta);
-        radioButton3 = findViewById(R.id.radioButton3);
-        radioButton4 = findViewById(R.id.radioButton4);
+        edtx_nivel_relativo = findViewById(R.id.edtx_nivel_relativo);
         btn_agregar = findViewById(R.id.btn_agregarp);
         sp_trl = findViewById(R.id.sp_trl);
-        radioGroup = findViewById(R.id.radioGroup);
+
 
         btn_agregar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,11 +65,10 @@ public class Admin extends AppCompatActivity {
                 preguntas_trl.setId(UUID.randomUUID().toString());
 
                 preguntas_trl.setPregunta(edtx_pregtunta.getText().toString());
-                preguntas_trl.setRespuesta1(radioButton3.getText().toString());
-                preguntas_trl.setRespuesta1(radioButton4.getText().toString());
+                preguntas_trl.setNivelRelativo(edtx_nivel_relativo.getText().toString());
                 preguntas_trl.setNivel((sp_trl.getSelectedItem().toString()));
 
-                myRef.child("Preguntas del Trl :").child(preguntas_trl.getId()).setValue(preguntas_trl); //insercion
+                myRef.child("preguntas").child(preguntas_trl.getId()).setValue(preguntas_trl); //insercion
                 Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();
 
             }

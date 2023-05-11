@@ -14,17 +14,17 @@
         android:theme="@style/Theme.Tusena_Movil"
         tools:targetApi="31">
         <activity
+            android:name=".Admin2"
+            android:exported="false" />
+        <activity
             android:name=".Admin"
             android:exported="false" />
         <activity
             android:name=".Menu_Principal"
             android:exported="false" />
-
-
         <activity
             android:name=".Trl2"
             android:exported="false" />
-
         <activity
             android:name=".Manual_Usuario"
             android:exported="false" />

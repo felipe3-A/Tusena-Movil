@@ -12,4 +12,17 @@
         <item>Tlr8</item>
         <item>Tlr9</item>
     </string-array>
+
+    <string-array name="investigadores">trl
+        <item>INVESTIGADOR</item>
+        <item>Zulema Yidney Leon Escobar </item>
+        <item>Pablo Ortiz</item>
+        <item>Javier Lozada</item>
+        <item>Rider Geovany Burbano </item>
+        <item>Henrry Bastidas Paruma</item>
+        <item>Jorge Coral</item>
+        <item>Franco Reyna</item>
+        <item>Edwin </item>
+
+    </string-array>
 </resources>
