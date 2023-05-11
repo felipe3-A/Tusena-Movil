@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-<<<<<<< HEAD
     android:gravity="center"
     tools:context=".Admin">
 
@@ -75,14 +74,6 @@
         />
 
 
-
-
-
-
-
-
-=======
-    tools:context=".Admin">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -94,5 +85,5 @@
 
 
 </LinearLayout>
->>>>>>> 098330e363bb9c570f1aa27ec687e4182a4b641e
+
 </LinearLayout>

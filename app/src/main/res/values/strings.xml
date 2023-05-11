@@ -33,7 +33,6 @@
     <string name="tr1_p5">Sabe en términos generales, ¿cómo funcionará y los resultados esperados de la solución propuesta?</string>
     <string name="tr1_p6">¿Sabe qué recursos económicos, financieros, técnicos y de personal requiere para desarrollar su solución?</string>
     <string name="tr1_p7">¿Construyó un documento con  toda la información recopilada en los items anteriores?</string>
-<<<<<<< HEAD
     <string name="ingresar_pregunta">INGRESAR PREGUNTA</string>
     <string name="preguntas_de_trl">Preguntas de TRL</string>
     <string name="preguntas">Preguntas</string>
@@ -46,7 +45,6 @@
     <string-array name="estado_civil">
 
     </string-array>
-=======
 
     <string name="trl2_p1"></string>
     <string name="trl2_p2"></string>
@@ -56,5 +54,4 @@
     <string name="trl2_p6"></string>
     <string name="trl2_p7"></string>
 
->>>>>>> 098330e363bb9c570f1aa27ec687e4182a4b641e
 </resources>

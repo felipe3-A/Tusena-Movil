@@ -1,6 +1,5 @@
 package com.felipe.myapplication;
 
-<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,19 +39,12 @@ public class Admin extends AppCompatActivity {
     //DatabaseReference database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tusena-c86eb-default-rtdb.firebaseio.com/");
 
     List<Preguntas> list = new ArrayList<>();
-=======
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-public class Admin extends AppCompatActivity {
->>>>>>> 098330e363bb9c570f1aa27ec687e4182a4b641e
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
-<<<<<<< HEAD
+
         referenciar();
     }
 
@@ -162,7 +154,6 @@ public class Admin extends AppCompatActivity {
 
 
 
-=======
-    }
-}
->>>>>>> 098330e363bb9c570f1aa27ec687e4182a4b641e
+
+
+
