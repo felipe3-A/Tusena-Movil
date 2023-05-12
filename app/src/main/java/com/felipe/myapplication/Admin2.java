@@ -17,7 +17,7 @@ import java.util.UUID;
 public class Admin2 extends AppCompatActivity {
 
     EditText edtx_nombre_proyecto,edtx_investigador,edtx_identificacion,edtx_no_producto;
-    Spinner sp_investigador;
+
     Button btn_agregarinvestigador;
     FirebaseDatabase database;
     DatabaseReference myRef;
