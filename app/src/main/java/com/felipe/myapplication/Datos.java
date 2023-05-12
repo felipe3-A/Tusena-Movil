@@ -5,15 +5,17 @@ public class Datos {
     String id;
     String proyecto;
     String investigador;
+    String identificacion;
     String productos;
 
     public Datos() {
     }
 
-    public Datos(String id, String proyecto, String investigador, String productos) {
+    public Datos(String id, String proyecto, String investigador, String identificacion, String productos) {
         this.id = id;
         this.proyecto = proyecto;
         this.investigador = investigador;
+        this.identificacion = identificacion;
         this.productos = productos;
     }
 
@@ -41,6 +43,14 @@ public class Datos {
         this.investigador = investigador;
     }
 
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+
     public String getProductos() {
         return productos;
     }
@@ -55,6 +65,7 @@ public class Datos {
                 "id='" + id + '\'' +
                 ", proyecto='" + proyecto + '\'' +
                 ", investigador='" + investigador + '\'' +
+                ", identificacion='" + identificacion + '\'' +
                 ", productos='" + productos + '\'' +
                 '}';
     }
