@@ -18,7 +18,7 @@ public class Menu_Principal extends AppCompatActivity {
 
     }
     public void Admin(View view){
-        Intent Register_investigadores= new Intent(this,Admin2.class);
+        Intent Register_investigadores= new Intent(this,Admin.class);
         startActivity(Register_investigadores);
     }
 
