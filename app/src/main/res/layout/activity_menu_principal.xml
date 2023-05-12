@@ -91,7 +91,8 @@
                 android:layout_marginEnd="10dp"
                 android:drawableLeft="@drawable/baseline_person_search_24"
                 android:drawablePadding="15dp"
-                android:text="Ingreso Privado" />
+                android:text="registro de Investidores"
+                android:onClick="Admin"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Cerrar"
                 android:layout_width="match_parent"
