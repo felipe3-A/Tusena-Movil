@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
                 final  String passwordTxt = password.getEditText().getText().toString();
 
                 if(textTxt.isEmpty() || passwordTxt.isEmpty()){
-                    Toast.makeText(Login.this,"por favor ingrese con su usuario o contraseña", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"Por favor ingrese con su usuario o contraseña", Toast.LENGTH_SHORT).show();
 
                 }
                 else{
