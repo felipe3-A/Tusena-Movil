@@ -52,9 +52,15 @@
     <string name="trl2_p5"></string>
     <string name="trl2_p6"></string>
     <string name="trl2_p7"></string>
+
     <string name="calculadora_nivel_trl_de_sennova">CALCULADORA NIVEL TRL DE SENNOVA</string>
     <string name="nivel_relativo">Nivel relativo</string>
     <string name="nombre_de_proyecto">Nombre de Proyecto</string>
     <string name="producto">Producto</string>
+
+
+
+    <string name="Web">Visita nuestro sitio web y enterate de todo lo que hemos preparado para ti, entra a </string>
+    <string name="Web_link">https://Tusena.edu.co </string>
 
 </resources>
