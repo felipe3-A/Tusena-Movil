@@ -16,7 +16,7 @@ import java.util.UUID;
 
 public class Admin2 extends AppCompatActivity {
 
-    EditText edtx_nombre_proyecto,edtx_investigador,edtx_identificacion,edtx_no_producto;
+    EditText edtx_nombre_proyecto,edtx_investigador,edtx_identificacion,edtx_no_producto,edtx_tipo_proyecto,edtx_numeroproyecto;
 
     Button btn_agregarinvestigador;
     FirebaseDatabase database;
@@ -33,6 +33,8 @@ public class Admin2 extends AppCompatActivity {
     private void referenciar() {
 
         edtx_nombre_proyecto=findViewById(R.id.edtx_nombre_proyecto);
+        edtx_numeroproyecto=findViewById(R.id.edtx_numeroproyecto);
+        edtx_tipo_proyecto=findViewById(R.id.edtx_tipo_proyecto);
         edtx_investigador=findViewById(R.id.edtx_investigador);
         edtx_identificacion=findViewById(R.id.edtx_identificacion);
         edtx_no_producto=findViewById(R.id.edtx_n_producto);
@@ -59,6 +61,9 @@ public class Admin2 extends AppCompatActivity {
                 datos_investigadores.setIdentificacion(edtx_identificacion.getText().toString());
                 datos_investigadores.setProyecto(edtx_nombre_proyecto.getText().toString());
                 datos_investigadores.setProductos(edtx_no_producto.getText().toString());
+                datos_investigadores.setTipocodigoproducto(edtx_tipo_proyecto.getText().toString());
+                datos_investigadores.setNumerodelproyecto(edtx_numeroproyecto.getText().toString());
+
 
 
                 myRef.child("Proyecto").child(datos_investigadores.getProyecto()).child(datos_investigadores.getInvestigador()).child(datos_investigadores.getIdentificacion()).child(datos_investigadores.getProductos()).setValue(datos_investigadores.getProductos()); //insercion

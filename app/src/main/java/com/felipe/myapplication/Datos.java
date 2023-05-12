@@ -7,16 +7,20 @@ public class Datos {
     String investigador;
     String identificacion;
     String productos;
+    String tipocodigoproducto;
+    String numerodelproyecto;
 
     public Datos() {
     }
 
-    public Datos(String id, String proyecto, String investigador, String identificacion, String productos) {
+    public Datos(String id, String proyecto, String investigador, String identificacion, String productos, String tipocodigoproducto, String numerodelproyecto) {
         this.id = id;
         this.proyecto = proyecto;
         this.investigador = investigador;
         this.identificacion = identificacion;
         this.productos = productos;
+        this.tipocodigoproducto = tipocodigoproducto;
+        this.numerodelproyecto = numerodelproyecto;
     }
 
     public String getId() {
@@ -59,6 +63,22 @@ public class Datos {
         this.productos = productos;
     }
 
+    public String getTipocodigoproducto() {
+        return tipocodigoproducto;
+    }
+
+    public void setTipocodigoproducto(String tipocodigoproducto) {
+        this.tipocodigoproducto = tipocodigoproducto;
+    }
+
+    public String getNumerodelproyecto() {
+        return numerodelproyecto;
+    }
+
+    public void setNumerodelproyecto(String numerodelproyecto) {
+        this.numerodelproyecto = numerodelproyecto;
+    }
+
     @Override
     public String toString() {
         return "Datos{" +
@@ -67,6 +87,8 @@ public class Datos {
                 ", investigador='" + investigador + '\'' +
                 ", identificacion='" + identificacion + '\'' +
                 ", productos='" + productos + '\'' +
+                ", tipocodigoproducto='" + tipocodigoproducto + '\'' +
+                ", numerodelproyecto='" + numerodelproyecto + '\'' +
                 '}';
     }
 }
