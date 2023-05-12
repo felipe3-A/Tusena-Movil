@@ -68,7 +68,7 @@ public class Admin extends AppCompatActivity {
                 preguntas_trl.setNivelRelativo(edtx_nivel_relativo.getText().toString());
                 preguntas_trl.setNivel((sp_trl.getSelectedItem().toString()));
 
-                myRef.child("preguntas").child(preguntas_trl.getId()).setValue(preguntas_trl); //insercion
+                myRef.child("Preguntas").child(preguntas_trl.getNivel()).child(preguntas_trl.getPregunta()).child(preguntas_trl.getNivelRelativo()).setValue("Nivel Relativo",preguntas_trl.getNivelRelativo()); //insercion
                 Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();
 
             }
