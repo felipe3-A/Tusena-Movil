@@ -12,22 +12,28 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/calculadora_nivel_trl_de_sennova"
+        android:text="@string/registro_de_investigadores1"
         android:textSize="15sp" />
 
-    <Spinner
-        android:id="@+id/sp_investogador"
-        android:layout_width="250dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="20dp"
-        android:entries="@array/investigadores"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+
+
+    <EditText
+        android:layout_marginTop="40dp"
+        android:id="@+id/edtx_investigador"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/investigador"
+        android:layout_gravity="center"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_marginTop="40dp"
+        android:id="@+id/edtx_identificacion"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/identificaci_n"
+        android:layout_gravity="center"
+        android:textSize="20sp" />
+
 
     <EditText
         android:layout_marginTop="40dp"
