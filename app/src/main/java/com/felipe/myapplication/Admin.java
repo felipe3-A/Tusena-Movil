@@ -62,7 +62,7 @@ public class Admin extends AppCompatActivity {
 
 
                 Preguntas preguntas_trl = new Preguntas();
-                preguntas_trl.setId(UUID.randomUUID().toString());
+//                preguntas_trl.setId(UUID.randomUUID().toString());
 
                 preguntas_trl.setPregunta(edtx_pregtunta.getText().toString());
                 preguntas_trl.setNivelRelativo(edtx_nivel_relativo.getText().toString());
