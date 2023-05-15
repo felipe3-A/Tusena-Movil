@@ -59,7 +59,6 @@
     <string name="producto">Producto</string>
 
 
-
     <string name="Web">Visita nuestro sitio web y enterate de todo lo que hemos preparado para ti, entra a </string>
     <string name="Web_link">https://Tusena.edu.co </string>
     <string name="investigador">Investigador</string>
@@ -68,5 +67,6 @@
     <string name="registro_de_investigadores1">REGISTRO DE INVESTIGADORES</string>
     <string name="tipo_codigo_de_proyecto">tipo Codigo de proyecto</string>
     <string name="n_mero_del_proyecto">Número del proyecto</string>
+    <string name="trl1">Trl1</string>
 
 </resources>
