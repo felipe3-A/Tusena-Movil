@@ -67,6 +67,10 @@
     <string name="registro_de_investigadores1">REGISTRO DE INVESTIGADORES</string>
     <string name="tipo_codigo_de_proyecto">tipo Codigo de proyecto</string>
     <string name="n_mero_del_proyecto">Número del proyecto</string>
+<<<<<<< HEAD
     <string name="tipo_codigo_de_proyecto_2">Tipo codigo de proyecto</string>
+=======
+    <string name="trl1">Trl1</string>
+>>>>>>> 7fd0886554ab67dc41f9f06a746dc76a76248e94
 
 </resources>

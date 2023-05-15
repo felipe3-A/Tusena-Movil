@@ -14,9 +14,11 @@
         android:theme="@style/Theme.Tusena_Movil"
         tools:targetApi="31">
         <activity
+
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Sin_Header" />
+
 
         <activity
             android:name=".Perfil"
