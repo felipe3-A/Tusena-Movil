@@ -28,6 +28,8 @@ public class Trl1 extends AppCompatActivity {
     ListView lista1;
     FirebaseDatabase database;
     DatabaseReference myref;
+
+    //public static  List<Preguntas> list = new ArrayList<>();
     ArrayAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class Trl1 extends AppCompatActivity {
         //Almacena los datos
         ArrayList<Preguntas> almacenapreguntas =new ArrayList<>();
 
-        myref.child("Preguntas").orderByChild("nivel").equalTo("Tlr").addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
+        myref.child("Preguntas").orderByChild("nivel").equalTo("Tlr1").addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //Crear un cico para que recorra cda uno de los datos almacenados

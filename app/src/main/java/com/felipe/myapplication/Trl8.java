@@ -15,7 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Trl4 extends AppCompatActivity {
+public class Trl8 extends AppCompatActivity {
     ListView lista1;
     FirebaseDatabase database;
     DatabaseReference myref;
@@ -34,7 +34,7 @@ public class Trl4 extends AppCompatActivity {
         //Almacena los datos
         ArrayList<Preguntas> almacenapreguntas =new ArrayList<>();
 
-        myref.child("Preguntas").orderByChild("nivel").equalTo("Tlr").addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
+        myref.child("Preguntas").orderByChild("nivel").equalTo("Tlr8").addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //Crear un cico para que recorra cda uno de los datos almacenados
@@ -45,7 +45,7 @@ public class Trl4 extends AppCompatActivity {
 
                     almacenapreguntas.add(preguntas);//Aqui se guardan los datos del nodo o algo asi
 
-                    adapter=new ArrayAdapter<Preguntas>(Trl4.this, android.R.layout.simple_list_item_1,almacenapreguntas);
+                    adapter=new ArrayAdapter<Preguntas>(Trl8.this, android.R.layout.simple_list_item_1,almacenapreguntas);
 
                     lista1.setAdapter(adapter);
 

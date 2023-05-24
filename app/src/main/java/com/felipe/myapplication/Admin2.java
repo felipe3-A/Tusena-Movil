@@ -65,7 +65,6 @@ public class Admin2 extends AppCompatActivity {
                 datos_investigadores.setNumerodelproyecto(edtx_numeroproyecto.getText().toString());
 
 
-
                 myRef.child("Proyecto").child(datos_investigadores.getProyecto()).child(datos_investigadores.getInvestigador()).child(datos_investigadores.getIdentificacion()).child(datos_investigadores.getProductos()).setValue(datos_investigadores.getProductos()); //insercion
 
 

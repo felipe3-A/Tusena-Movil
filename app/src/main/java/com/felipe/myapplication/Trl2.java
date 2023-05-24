@@ -26,84 +26,85 @@ import java.util.List;
 
 public class Trl2 extends AppCompatActivity {
     //private List<Preguntas> listpregunta=new ArrayList<Preguntas>();
-    FirebaseDatabase firebasedatabase;
-    DatabaseReference databaseReference;
-    TextView txt_trl2,txt_trl2p,txt_trl80;
+    FirebaseDatabase database;
+    DatabaseReference myref;
+    TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7,txt_trl1p8,txt_trl1p9,txt_trlp10;
 
-   // ListView list;
-
-    public static  List<Preguntas> list = new ArrayList<>();
+    public static List<Preguntas> list = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trl2);
-        txt_trl2=findViewById(R.id.txt_trl2);
-        txt_trl2p=findViewById(R.id.txt_trl1p);
-        txt_trl80=findViewById(R.id.txt_trl80);
-       //list = findViewById(R.id.txt_trl1);
-       cargarpregunta();
-    }
+        txt_trl1p1 = findViewById(R.id.txt_trl1p1);
+        txt_trl1p2 = findViewById(R.id.txt_trl1p2);
+        txt_trl1p3 = findViewById(R.id.txt_trl1p3);
+        txt_trl1p4 = findViewById(R.id.txt_trl1p4);
+        txt_trl1p5 = findViewById(R.id.txt_trl1p5);
+        txt_trl1p6 = findViewById(R.id.txt_trl1p6);
+        txt_trl1p7 = findViewById(R.id.txt_trl1p7);
 
-    private void cargarpregunta() {
-        Toast.makeText(this, "hols" +list, Toast.LENGTH_SHORT).show();
 
-        iniciarFireBase();
-
-       databaseReference.child("Preguntas").orderByChild("nivel").equalTo("Tlr1").addChildEventListener(new ChildEventListener() {
-                   @Override
-                   public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                       for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                           Preguntas pregunta = dataSnapshot.getValue(Preguntas.class);
-                           Toast.makeText(Trl2.this, "valor"+previousChildName, Toast.LENGTH_SHORT).show();
-                           list.add(pregunta);
-
-                       }
-
-                       txt_trl2.setText( list.get(0).getPregunta());
-                       txt_trl2p.setText( list.get(1).getPregunta());
-                       txt_trl80.setText(list.get(2).getPregunta());
-                   }
-
-                   @Override
-                   public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                   }
-
-                   @Override
-                   public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                   }
-
-                   @Override
-                   public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                   }
-
-                   @Override
-                   public void onCancelled(@NonNull DatabaseError error) {
-
-                   }
-               });
-
+        cargarP("tlr1");
+        //list = findViewById(R.id.txt_trl1);
 
     }
+    public void cargarP(String tlr) {
 
 
-
-    public void iniciarFireBase() {
-        FirebaseApp.initializeApp(this);
-        firebasedatabase = FirebaseDatabase.getInstance(); //conexion
-        databaseReference = firebasedatabase.getReference(); // referencia
+        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
+        myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
 
 
-    }
+        Query query = myref.child("Preguntas").orderByChild("nivel").equalTo(tlr);
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-
-
-
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Preguntas pregunta = dataSnapshot.getValue(Preguntas.class);
+                    list.add(pregunta);
                 }
+                txt_trl1p1.setText(list.get(0).getPregunta());
+                txt_trl1p2.setText(list.get(1).getPregunta());
+                txt_trl1p3.setText(list.get(2).getPregunta());
+                txt_trl1p4.setText(list.get(3).getPregunta());
+                txt_trl1p5.setText(list.get(4).getPregunta());
+                txt_trl1p6.setText(list.get(5).getPregunta());
+                txt_trl1p7.setText(list.get(6).getPregunta());
+                txt_trl1p8.setText(list.get(7).getPregunta());
+                txt_trl1p9.setText(list.get(8).getPregunta());
+                txt_trlp10.setText(list.get(9).getPregunta());
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

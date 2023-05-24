@@ -7,31 +7,271 @@
     tools:context=".Trl2"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_trl2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Preguntas Tlr1"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/txt_trl1p1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="100dp"
         android:background="@color/color_boton"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textSize="20dp" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/txt_trl1p"
+        android:id="@+id/txt_trl1p2"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:background="@color/color_boton_omitir" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
+
     <TextView
-        android:id="@+id/txt_trl80"
+        android:id="@+id/txt_trl1p3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:background="@color/color_boton_omitir" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txt_trl1p4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@color/color_boton_omitir" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txt_trl1p5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@color/color_boton_omitir" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txt_trl1p6"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@color/color_boton_omitir" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txt_trl1p7"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@color/color_boton_omitir" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+    </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_trl1p8"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:background="@color/color_boton_omitir" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_trl1p9"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:background="@color/color_boton_omitir" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_trl1p10"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:background="@color/color_boton_omitir" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI" />
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALCULAR"
+
+                />
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
