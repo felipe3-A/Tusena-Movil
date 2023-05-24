@@ -60,16 +60,34 @@ public class Admin extends AppCompatActivity {
                 database = FirebaseDatabase.getInstance(); //conexion
                 myRef = database.getReference(); // referencia
 
-
                 Preguntas preguntas_trl = new Preguntas();
-//                preguntas_trl.setId(UUID.randomUUID().toString());
-
+                preguntas_trl.setId(UUID.randomUUID().toString());
                 preguntas_trl.setPregunta(edtx_pregtunta.getText().toString());
                 preguntas_trl.setNivelRelativo(edtx_nivel_relativo.getText().toString());
                 preguntas_trl.setNivel((sp_trl.getSelectedItem().toString()));
 
-                myRef.child("Preguntas").child(preguntas_trl.getNivel()).child(preguntas_trl.getPregunta()).child(preguntas_trl.getNivelRelativo()).setValue("Nivel Relativo",preguntas_trl.getNivelRelativo()); //insercion
-                Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();
+
+
+                 myRef.child("Preguntas").child(preguntas_trl.getId()).setValue(preguntas_trl); //insercion
+               Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();
+
+                /*myRef.child("Preguntas").child(preguntas_trl.getNivel()).setValue(preguntas_trl); //insercion
+                Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();+/
+
+
+                 */
+
+
+                //myRef.child("Preguntas").child(preguntas_trl.getNivel()).child(preguntas_trl.getPregunta()).setValue(preguntas_trl); //insercion
+                //Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();
+
+               /* myRef.child("Preguntas").child(preguntas_trl.getId()).setValue(preguntas_trl);
+                myRef.child("Preguntas").child(preguntas_trl.getNivel()).child("nivel").setValue(sp_trl);
+                myRef.child("Preguntas").child(preguntas_trl.getNivelRelativo()).child("nivel_relativo").setValue(edtx_nivel_relativo);
+                myRef.child("Preguntas").child(preguntas_trl.getPregunta()).child("pregunta").setValue(edtx_pregtunta);
+                Toast.makeText(Admin.this, "Pregunta Agregada", Toast.LENGTH_SHORT).show();*/
+
+
 
             }
         });

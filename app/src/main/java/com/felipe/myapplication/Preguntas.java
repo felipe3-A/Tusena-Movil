@@ -50,11 +50,7 @@ public class Preguntas {
 
     @Override
     public String toString() {
-        return "Preguntas{" +
-                "id='" + id + '\'' +
-                ", pregunta='" + pregunta + '\'' +
-                ", nivelRelativo='" + nivelRelativo + '\'' +
-                ", nivel='" + nivel + '\'' +
-                '}';
+        return pregunta + nivel;
+
     }
 }

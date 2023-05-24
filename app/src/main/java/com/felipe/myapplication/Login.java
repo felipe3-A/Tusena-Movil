@@ -26,10 +26,12 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         final TextInputLayout usuario = (TextInputLayout)findViewById(R.id.usuario);
         final TextInputLayout  password = (TextInputLayout)findViewById(R.id.password_login);
         final Button loginbtn = findViewById(R.id.login_btn);
         final TextView registrarseahora = findViewById(R.id.registrarse_ahora);
+
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +55,7 @@ public class Login extends AppCompatActivity {
                                 //ahora obtenga la contraseña del usuario de la bd y conéctela con la contraseña ingresada por el usuario
                                 final String getPassword = snapshot.child(textTxt).child("contraseña").getValue(String.class);
 
+
                                 if (getPassword.equals(passwordTxt)) {
                                     Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(Login.this,Menu_Principal.class));
@@ -63,10 +66,8 @@ public class Login extends AppCompatActivity {
                             }
                             else{
                                 Toast.makeText(Login.this, "Usuario incorrecto", Toast.LENGTH_SHORT).show();
-
-
-
                             }
+
                         }
 
                         @Override

@@ -1,5 +1,8 @@
 package com.felipe.myapplication;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +55,7 @@ holder.expandableLayout.setVisibility(isExpadable ? View.VISIBLE : View.GONE);
         LinearLayout linearLayout;
         RelativeLayout expandableLayout;
 
+
         public VersionVH(@NonNull View itemView) {
             super(itemView);
             codeNameTxt=itemView.findViewById(R.id.code_name);
@@ -61,6 +65,8 @@ holder.expandableLayout.setVisibility(isExpadable ? View.VISIBLE : View.GONE);
 
             linearLayout=itemView.findViewById(R.id.linear_layout);
             expandableLayout=itemView.findViewById(R.id.expandible_layout);
+
+
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

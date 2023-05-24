@@ -100,6 +100,7 @@ public class Register extends AppCompatActivity {
         inicia_ahora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(Register.this, Login.class));
                 finish();
             }
         });

@@ -2,17 +2,13 @@ package com.felipe.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-public class SplasScreem extends AppCompatActivity {
+public class Trl5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent=new Intent(this,Trl2_2.class);
-        startActivity(intent);
-
+        setContentView(R.layout.activity_trl5);
     }
 }
