@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,10 +26,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Trl2 extends AppCompatActivity {
-    //private List<Preguntas> listpregunta=new ArrayList<Preguntas>();
+
     FirebaseDatabase database;
     DatabaseReference myref;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7,txt_trl1p8,txt_trl1p9,txt_trlp10;
+
+    Button btn_calcular;
 
     public static List<Preguntas> list = new ArrayList<>();
 
@@ -44,6 +47,8 @@ public class Trl2 extends AppCompatActivity {
         txt_trl1p5 = findViewById(R.id.txt_trl1p5);
         txt_trl1p6 = findViewById(R.id.txt_trl1p6);
         txt_trl1p7 = findViewById(R.id.txt_trl1p7);
+        btn_calcular = findViewById(R.id.btn_calcular);
+
 
 
         cargarP("tlr1");
@@ -85,8 +90,20 @@ public class Trl2 extends AppCompatActivity {
             }
         });
 
+
+        btn_calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+
+            }
+        });
+
     }
+
+
 }
+
 
 
 
