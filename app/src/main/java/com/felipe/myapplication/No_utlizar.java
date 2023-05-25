@@ -15,16 +15,17 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Trl8 extends AppCompatActivity {
+public class No_utlizar extends AppCompatActivity {
     ListView lista1;
     FirebaseDatabase database;
     DatabaseReference myref;
+
+    //public static  List<Preguntas> list = new ArrayList<>();
     ArrayAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trl1);
-        lista1 = findViewById(R.id.Lista1);
+
         //Crear conexion a la base de datos
         database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
         myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
@@ -34,7 +35,7 @@ public class Trl8 extends AppCompatActivity {
         //Almacena los datos
         ArrayList<Preguntas> almacenapreguntas =new ArrayList<>();
 
-        myref.child("Preguntas").orderByChild("nivel").equalTo("Tlr8").addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
+        myref.child("Preguntas").orderByChild("nivel").equalTo(Tlr1_1.nivel).addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //Crear un cico para que recorra cda uno de los datos almacenados
@@ -45,7 +46,7 @@ public class Trl8 extends AppCompatActivity {
 
                     almacenapreguntas.add(preguntas);//Aqui se guardan los datos del nodo o algo asi
 
-                    adapter=new ArrayAdapter<Preguntas>(Trl8.this, android.R.layout.simple_list_item_1,almacenapreguntas);
+                    adapter=new ArrayAdapter<Preguntas>(No_utlizar.this, android.R.layout.simple_list_item_1,almacenapreguntas);
 
                     lista1.setAdapter(adapter);
 
@@ -62,7 +63,6 @@ public class Trl8 extends AppCompatActivity {
 
 
     }
-
 
 
 }

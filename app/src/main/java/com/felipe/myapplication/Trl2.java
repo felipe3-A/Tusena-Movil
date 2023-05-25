@@ -29,7 +29,7 @@ public class Trl2 extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference myref;
-    TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7,txt_trl1p8,txt_trl1p9,txt_trlp10;
+    TextView txt_trl2p1, txt_trl2p2, txt_trl2p3, txt_trl2p4, txt_trl2p5, txt_trl2p6, txt_trl2p7,txt_trl2p8;
 
     Button btn_calcular;
 
@@ -40,29 +40,29 @@ public class Trl2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trl2);
-        txt_trl1p1 = findViewById(R.id.txt_trl1p1);
-        txt_trl1p2 = findViewById(R.id.txt_trl1p2);
-        txt_trl1p3 = findViewById(R.id.txt_trl1p3);
-        txt_trl1p4 = findViewById(R.id.txt_trl1p4);
-        txt_trl1p5 = findViewById(R.id.txt_trl1p5);
-        txt_trl1p6 = findViewById(R.id.txt_trl1p6);
-        txt_trl1p7 = findViewById(R.id.txt_trl1p7);
-        btn_calcular = findViewById(R.id.btn_calcular);
+        txt_trl2p1 = findViewById(R.id.txt_trl2p1);
+        txt_trl2p2 = findViewById(R.id.txt_trl2p2);
+        txt_trl2p3 = findViewById(R.id.txt_trl2p3);
+        txt_trl2p4 = findViewById(R.id.txt_trl2p4);
+        txt_trl2p5 = findViewById(R.id.txt_trl2p5);
+        txt_trl2p6 = findViewById(R.id.txt_trl2p6);
+        txt_trl2p7 = findViewById(R.id.txt_trl2p7);
+        txt_trl2p8 = findViewById(R.id.txt_trl2p8);
 
 
 
-        cargarP("tlr1");
+        cargarP();
         //list = findViewById(R.id.txt_trl1);
 
     }
-    public void cargarP(String tlr) {
+    public void cargarP() {
 
 
         database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
         myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
 
 
-        Query query = myref.child("Preguntas").orderByChild("nivel").equalTo(tlr);
+        Query query = myref.child("Preguntas").orderByChild("nivel").equalTo("Tlr2");
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -71,17 +71,14 @@ public class Trl2 extends AppCompatActivity {
                     Preguntas pregunta = dataSnapshot.getValue(Preguntas.class);
                     list.add(pregunta);
                 }
-                txt_trl1p1.setText(list.get(0).getPregunta());
-                txt_trl1p2.setText(list.get(1).getPregunta());
-                txt_trl1p3.setText(list.get(2).getPregunta());
-                txt_trl1p4.setText(list.get(3).getPregunta());
-                txt_trl1p5.setText(list.get(4).getPregunta());
-                txt_trl1p6.setText(list.get(5).getPregunta());
-                txt_trl1p7.setText(list.get(6).getPregunta());
-                txt_trl1p8.setText(list.get(7).getPregunta());
-                txt_trl1p9.setText(list.get(8).getPregunta());
-                txt_trlp10.setText(list.get(9).getPregunta());
-
+                txt_trl2p1.setText(list.get(0).getPregunta());
+                txt_trl2p2.setText(list.get(1).getPregunta());
+                txt_trl2p3.setText(list.get(2).getPregunta());
+                txt_trl2p4.setText(list.get(3).getPregunta());
+                txt_trl2p5.setText(list.get(4).getPregunta());
+                txt_trl2p6.setText(list.get(5).getPregunta());
+                txt_trl2p7.setText(list.get(6).getPregunta());
+                txt_trl2p8.setText(list.get(7).getPregunta());
             }
 
             @Override
@@ -90,14 +87,6 @@ public class Trl2 extends AppCompatActivity {
             }
         });
 
-
-        btn_calcular.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-
-            }
-        });
 
     }
 
