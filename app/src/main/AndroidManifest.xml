@@ -62,10 +62,17 @@
             android:theme="@style/Sin_Header" />
         <activity
             android:name=".Trl2"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Sin_Header"/>
         <activity
+<<<<<<< HEAD
             android:name=".No_utlizar"
             android:exported="false" />
+=======
+            android:name=".Trl1"
+            android:exported="false"
+            android:theme="@style/Sin_Header"/>
+>>>>>>> ce430ed4c49dea4101171ec1b8b77987ed04eceb
         <activity
             android:name=".Registro5"
             android:exported="true"
