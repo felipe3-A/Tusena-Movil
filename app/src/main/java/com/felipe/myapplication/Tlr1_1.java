@@ -130,9 +130,8 @@ public class Tlr1_1 extends AppCompatActivity {
 
                                 resultado= (int) (resultado+15);
                                 resultado1=resultado;
-                                //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
-                               // Toast.makeText(Trl3.this, "Su porcentaje es: "+resultado , Toast.LENGTH_SHORT).show();
+                               Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel" , Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rd_p_1:
@@ -156,7 +155,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                                 resultadop2 = (int) (resultadop2 + 15);
                                 resultadop2_2 = resultadop2;
-                                //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                              //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -181,7 +179,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                                 resultadop3 = (int) (resultadop3 + 15);
                                 resultadop_3 = resultadop3;
-                                //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -232,7 +229,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                                 resultadop5 = (int) (resultadop5 + 15);
                                 resultadop_5 = resultadop5;
-                                //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -258,7 +254,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                                 resultadop6 = (int) (resultadop6 + 15);
                                 resultadop_6 = resultadop6;
-                                //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -284,7 +279,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                                 resultadop7 = (int) (resultadop7 + 15);
                                 resultadop_7 = resultadop7;
-                                //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -307,16 +301,12 @@ public class Tlr1_1 extends AppCompatActivity {
                     public void onClick(View view) {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 0296bf01659c3a7e98c708f7bba5bc4430e61fd4
                         if(todos>= 100) {
                             //nivel = "Tlr2";
 
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
-                                Toast.makeText(Tlr1_1.this, "su porcentaje es :" + todos + "%", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel", Toast.LENGTH_SHORT).show();
 
                         }
                        else{

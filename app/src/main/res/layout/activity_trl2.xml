@@ -41,12 +41,12 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rd2_p2"
+                    android:id="@+id/rd2_p1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SI" />
                 <RadioButton
-                    android:id="@+id/rd2_p_2"
+                    android:id="@+id/rd2_p_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NO" />
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:text="SI" />
                 <RadioButton
-                    android:id="@+id/rb2_p7_8"
+                    android:id="@+id/rb2_p8_8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NO" />

@@ -19,7 +19,9 @@ TextView respuestas,respuestas_trl;
         respuestas_trl=findViewById(R.id.resultado_trl);
 
         respuestas.setText("Su porcentaje es  : "+Tlr1_1.todos + "%");
-        respuestas_trl.setText("Su Trl es : "+Tlr1_1.nivel);
+        respuestas_trl.setText("Su Nivel es : "+Tlr1_1.nivel);
 
+        respuestas.setText("Su porcentaje es  : "+Trl2.todos + "%");
+        respuestas_trl.setText("Su Nivel es : "+Trl2.nivel);
     }
 }
