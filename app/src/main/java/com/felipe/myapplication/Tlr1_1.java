@@ -131,7 +131,7 @@ public class Tlr1_1 extends AppCompatActivity {
                                 resultado= (int) (resultado+15);
                                 resultado1=resultado;
                                 cargarP();
-                               Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel" , Toast.LENGTH_SHORT).show();
+                               //Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel" , Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rd_p_1:
@@ -304,7 +304,7 @@ public class Tlr1_1 extends AppCompatActivity {
                         if(todos>= 100) {
                             //nivel = "Tlr2";
 
-                                Intent intent = new Intent(Tlr1_1.this, Trl3.class);
+                                Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
                                 Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel", Toast.LENGTH_SHORT).show();
 
@@ -313,8 +313,7 @@ public class Tlr1_1 extends AppCompatActivity {
                             nivel = "Tlr1";
                             Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
                             startActivity(intent);
-                            Toast.makeText(Tlr1_1.this, "s" +
-                                    "us resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Tlr1_1.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
                         }
 
 

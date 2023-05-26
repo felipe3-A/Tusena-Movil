@@ -54,7 +54,7 @@ public class Trl2 extends AppCompatActivity {
            resultadop_6,
           resultadop7,
             resultadop_7,
-    todos;
+    todos2;
 
 
     public static List<Preguntas> list = new ArrayList<>();
@@ -76,7 +76,7 @@ public class Trl2 extends AppCompatActivity {
 
         rg2_respuestas = findViewById(R.id.rg2_respuestas2);
         rb2_p1 = findViewById(R.id.rd2_p1);
-        rb2_p_1 = findViewById(R.id.rd2_p_1);
+        rb2_p_1 = findViewById(R.id.rb2_p_1);
 
         rg2_respuestas2 = findViewById(R.id.rd2_repuesta2);
         rb2_p2 = findViewById(R.id.rb2_p2);
@@ -360,9 +360,9 @@ public class Trl2 extends AppCompatActivity {
         btn_calcular2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                todos=resultados+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
+                todos2=resultados+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
 
-                if(todos>= 100) {
+                if(todos2>= 100) {
                     //nivel = "Tlr2";
 
                     Intent intent = new Intent(Trl2.this, Trl3.class);
@@ -374,7 +374,7 @@ public class Trl2 extends AppCompatActivity {
                     nivel = "Tlr2";
                     Intent intent = new Intent(Trl2.this, Error_Trl.class);
                     startActivity(intent);
-                    Toast.makeText(Trl2.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Trl2.this, "sus resultados "+ todos2 +"%", Toast.LENGTH_SHORT).show();
                 }
 
 
