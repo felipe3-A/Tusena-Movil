@@ -19,8 +19,9 @@ TextView respuestas,respuestas_trl;
         respuestas_trl=findViewById(R.id.resultado_trl);
 
         respuestas.setText("Su porcentaje es  : "+Tlr1_1.todos + "%");
-        respuestas_trl.setText("Su Trl es : "+Tlr1_1.nivel);
+        respuestas_trl.setText("Su Nivel es : "+Tlr1_1.nivel);
 
+<<<<<<< HEAD
         respuestas.setText("Su porcentaje es  : "+Trl4.todos4 + "%");
         respuestas_trl.setText("Su Trl es : "+Trl4.nivel);
 
@@ -32,5 +33,9 @@ TextView respuestas,respuestas_trl;
         respuestas.setText("Su porcentaje es  : "+Trl5.todos5 + "%");
         respuestas_trl.setText("Su Trl es : "+Trl5.nivel);
 
+=======
+        respuestas.setText("Su porcentaje es  : "+Trl2.todos + "%");
+        respuestas_trl.setText("Su Nivel es : "+Trl2.nivel);
+>>>>>>> 60898e8b471e1d22e19e94c5710b5bc5b28979bb
     }
 }

@@ -69,6 +69,11 @@
             android:name=".Trl2"
             android:exported="true"
             android:theme="@style/Sin_Header" />
+
+        <activity
+            android:name=".Trl3"
+            android:exported="true"
+            android:theme="@style/Sin_Header" />
         <activity
             android:name=".Trl3"
             android:exported="true"
