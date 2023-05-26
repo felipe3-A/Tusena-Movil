@@ -71,6 +71,11 @@
         <activity
             android:name=".No_utlizar"
             android:exported="false" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 084ffec72e577649eee33501e5a4428c4d9846ec
         <activity
             android:name=".Registro5"
             android:exported="true"
