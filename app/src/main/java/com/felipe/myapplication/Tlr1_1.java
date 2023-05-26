@@ -307,6 +307,10 @@ public class Tlr1_1 extends AppCompatActivity {
                     public void onClick(View view) {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0296bf01659c3a7e98c708f7bba5bc4430e61fd4
                         if(todos>= 100) {
                             //nivel = "Tlr2";
 

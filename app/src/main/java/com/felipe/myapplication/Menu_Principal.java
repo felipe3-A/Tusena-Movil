@@ -21,5 +21,9 @@ public class Menu_Principal extends AppCompatActivity {
         Intent calculadora= new Intent(this, Tlr1_1.class);
         startActivity(calculadora);
     }
+    public void exit(View view){
+        Intent exit= new Intent(this, Login.class);
+        startActivity(exit);
+    }
 
 }
