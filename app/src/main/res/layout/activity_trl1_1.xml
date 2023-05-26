@@ -14,7 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="7dp">
 
 
             <TextView
@@ -62,7 +63,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:background="@color/color_boton_omitir" />
+                android:background="@color/color_boton" />
 
             <RadioGroup
                 android:id="@+id/rd_repuesta2"
@@ -90,7 +91,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:background="@color/color_boton_omitir" />
+                android:background="@color/color_boton" />
             <RadioGroup
                 android:id="@+id/rg_respuestas3"
                 android:layout_width="wrap_content"
@@ -116,7 +117,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:background="@color/color_boton_omitir" />
+                android:background="@color/color_boton" />
             <RadioGroup
                 android:id="@+id/rg_respuestas4"
                 android:layout_width="wrap_content"
@@ -142,7 +143,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:background="@color/color_boton_omitir" />
+                android:background="@color/color_boton" />
             <RadioGroup
                 android:id="@+id/rg_respuestas5"
                 android:layout_width="wrap_content"
@@ -168,7 +169,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:background="@color/color_boton_omitir" />
+                android:background="@color/color_boton" />
             <RadioGroup
                 android:id="@+id/rg_respuestas6"
                 android:layout_width="wrap_content"
@@ -194,7 +195,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:background="@color/color_boton_omitir" />
+                android:background="@color/color_boton" />
             <RadioGroup
                 android:id="@+id/rg_respuestas7"
                 android:layout_width="wrap_content"
@@ -216,8 +217,9 @@
 
             <Button
                 android:id="@+id/btn_calcular1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
                 android:text="CALCULAR" />
         </LinearLayout>
 

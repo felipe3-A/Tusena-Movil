@@ -17,9 +17,9 @@ public class Menu_Principal extends AppCompatActivity {
         setContentView(R.layout.activity_menu_principal);
 
     }
-    public void Admin(View view){
-        Intent Register_investigadores= new Intent(this,Admin.class);
-        startActivity(Register_investigadores);
+    public void calculadora(View view){
+        Intent calculadora= new Intent(this, Tlr1_1.class);
+        startActivity(calculadora);
     }
 
 }

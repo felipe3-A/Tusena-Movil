@@ -63,6 +63,8 @@
     <style name="fondo" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/fondos</item>
     </style>
+    
+
 
 
 </resources>
