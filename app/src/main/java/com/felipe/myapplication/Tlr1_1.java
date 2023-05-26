@@ -307,16 +307,19 @@ public class Tlr1_1 extends AppCompatActivity {
                     public void onClick(View view) {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
 
+<<<<<<< HEAD
                         if(todos>= 100){
                             nivel= "Trl2";
                             Intent intent = new Intent(Tlr1_1.this,Trl2.class);
                             startActivity(intent);
                         }
 
+=======
+>>>>>>> 3d93c7b1cdf868a7dfa7d0d1fb1f060bfad2eed6
 
 
                         if(todos>= 100) {
-                            nivel = "Tlr2";
+                            //nivel = "Tlr2";
 
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
@@ -324,9 +327,11 @@ public class Tlr1_1 extends AppCompatActivity {
 
                         }
                        else{
-                            Intent intent = new Intent(Tlr1_1.this,Login.class);
+                            nivel = "Tlr1";
+                            Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
                             startActivity(intent);
-                            Toast.makeText(Tlr1_1.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Tlr1_1.this, "s" +
+                                    "us resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
                         }
 
 
