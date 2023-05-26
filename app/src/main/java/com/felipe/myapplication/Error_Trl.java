@@ -21,5 +21,16 @@ TextView respuestas,respuestas_trl;
         respuestas.setText("Su porcentaje es  : "+Tlr1_1.todos + "%");
         respuestas_trl.setText("Su Trl es : "+Tlr1_1.nivel);
 
+        respuestas.setText("Su porcentaje es  : "+Trl4.todos4 + "%");
+        respuestas_trl.setText("Su Trl es : "+Trl4.nivel);
+
+
+        respuestas.setText("Su porcentaje es  : "+Trl3.todos3 + "%");
+        respuestas_trl.setText("Su Trl es : "+Trl3.nivel);
+
+
+        respuestas.setText("Su porcentaje es  : "+Trl5.todos5 + "%");
+        respuestas_trl.setText("Su Trl es : "+Trl5.nivel);
+
     }
 }

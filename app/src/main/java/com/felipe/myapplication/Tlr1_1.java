@@ -311,7 +311,7 @@ public class Tlr1_1 extends AppCompatActivity {
                         if(todos>= 100) {
                             //nivel = "Tlr2";
 
-                                Intent intent = new Intent(Tlr1_1.this, Trl2.class);
+                                Intent intent = new Intent(Tlr1_1.this, Trl3.class);
                                 startActivity(intent);
                                 Toast.makeText(Tlr1_1.this, "su porcentaje es :" + todos + "%", Toast.LENGTH_SHORT).show();
 

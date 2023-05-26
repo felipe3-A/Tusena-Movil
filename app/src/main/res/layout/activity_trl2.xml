@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:text="SI" />
                 <RadioButton
-                    android:id="@+id/rd2_p_2"
+                    android:id="@+id/rb2_p_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NO" />
