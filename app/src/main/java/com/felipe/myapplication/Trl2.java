@@ -40,20 +40,22 @@ public class Trl2 extends AppCompatActivity {
     Button btn_calcular2;
 
     public static int
-            resultados,
-            resultados1,
-            resultadop2,
-            resultadop2_2,
-            resultadop3,
-          resultadop_3,
-           resultadop4,
-         resultadop_4,
-          resultadop5,
-           resultadop_5,
-           resultadop6,
-           resultadop_6,
-          resultadop7,
-            resultadop_7,
+            resultados1_1_1,
+            resultados1_1,
+            resultado2_2,
+            resultadop2_2_2,
+            resultadop3_3,
+          resultadop_3_3_3,
+           resultadop4_4,
+         resultadop_4_4_4,
+          resultadop5_5,
+           resultadop_5_5_5,
+           resultadop6_6,
+           resultadop_6_6_6,
+          resultadop7_7,
+            resultadop_7_7,
+            resultadop8_8,
+            resultadop_8_8_8,
     todos2;
 
 
@@ -153,22 +155,20 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.rd2_p1:
 
-                        resultados= (int) (resultados+13);
-                        resultados1=resultados;
+                        resultados1_1= (int) (resultados1_1+12.5);
+                        resultados1_1_1=resultados1_1;
                         cargarP();
                         //Toast.makeText(Trl2.this, "Su porcentaje es: " + resultados, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rd_p_1:
-                        resultados= 0;
-                        resultados1=resultados;
+                        resultados1_1= 0;
+                        resultados1_1_1=resultados1_1;
                         cargarP();
                         // Toast.makeText(Trl3.this, "ghjj"+resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                 }
-
-
             }
         });
         rg2_respuestas2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -178,15 +178,15 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p2:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultado2_2 = (int)(resultado2_2 + 12.5);
+                        resultadop2_2_2 = resultado2_2;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb_p2_2:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultado2_2 =0;
+                        resultadop2_2_2 = resultado2_2;
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
@@ -205,15 +205,15 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p3:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultadop3_3 =(int)(resultadop_3_3_3 + 12.5);
+                        resultadop_3_3_3 = resultadop3_3;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb2_p3_3:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultadop3_3 =0;
+                        resultadop_3_3_3 = resultadop3_3;
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
@@ -230,15 +230,15 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p4:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultadop4_4 = (int) (resultadop4_4 + 12.5);
+                        resultadop_4_4_4 = resultadop4_4;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb2_p4_4:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultadop4_4 = 0;
+                        resultadop_4_4_4 = resultadop4_4;
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
@@ -258,15 +258,15 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p5:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultadop5_5 =  (resultadop5_5 + 13);
+                        resultadop_5_5_5 = resultadop5_5;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb2_p5_5:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultadop5_5 =  0;
+                        resultadop_5_5_5 = resultadop5_5;
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
@@ -284,15 +284,15 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p6:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultadop6_6 = (int) (resultadop6_6 + 13);
+                        resultadop_6_6_6 = resultadop6_6;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb2_p6_6:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultadop6_6 = 0;
+                        resultadop_6_6_6 = resultadop6_6;
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
@@ -310,23 +310,20 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p7:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultadop7_7 =(resultadop7_7 + 13);
+                        resultadop_7_7 = resultadop7_7;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb2_p7_7:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultadop7_7 = 0;
+                        resultadop_7_7 = resultadop7_7;
+
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
-
-
                 }
-
-
             }
         });
 
@@ -336,15 +333,15 @@ public class Trl2 extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.rb2_p8:
 
-                        resultadop2 = (int) (resultadop2 + 13);
-                        resultadop2_2 = resultadop2;
+                        resultadop8_8 =  (resultadop8_8 + 13);
+                        resultadop_8_8_8 = resultadop8_8;
                         cargarP();
                         //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.rb2_p8_8:
-                        resultadop2 = 0;
-                        resultadop2_2 = resultadop2;
+                        resultadop8_8 = 0;
+                        resultadop_8_8_8 = resultadop8_8;
                         cargarP();
                         //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                         break;
@@ -360,14 +357,14 @@ public class Trl2 extends AppCompatActivity {
         btn_calcular2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                todos2=resultados+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
+                todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
 
                 if(todos2>= 100) {
-                    //nivel = "Tlr2";
+                    nivel = "Tlr2";
 
                     Intent intent = new Intent(Trl2.this, Trl3.class);
                     startActivity(intent);
-                    Toast.makeText(Trl2.this, "Muy Bien, Sigues al siguiente nivel", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Trl2.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos2 + "%" ,Toast.LENGTH_SHORT).show();
 
                 }
                 else{

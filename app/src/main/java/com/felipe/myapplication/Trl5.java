@@ -34,22 +34,22 @@ public class Trl5 extends AppCompatActivity {
     RadioButton rd5_p1, rd5_p_1,rd5_p2, rd5_p2_2,rd5_p3, rb5_p_3,rb5_p4, rb5_p4_4,rb5_p5, rb5_p5_5,rb5_p6, rb5_p6_6,rb5_p7, rb5_p7_7,rb5_p8, rb5_p7_8;
 
     public static int
-            resultado,
-            resultado1,
-            resultadop2,
-            resultadop2_2,
-            resultadop3,
-            resultadop_3,
-            resultadop4,
-            resultadop_4,
-            resultadop5,
-            resultadop_5,
-            resultadop6,
-            resultadop_6,
-            resultadop7,
-            resultadop_7,
-            resultadop8,
-            resultadop_8,
+            resultadot5_1,
+            resultado5_1_1,
+            resultado5_2,
+            resultado5_2_2,
+            resultado5_3,
+            resultado5_3_3,
+            resultado5_4,
+            resultado5_4_4,
+            resultado5_5,
+            resultado5_5_5,
+            resultado5_6,
+            resultado5_6_6,
+            resultado5_7,
+            resultado5_7_7,
+            resultado5_8,
+            resultado5_8_8,
             todos5;
     public static List<Preguntas> list = new ArrayList<>();
 
@@ -102,13 +102,9 @@ public class Trl5 extends AppCompatActivity {
         rb5_p8 = findViewById(R.id.rb5_p8);
         rb5_p7_8 = findViewById(R.id.rb5_p_8);
 
-
-
         cargarP();
 
     }
-
-
     public void cargarP() {
 
         database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
@@ -140,16 +136,16 @@ public class Trl5 extends AppCompatActivity {
                         switch (i){
                             case R.id.rd5_p1:
 
-                                resultado= (int) (resultado+13);
-                                resultado1=resultado;
+                                resultadot5_1= (int) (resultadot5_1+22);
+                                resultado5_1_1=resultadot5_1;
                                 //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                                 // Toast.makeText(Trl3.this, "Su porcentaje es: "+resultado , Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rd5_p_1:
-                                resultado= 0;
-                                resultado1=resultado;
+                                resultadot5_1= 0;
+                                resultado5_1_1=resultadot5_1;
                                 cargarP();
                                 // Toast.makeText(Trl3.this, "ghjj"+resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -166,21 +162,18 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p2:
 
-                                resultadop2 = (int) (resultadop2 + 13);
-                                resultadop2_2 = resultadop2;
-                                //txtresultado.setText("sus puntos" + puntos);
+                                resultado5_2 = (int) (resultado5_2 + 13);
+                                resultado5_2_2 = resultado5_2;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_2:
-                                resultadop2 = 0;
-                                resultadop2_2 = resultadop2;
+                                resultado5_2 = 0;
+                                resultado5_2_2 = resultado5_2;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
-
-
                         }
                     }
                 });
@@ -191,16 +184,15 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p3:
 
-                                resultadop3 = (int) (resultadop3 + 15);
-                                resultadop_3 = resultadop3;
-                                //txtresultado.setText("sus puntos" + puntos);
+                                resultado5_3 = (int) (resultado5_3 + 13);
+                                resultado5_3_3 = resultado5_3;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_3:
-                                resultadop3 = 0;
-                                resultadop_3 = resultadop3;
+                                resultado5_3 = 0;
+                                resultado5_3_3 = resultado5_3;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -216,20 +208,19 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p4:
 
-                                resultadop4 = (int) (resultadop4 + 15);
-                                resultadop_4 = resultadop4;
-                                //txtresultado.setText("sus puntos" + puntos);
+                                resultado5_4 = (int) (resultado5_4 + 13);
+                                resultado5_4_4 = resultado5_4;
+
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_4:
-                                resultadop4 = 0;
-                                resultadop_4 = resultadop4;
+                                resultado5_4 = 0;
+                                resultado5_4_4 = resultado5_4;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
-
 
                         }
 
@@ -242,16 +233,15 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p5:
 
-                                resultadop5 = (int) (resultadop5 + 15);
-                                resultadop_5 = resultadop5;
-                                //txtresultado.setText("sus puntos" + puntos);
+                                resultado5_5 =(resultado5_5 + 13);
+                                resultado5_5_5 = resultado5_5;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_5:
-                                resultadop5 = 0;
-                                resultadop_5 = resultadop5;
+                                resultado5_5 =0;
+                                resultado5_5_5 = resultado5_5;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -267,24 +257,19 @@ public class Trl5 extends AppCompatActivity {
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
                         switch (i) {
                             case R.id.rb5_p6:
-
-                                resultadop6 = (int) (resultadop6 + 15);
-                                resultadop_6 = resultadop6;
-                                //txtresultado.setText("sus puntos" + puntos);
+                                resultado5_6 =(resultado5_6 + 13);
+                                resultado5_6_6 = resultado5_6;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_6:
-                                resultadop6 = 0;
-                                resultadop_6 = resultadop6;
+                                resultado5_6 = 0;
+                                resultado5_6_6 = resultado5_6;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
-
-
                         }
-
                     }
                 });
 
@@ -294,16 +279,16 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p7:
 
-                                resultadop7 = (int) (resultadop7 + 15);
-                                resultadop_7 = resultadop7;
+                                resultado5_7 = (resultado5_7 + 13);
+                                resultado5_7_7 = resultado5_7;
                                 //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_7:
-                                resultadop7 = 0;
-                                resultadop_7 = resultadop7;
+                                resultado5_7 = 0;
+                                resultado5_7_7 = resultado5_7;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -317,16 +302,15 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p8:
 
-                                resultadop8 = (int) (resultadop8 + 15);
-                                resultadop_8 = resultadop8;
-                                //txtresultado.setText("sus puntos" + puntos);
+                                resultado5_8 =(resultado5_8 + 13);
+                                resultado5_8_8 = resultado5_8;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb5_p_8:
-                                resultadop8 = 0;
-                                resultadop_8 = resultadop8;
+                                resultado5_8 =0;
+                                resultado5_8_8 = resultado5_8;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -337,23 +321,22 @@ public class Trl5 extends AppCompatActivity {
                 btn_calcular5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        todos5=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop_7;
+                        todos5=resultadot5_1+resultado5_2+resultado5_3+resultado5_4+resultado5_5+resultado5_6+resultado5_7;
 
 
                         if(todos5>= 100) {
-                            //nivel = "Tlr2";
+                            //nivel = "Tlr5";
 
                             Intent intent = new Intent(Trl5.this, Trl6.class);
                             startActivity(intent);
-                            Toast.makeText(Trl5.this, "su porcentaje es :" + todos5 + "%", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Trl5.this, "Muy Bien, Sigues al siguiente nivel" + " " +  todos5, Toast.LENGTH_SHORT).show();
 
                         }
                         else{
                             nivel = "Tlr5";
                             Intent intent = new Intent(Trl5.this, Error_Trl.class);
                             startActivity(intent);
-                            Toast.makeText(Trl5.this, "s" +
-                                    "us resultados "+ todos5 +"%", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Trl5.this, "sus resultados "+ todos5 +"%", Toast.LENGTH_SHORT).show();
                         }
 
 
