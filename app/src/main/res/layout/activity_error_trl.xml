@@ -8,13 +8,20 @@
     android:orientation="vertical"
     tools:context=".Error_Trl">
 <TextView
+    android:background="@color/color_boton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+    android:padding="5dp"
+    android:textColor="@color/white"
+        android:textSize="30sp"
         android:id="@+id/resultado"/>
 
     <TextView
+        android:background="@color/color_boton_omitir"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
         android:id="@+id/resultado_trl"/>
 
 </LinearLayout>

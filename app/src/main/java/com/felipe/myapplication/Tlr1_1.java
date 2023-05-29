@@ -25,6 +25,7 @@ import java.util.List;
 public class Tlr1_1 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myref;
+
   public static String nivel;
     Button btn_calcular;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7;
@@ -301,7 +302,7 @@ public class Tlr1_1 extends AppCompatActivity {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
 
                         if(todos>= 100) {
-                            nivel = "Tlr1";
+
 
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);

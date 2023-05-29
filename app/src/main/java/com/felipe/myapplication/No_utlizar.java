@@ -35,7 +35,7 @@ public class No_utlizar extends AppCompatActivity {
         //Almacena los datos
         ArrayList<Preguntas> almacenapreguntas =new ArrayList<>();
 
-        myref.child("Preguntas").orderByChild("nivel").equalTo(Tlr1_1.nivel).addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
+        myref.child("Preguntas").orderByChild("nivel").equalTo("").addValueEventListener(new ValueEventListener() {//* Select *from Preguntas
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //Crear un cico para que recorra cda uno de los datos almacenados

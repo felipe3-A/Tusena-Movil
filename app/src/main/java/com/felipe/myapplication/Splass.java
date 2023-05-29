@@ -18,13 +18,12 @@ public class Splass extends AppCompatActivity {
         TimerTask tarea=new TimerTask() {
             @Override
             public void run() {
-                Intent intent=new Intent(Splass.this, Login.class);
-
+                Intent intent=new Intent(Splass.this, Tlr1_1.class);
                 startActivity(intent);
                 finish();
             }
         };
         Timer timer=new Timer();
-        timer.schedule(tarea,2000);
+        timer.schedule(tarea,1000);
     }
 }
