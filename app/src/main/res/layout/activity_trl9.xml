@@ -63,7 +63,7 @@
                 android:background="@color/color_boton" />
 
             <RadioGroup
-                android:id="@+id/rd9_repuesta3"
+                android:id="@+id/rd9_respuesta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">

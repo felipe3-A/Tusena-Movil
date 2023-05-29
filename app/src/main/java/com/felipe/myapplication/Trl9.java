@@ -3,11 +3,14 @@ package com.felipe.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Trl9 extends AppCompatActivity {
+
     public static List<Preguntas> list = new ArrayList<>();
 
     FirebaseDatabase database;
@@ -28,9 +32,25 @@ public class Trl9 extends AppCompatActivity {
     Button btn_calcular9;
     TextView txt_trl9p1, txt_trl9p2, txt_trl9p3, txt_trl9p4, txt_trl9p5, txt_trl9p6, txt_trl9p7;
 
-    RadioGroup rg4_respuestas1, rg4_respuestas2, rg4_respuestas3, rg4_respuestas4, rg4_respuestas5, rg4_respuestas6, rg4_respuestas7;
-    RadioButton rd4_p1, rd4_p_1, rd4_p2, rd4_p2_2, rd4_p3, rb4_p_3, rb4_p4, rb4_p4_4, rb4_p5, rb4_p5_5, rb4_p6;
+    RadioGroup rg9_respuestas1, rg9_respuestas2, rg9_respuestas3, rg9_respuestas4, rg9_respuestas5, rg9_respuestas6, rg9_respuestas7;
+    RadioButton rd9_p1, rd9_p_1, rd9_p2, rd9_p2_2, rd9_p3, rb9_p_3, rb9_p4, rb9_p4_4, rb9_p5, rb9_p5_5, rb9_p6,rb9_p6_6,rb9_p7,rb9_p7_7;
+    public static int
+            resultado9_1,
+            resultado9_1_1,
+            resultado9_2,
+            resultado9_2_2,
+            resultado9_3,
+            resultado9_3_3,
+            resultado9_4,
+            resultado9_4_4,
+            resultado9_5,
+            resultado9_5_5,
+            resultado9_6,
+            resultado9_6_6,
+            resultado9_7,
+            resultado9_7_7,
 
+            todos9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +66,35 @@ public class Trl9 extends AppCompatActivity {
 
         btn_calcular9 = findViewById(R.id.btn_calcular9);
         cargarP();
+
+        rg9_respuestas1 = findViewById(R.id.rg9_respuestas1);
+        rd9_p1 = findViewById(R.id.rd9_p1);
+        rd9_p_1 = findViewById(R.id.rd9_p_1);
+
+        rg9_respuestas2 = findViewById(R.id.rd9_respuesta2);
+        rd9_p2 = findViewById(R.id.rb9_p2);
+        rd9_p2_2 = findViewById(R.id.rb9_p_2);
+
+        rg9_respuestas3 = findViewById(R.id.rg9_respuestas3);
+        rd9_p3 = findViewById(R.id.rb9_p3);
+        rb9_p_3 = findViewById(R.id.rb9_p_3);
+
+        rg9_respuestas4 = findViewById(R.id.rg9_respuestas4);
+        rb9_p4 = findViewById(R.id.rb9_p4);
+        rb9_p4_4 = findViewById(R.id.rb9_p_4);
+
+        rg9_respuestas5 = findViewById(R.id.rg9_respuestas5);
+        rb9_p5 = findViewById(R.id.rb9_p5);
+        rb9_p5_5 = findViewById(R.id.rb9_p_5);
+
+        rg9_respuestas6 = findViewById(R.id.rg9_respuestas6);
+        rb9_p6 = findViewById(R.id.rb9_p6);
+        rb9_p6_6 = findViewById(R.id.rb9_p_6);
+
+        rg9_respuestas7 = findViewById(R.id.rg9_respuestas7);
+        rb9_p7 = findViewById(R.id.rb9_p7);
+        rb9_p7_7 = findViewById(R.id.rb9_p_7);
+
     }
     public void cargarP() {
 
@@ -67,6 +116,202 @@ public class Trl9 extends AppCompatActivity {
                 txt_trl9p5.setText(list.get(4).getPregunta());
                 txt_trl9p6.setText(list.get(5).getPregunta());
                 txt_trl9p7.setText(list.get(6).getPregunta());
+
+                rg9_respuestas1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i){
+                            case R.id.rd9_p1:
+
+                                resultado9_1= (resultado9_1+15);
+                                resultado9_1_1=resultado9_1;
+                                cargarP();
+                                // Toast.makeText(Trl3.this, "Su porcentaje es: "+resultado , Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb9_p_2:
+                                resultado9_1=0;
+                                resultado9_1_1=resultado9_1;
+                                cargarP();
+                                // Toast.makeText(Trl3.this, "ghjj"+resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                        }
+
+                    }
+                });
+
+
+                rg9_respuestas2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i) {
+                            case R.id.rb9_p2:
+
+                                resultado9_2 = (resultado9_2 + 15);
+                                resultado9_2_2 = resultado9_2;
+                                //txtresultado.setText("sus puntos" + puntos);
+                                cargarP();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb9_p_2:
+                                resultado9_2 = 0;
+                                resultado9_2_2 = resultado9_2;
+                                cargarP();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+
+                        }
+                    }
+                });
+
+                rg9_respuestas3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i) {
+                            case R.id.rb4_p3:
+
+                                resultado9_3 = (resultado9_3 + 15);
+                                resultado9_3_3 = resultado9_3;
+                                //txtresultado.setText("sus puntos" + puntos);
+                                cargarP();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb4_p_3:
+                                resultado9_3 = 0;
+                                resultado9_3_3 = resultado9_3;
+                                cargarP();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+
+                        }
+
+                    }
+                });
+                rg9_respuestas4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i) {
+                            case R.id.rb9_p4:
+
+                                resultado9_4 = (resultado9_4 + 15);
+                                resultado9_4_4 = resultado9_4;
+                                cargarP();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb9_p_4:
+                                resultado9_4 = 0;
+                                resultado9_4_4 = resultado9_4;
+                                cargarP();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+
+                        }
+
+                    }
+                });
+
+                rg9_respuestas5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i) {
+                            case R.id.rb9_p5:
+
+                                resultado9_5 = (int) (resultado9_5 + 15);
+                                resultado9_5_5 = resultado9_5;
+                                cargarP();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb9_p_5:
+                                resultado9_5 =0;
+                                resultado9_5_5 = resultado9_5;
+                                cargarP();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+
+                        }
+
+                    }
+                });
+
+                rg9_respuestas6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i) {
+                            case R.id.rb9_p6:
+
+                                resultado9_6 =  (resultado9_6 + 15);
+                                resultado9_6_6 = resultado9_6;
+                                cargarP();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb9_p_6:
+                                resultado9_6 =0;
+                                resultado9_6_6 = resultado9_6;
+                                cargarP();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+
+                    }
+                });
+
+                rg9_respuestas7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        switch (i) {
+                            case R.id.rb9_p7:
+
+                                resultado9_7 = (resultado9_7 +25);
+                                resultado9_7_7 = resultado9_7;
+                                //txtresultado.setText("sus puntos" + puntos);
+                                cargarP();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.rb9_p_7:
+                                resultado9_7 =0;
+                                resultado9_7_7 = resultado9_7;
+                                cargarP();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+
+                    }
+                });
+
+                btn_calcular9.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        todos9=resultado9_1+resultado9_2+resultado9_3+resultado9_5+resultado9_6+resultado9_7;
+
+
+                        if(todos9>= 100) {
+                            //nivel = "Tlr4";
+
+                            Intent intent = new Intent(Trl9.this, Error_Trl.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl9.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos9 + "%" ,Toast.LENGTH_SHORT).show();
+
+                        }
+                        else{
+                            nivel = "Tlr9";
+                            Intent intent = new Intent(Trl9.this, Error_Trl.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl9.this, "sus resultados "+ todos9 +"%", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
 
             }
 
