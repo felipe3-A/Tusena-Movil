@@ -63,7 +63,7 @@
                 android:background="@color/color_boton" />
 
             <RadioGroup
-                android:id="@+id/rd8_repuesta3"
+                android:id="@+id/rd8_repuesta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -211,6 +211,7 @@
                     android:text="NO" />
 
             </RadioGroup>
+
 
             <Button
                 android:id="@+id/btn_calcular8"

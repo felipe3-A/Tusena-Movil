@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:text="SI" />
                 <RadioButton
-                    android:id="@+id/rd6_p_1"
+                    android:id="@+id/rd7_p_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NO" />
@@ -63,7 +63,7 @@
                 android:background="@color/color_boton" />
 
             <RadioGroup
-                android:id="@+id/rd7_repuesta3"
+                android:id="@+id/rd7_repuesta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
