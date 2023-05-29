@@ -31,7 +31,7 @@ public class Trl5 extends AppCompatActivity {
     Button btn_calcular5;
     TextView txt_trl5p1, txt_trl5p2, txt_trl5p3, txt_trl5p4, txt_trl5p5, txt_trl5p6, txt_trl5p7,txt_trl5p8;
     RadioGroup rg5_respuestas1,rg5_respuestas2,rg5_respuestas3,rg5_respuestas4,rg5_respuestas5,rg5_respuestas6,rg5_respuestas7,rg5_respuestas8;
-    RadioButton rd5_p1, rd5_p_1,rd5_p2, rd5_p2_2,rd5_p3, rb5_p_3,rb5_p4, rb5_p4_4,rb5_p5, rb5_p5_5,rb5_p6, rb5_p6_6,rb5_p7, rb5_p7_7,rb5_p8, rb5_p7_8;
+    RadioButton rd5_p1, rd5_p_1,rd5_p2, rd5_p2_2,rd5_p3, rb5_p_3,rb5_p4, rb5_p4_4,rb5_p5, rb5_p5_5,rb5_p6, rb5_p6_6,rb5_p7, rb5_p7_7,rb5_p8, rb5_p8_8;
 
     public static int
             resultadot5_1,
@@ -100,7 +100,7 @@ public class Trl5 extends AppCompatActivity {
 
         rg5_respuestas8 = findViewById(R.id.rg5_respuestas8);
         rb5_p8 = findViewById(R.id.rb5_p8);
-        rb5_p7_8 = findViewById(R.id.rb5_p_8);
+        rb5_p8_8 = findViewById(R.id.rb5_p_8);
 
         cargarP();
 
@@ -136,7 +136,7 @@ public class Trl5 extends AppCompatActivity {
                         switch (i){
                             case R.id.rd5_p1:
 
-                                resultadot5_1= (int) (resultadot5_1+22);
+                                resultadot5_1= (int) (resultadot5_1+12.5);
                                 resultado5_1_1=resultadot5_1;
                                 //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
@@ -162,7 +162,7 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p2:
 
-                                resultado5_2 = (int) (resultado5_2 + 13);
+                                resultado5_2 = (int) (resultado5_2 + 12.5);
                                 resultado5_2_2 = resultado5_2;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
@@ -184,7 +184,7 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p3:
 
-                                resultado5_3 = (int) (resultado5_3 + 13);
+                                resultado5_3 = (int) (resultado5_3 + 12.5);
                                 resultado5_3_3 = resultado5_3;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
@@ -208,7 +208,7 @@ public class Trl5 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb5_p4:
 
-                                resultado5_4 = (int) (resultado5_4 + 13);
+                                resultado5_4 = (int) (resultado5_4 + 12.5);
                                 resultado5_4_4 = resultado5_4;
 
                                 cargarP();
@@ -321,7 +321,7 @@ public class Trl5 extends AppCompatActivity {
                 btn_calcular5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        todos5=resultadot5_1+resultado5_2+resultado5_3+resultado5_4+resultado5_5+resultado5_6+resultado5_7;
+                        todos5=resultadot5_1+resultado5_2+resultado5_3+resultado5_4+resultado5_5+resultado5_6+resultado5_7+resultado5_8;
 
 
                         if(todos5>= 100) {
