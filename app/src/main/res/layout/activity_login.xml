@@ -11,126 +11,124 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">
-   <ScrollView
-       android:layout_width="match_parent"
-       android:layout_gravity="center"
-       android:layout_height="match_parent">
 
-       <androidx.cardview.widget.CardView
-           android:layout_width="370dp"
-           android:layout_marginTop="70dp"
-           android:layout_marginStart="19dp"
-           android:layout_height="match_parent"
-           app:cardCornerRadius="30dp">
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
 
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="480dp"
-              android:orientation="vertical">
+         <androidx.cardview.widget.CardView
+             android:layout_width="370dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"
+             app:cardCornerRadius="30dp">
 
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="70dp"
-                 android:animationCache="false"
-                 android:background="@drawable/img_5"
-                 android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="30sp"
-                    android:layout_marginTop="10dp"
-                    android:text="Login"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-             </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="70dp"
+                   android:animationCache="false"
+                   android:background="#00324D"
+                   android:orientation="horizontal">
 
-             <com.google.android.material.textfield.TextInputLayout
-                 android:layout_width="350dp"
-                 android:layout_height="wrap_content"
-                 android:layout_gravity="center"
-                 android:backgroundTint="@color/color_boton_omitir"
-                 android:id="@+id/usuario"
-                 app:endIconMode="clear_text"
-                 android:hint="Usuario"
-                 app:startIconDrawable="@drawable/baseline_person_24"
-                 app:boxCornerRadiusBottomEnd="50px"
-                 app:boxCornerRadiusBottomStart="50px"
-                 android:layout_marginTop="20dp"
-                 android:inputType="text"
-                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginStart="30sp"
+                      android:layout_marginTop="10dp"
+                      android:text="Login"
+                      android:textColor="@color/white"
+                      android:textSize="25sp"
+                      android:textStyle="bold" />
+               </LinearLayout>
 
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    />
-
-             </com.google.android.material.textfield.TextInputLayout>
-
-             <com.google.android.material.textfield.TextInputLayout
-                 android:layout_width="350dp"
-                 android:layout_height="wrap_content"
-                 android:layout_gravity="center"
-                 app:startIconDrawable="@drawable/baseline_password_24"
-                 app:boxCornerRadiusBottomEnd="50px"
-                 app:boxCornerRadiusBottomStart="50px"
-                 app:endIconMode="clear_text"
-                 android:backgroundTint="@color/color_boton_omitir"
-                 android:id="@+id/password_login"
-                 android:hint="Contraseña"
-                 app:passwordToggleEnabled = "true"
-                 android:layout_marginTop="35dp"
-                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
-             </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/usuario"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                   android:layout_width="350dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="20dp"
+                   android:backgroundTint="@color/color_boton_omitir"
+                   android:hint="Usuario"
+                   android:inputType="text"
+                   app:boxCornerRadiusBottomEnd="50px"
+                   app:boxCornerRadiusBottomStart="50px"
+                   app:endIconMode="clear_text"
+                   app:startIconDrawable="@drawable/baseline_person_24">
 
 
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="number" />
 
-             <Button
-                 android:id="@+id/login_btn"
-                 android:layout_width="150dp"
-                 android:layout_height="60dp"
-                 android:layout_gravity="center"
-                 android:onClick="Menu"
-                 android:text="Login"
-                 android:textSize="20dp"
-                 android:backgroundTint="@color/color_boton"
-                 app:cornerRadius="10dp"
-                 android:layout_marginTop="30dp"
-                 />
+               </com.google.android.material.textfield.TextInputLayout>
 
-             <LinearLayout
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:orientation="horizontal"
-                 android:layout_gravity="center"
-                 android:layout_marginTop="40dp">
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/password_login"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                   android:layout_width="350dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="35dp"
+                   android:backgroundTint="@color/color_boton_omitir"
+                   android:hint="Contraseña"
+                   app:boxCornerRadiusBottomEnd="50px"
+                   app:boxCornerRadiusBottomStart="50px"
+                   app:endIconMode="clear_text"
+                   app:passwordToggleEnabled="true"
+                   app:startIconDrawable="@drawable/baseline_password_24">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/no_tienes_cuenta" />
-                <TextView
-                    android:id="@+id/registrarse_ahora"
-                    android:layout_marginStart="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/registrarse_ahora"
-                    android:textStyle="bold" />
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textPassword" />
+               </com.google.android.material.textfield.TextInputLayout>
 
-             </LinearLayout>
 
-          </LinearLayout>
-       </androidx.cardview.widget.CardView>
+               <Button
+                   android:id="@+id/login_btn"
+                   android:layout_width="150dp"
+                   android:layout_height="60dp"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="30dp"
+                   android:backgroundTint="@color/color_boton"
+                   android:onClick="Menu"
+                   android:text="Login"
+                   android:textSize="20dp"
+                   app:cornerRadius="10dp" />
 
-   </ScrollView>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="40dp"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/no_tienes_cuenta" />
+
+                  <TextView
+                      android:id="@+id/registrarse_ahora"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:text="@string/registrarse_ahora"
+                      android:textStyle="bold" />
+
+               </LinearLayout>
+
+            </LinearLayout>
+         </androidx.cardview.widget.CardView>
+
+      </ScrollView>
    </LinearLayout>
 </LinearLayout>
