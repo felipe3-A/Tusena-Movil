@@ -360,7 +360,6 @@ public class Trl2 extends AppCompatActivity {
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
 
                 if(todos2>= 100) {
-                    nivel = "Tlr2";
 
                     Intent intent = new Intent(Trl2.this, Trl3.class);
                     startActivity(intent);
@@ -368,7 +367,7 @@ public class Trl2 extends AppCompatActivity {
 
                 }
                 else{
-                    nivel = "Tlr2";
+                    nivel="Trl2";
                     Intent intent = new Intent(Trl2.this, Error_Trl.class);
                     startActivity(intent);
                     Toast.makeText(Trl2.this, "sus resultados "+ todos2 +"%", Toast.LENGTH_SHORT).show();

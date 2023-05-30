@@ -41,6 +41,7 @@ public class Login extends AppCompatActivity {
                 final  String textTxt = usuario.getEditText().getText().toString();
                 final  String passwordTxt = password.getEditText().getText().toString();
 
+
                 if(textTxt.isEmpty() || passwordTxt.isEmpty()){
                     Toast.makeText(Login.this,"Por favor ingrese con su usuario o contraseña", Toast.LENGTH_SHORT).show();
 
@@ -57,11 +58,11 @@ public class Login extends AppCompatActivity {
 
 
                                 if (getPassword.equals(passwordTxt)) {
-                                    Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Login.this, "Inicio sesión con éxito", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(Login.this,Menu_Principal.class));
                                     finish();
                                 } else {
-                                    Toast.makeText(Login.this, "contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Login.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
                                 }
                             }
                             else{

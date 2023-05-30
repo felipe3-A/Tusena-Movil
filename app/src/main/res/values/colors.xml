@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#00A500</color>
-    <color name="purple_700">#006A00</color>
-    <color name="teal_200">#4CAF50</color>
-    <color name="teal_700">#4CAF50</color>
+    <color name="cajas_boton">#1E2860</color>
+    <color name="purple_700">#0B395E</color>
+    //Color del radiobuton
+    <color name="teal_200">#3F51B5</color>
+
+    <color name="teal_700">#79C829</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="color_boton">#018104</color>
+
+    <color name="color_boton">#1A2B8B</color>
     <color name="color_boton_omitir">#004703</color>
 
 
