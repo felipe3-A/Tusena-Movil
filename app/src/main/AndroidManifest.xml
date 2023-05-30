@@ -74,10 +74,7 @@
             android:name=".Trl3"
             android:exported="true"
             android:theme="@style/Sin_Header" />
-        <activity
-            android:name=".Trl3"
-            android:exported="true"
-            android:theme="@style/Sin_Header" />
+
         <activity
             android:name=".No_utlizar"
             android:exported="false" />

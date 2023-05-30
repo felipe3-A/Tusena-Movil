@@ -271,7 +271,7 @@ public class Trl9 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb9_p7:
 
-                                resultado9_7 = (resultado9_7 +25);
+                                resultado9_7 = (resultado9_7 +10);
                                 resultado9_7_7 = resultado9_7;
                                 //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
