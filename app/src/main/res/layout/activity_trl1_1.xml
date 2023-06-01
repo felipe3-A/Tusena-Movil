@@ -95,6 +95,12 @@
                         android:layout_height="wrap_content"
                         android:text="SI" />
 
+<<<<<<< HEAD
+            //===============================
+
+            <TextView
+                android:id="@+id/txt_trl1p2"
+=======
                     <RadioButton
                         android:id="@+id/rb_p2_2"
                         android:layout_width="wrap_content"
@@ -106,6 +112,7 @@
             </LinearLayout>
 
             <LinearLayout
+>>>>>>> 9c811fb6627df005e3b7c8ebe5939ca897b8120b
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"

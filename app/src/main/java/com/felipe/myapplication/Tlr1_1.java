@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Tlr1_1 extends AppCompatActivity {
     FirebaseDatabase database;
@@ -96,6 +97,17 @@ public class Tlr1_1 extends AppCompatActivity {
 
 
         cargarP();
+
+
+    }
+
+    private void cargarResultados() {
+        Resultados resultados = new Resultados();
+
+        resultados.setId(UUID.randomUUID().toString());
+        resultados.setPorcentaje(todos);
+
+        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
 
     }
 
@@ -300,12 +312,16 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
-
+                        cargarResultados();
                         if(todos>= 100) {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 9c811fb6627df005e3b7c8ebe5939ca897b8120b
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
+
                                 Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos + "%" ,Toast.LENGTH_SHORT).show();
 
                         }
@@ -320,6 +336,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
                     }
                 });
+
 
             }
 

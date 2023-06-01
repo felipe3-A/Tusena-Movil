@@ -24,6 +24,21 @@ public class Error_Trl extends AppCompatActivity {
 
         respuestas.setText("Su porcentaje es  : " + Tlr1_1.todos + "%");
         respuestas_trl.setText("Su Nivel es : "+Tlr1_1.nivel);
+<<<<<<< HEAD
+
+
+
+        respuestas.setText("Su porcentaje es  : "+Trl2.todos2 + "%");
+        respuestas_trl.setText("Su Nivel es : "+Trl2.nivel);
+
+
+        respuestas.setText("Su porcentaje es  : "+Trl3.todos3 + "%");
+        respuestas_trl.setText("Su Trl es : "+Trl3.nivel);
+
+        respuestas.setText("Su porcentaje es  : "+Trl4.todos4 + "%");
+        respuestas_trl.setText("Su Trl es : "+Trl4.nivel);
+=======
+>>>>>>> 9c811fb6627df005e3b7c8ebe5939ca897b8120b
 
 
 
