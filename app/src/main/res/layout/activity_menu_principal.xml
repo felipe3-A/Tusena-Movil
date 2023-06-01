@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Menu_Principal">
+    tools:context=".Menu_Principal"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,49 +14,59 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="100dp"
                 android:background="@drawable/bottom_rounded">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:layout_width="122dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="40dp"
-                    android:text="!Bienvenido¡"
-                    android:textColor="@color/white"
-                    android:textSize="40dp"
-                    android:textStyle="bold" />
+                    android:src="@drawable/tusena_oscuro" />
             </LinearLayout>
 
-
-
-
-            <Button
+            <SearchView
                 android:id="@+id/perfil_btn"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="49dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/boton_redondo"
-                android:textSize="20sp"
-                android:drawableLeft="@drawable/baseline_person_24"
-                android:drawablePadding="8dp"
-                android:text="Perfil" />
+                android:text="Buscador"
+                android:textSize="20sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="347dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Aqui va el contenido que ha de traer de la base de datos" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/Calculadora_btn"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="10dp"
                 android:textSize="18sp"
+                android:background="#329D9C"
                 android:layout_marginEnd="10dp"
                 android:drawableLeft="@drawable/baseline_calculate_24"
                 android:drawablePadding="8dp"
@@ -67,9 +78,9 @@
                 android:id="@+id/Cerrar"
                 android:textSize="18sp"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="9dp"
                 android:layout_marginEnd="10dp"
                 android:drawableLeft="@drawable/baseline_exit_to_app_24"
                 android:drawablePadding="8dp"
@@ -81,8 +92,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="60dp"
+                android:layout_weight="2"
                 android:background="@drawable/bottom_rounded2"
                 android:orientation="vertical"
                 android:padding="49dp">
