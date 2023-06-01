@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Menu_Principal"
+    tools:context=".Admin_Menu"
     >
 
     <ScrollView
@@ -27,6 +27,15 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:src="@drawable/tusena_oscuro" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Admin"
+                    android:textStyle="bold"
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/ic_launcher_background"
+                    android:textSize="30dp" />
             </LinearLayout>
 
             <SearchView
@@ -50,21 +59,12 @@
                 android:padding="20dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginEnd="30dp"
                     android:layout_marginStart="50dp"
                     android:orientation="horizontal">
-
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="13dp"
-                        android:layout_marginEnd="13dp"
-                        android:backgroundTint="#389c9c"
-                        app:icon="@drawable/baseline_menu_book_24"
-                        app:iconTint="@color/ic_launcher_background" />
 
                     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                         android:layout_width="wrap_content"

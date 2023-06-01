@@ -5,7 +5,6 @@
     android:id="@+id/guia1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_1"
     android:onClick="guia3"
     android:orientation="vertical"
     tools:context=".Guia1">
@@ -26,7 +25,6 @@
         android:layout_height="600dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-
-        android:src="@drawable/img_2" />
+/>
 
 </LinearLayout>

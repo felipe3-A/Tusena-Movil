@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img"
     android:orientation="vertical"
     android:id="@+id/manual1"
     tools:context=".Manual1">
@@ -21,8 +20,7 @@
     <ImageView
         android:layout_width="280dp"
         android:layout_gravity="center"
-        android:layout_height="600dp"
-        android:src="@drawable/img_6" />
+        android:layout_height="600dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"

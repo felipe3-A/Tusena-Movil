@@ -17,13 +17,6 @@ public class Menu_Principal extends AppCompatActivity {
         setContentView(R.layout.activity_menu_principal);
 
     }
-    public void calculadora(View view){
-        Intent calculadora= new Intent(this, Tlr1_1.class);
-        startActivity(calculadora);
-    }
-    public void exit(View view){
-        Intent exit= new Intent(this, Login.class);
-        startActivity(exit);
-    }
+
 
 }
