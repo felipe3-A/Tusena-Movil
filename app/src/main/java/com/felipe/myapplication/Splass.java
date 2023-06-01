@@ -18,13 +18,9 @@ public class Splass extends AppCompatActivity {
         TimerTask tarea=new TimerTask() {
             @Override
             public void run() {
-<<<<<<< HEAD
 
                 Intent intent=new Intent(Splass.this, Login.class);
 
-=======
-                Intent intent=new Intent(Splass.this, Login.class);
->>>>>>> 9c811fb6627df005e3b7c8ebe5939ca897b8120b
                 startActivity(intent);
                 finish();
             }
