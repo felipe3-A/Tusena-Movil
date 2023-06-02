@@ -1,94 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".Admin">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/registro_de_investigadores1"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:textSize="17sp"
-        android:layout_marginTop="15dp"/>
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".Admin2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/bottom_rounded">
+
+                <ImageView
+                    android:layout_width="122dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/tusena_oscuro" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Añadir Productos"
+                    android:textStyle="bold"
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/ic_launcher_background"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="560dp"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/edtx_investigador"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/investigador"
+                    android:padding="15dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtx_identificacion"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:hint="@string/identificaci_n"
+                    android:textSize="20sp" />
+
+
+                <EditText
+                    android:id="@+id/edtx_nombre_proyecto"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:hint="@string/nombre_de_proyecto"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtx_n_producto"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:hint="@string/producto"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtx_tipo_proyecto"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:hint="@string/tipo_codigo_de_proyecto_2"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtx_numeroproyecto"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:hint="@string/n_mero_del_proyecto"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_agregarinvestigador"
+                    android:layout_width="123dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="AGREGAR" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
 
-    <EditText
-        android:layout_marginTop="40dp"
-        android:id="@+id/edtx_investigador"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/investigador"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
-    <EditText
-        android:layout_marginTop="40dp"
-        android:id="@+id/edtx_identificacion"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/identificaci_n"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#205072"
+            android:orientation="vertical"
+            android:layout_marginTop="43dp"
+            android:layout_gravity="center_vertical|bottom"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/float_home_return"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#389c9c"
+                    android:layout_gravity="center_vertical|bottom"
+                    app:icon="@drawable/baseline_home_24"
+                    app:iconTint="@color/ic_launcher_background" />
+            </LinearLayout>
+
+        </LinearLayout>
 
 
-    <EditText
-        android:layout_marginTop="40dp"
-        android:id="@+id/edtx_nombre_proyecto"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/nombre_de_proyecto"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
-
-    <EditText
-        android:layout_marginTop="40dp"
-        android:id="@+id/edtx_n_producto"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/producto"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
-    <EditText
-        android:layout_marginTop="40dp"
-        android:id="@+id/edtx_tipo_proyecto"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/tipo_codigo_de_proyecto_2"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
-    <EditText
-        android:layout_marginTop="40dp"
-        android:id="@+id/edtx_numeroproyecto"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/n_mero_del_proyecto"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/btn_agregarinvestigador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AGREGAR"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        />
-
-</LinearLayout>
-
+    </LinearLayout>
 </ScrollView>
 
-
-</LinearLayout>

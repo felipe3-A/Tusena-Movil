@@ -1,9 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Vista_Trls">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bottom_rounded">
+
+            <ImageView
+                android:layout_width="122dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tusena_oscuro" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="605dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="9dp">
+
+        <Button
+            android:id="@+id/ir_a_trl1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/boton_redondo2"
+            android:text="Trl1"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorLink="#00BCD4"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl3" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl4" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl4" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple_700"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="Trl6" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl7" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:backgroundTint="@color/purple_700"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="Trl8" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl9" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_vertical|bottom"
+        android:background="#205072"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|bottom"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/baseline_home_24"
+                android:onClick="home"
+                app:iconTint="@color/ic_launcher_background" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

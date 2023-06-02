@@ -20,7 +20,7 @@
 
                 <LinearLayout
                     android:layout_width="400dp"
-                    android:layout_height="600dp"
+                    android:layout_height="650dp"
                     android:orientation="vertical"
                     >
 
@@ -37,7 +37,7 @@
                             android:layout_marginStart="30sp"
                             android:layout_marginTop="3dp"
                             android:text="Registrarse"
-                            android:textColor="@color/white"
+                            android:textColor="@color/ic_launcher_background"
                             android:textSize="20sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -129,7 +129,6 @@
                         android:layout_height="65dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        app:endIconMode="clear_text"
                         android:backgroundTint="@color/color_boton_omitir"
                         android:hint="@string/password"
                         app:passwordToggleEnabled = "true"
@@ -147,10 +146,9 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:id="@+id/txt_cpassword"
                         android:layout_width="350dp"
-                        app:passwordToggleEnabled = "true"
+                        app:passwordToggleEnabled="true"
                         android:layout_height="65dp"
                         android:layout_gravity="center"
-                        app:endIconMode="clear_text"
                         android:layout_marginTop="10dp"
                         android:backgroundTint="@color/color_boton_omitir"
                         android:hint="@string/cpassword"
@@ -172,6 +170,7 @@
                         android:layout_marginTop="10dp"
                         android:backgroundTint="#205072"
                         android:onClick="login"
+                        android:textColor="@color/ic_launcher_background"
                         android:text="@string/registrarse"
                         android:textSize="15dp"
                         app:cornerRadius="10dp"

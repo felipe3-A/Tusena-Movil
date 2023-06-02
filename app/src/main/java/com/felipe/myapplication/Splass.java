@@ -21,22 +21,15 @@ MediaPlayer mediaPlayer;
 
         view=findViewById(R.id.video);
         //Direciones
-        view.setVideoPath("android.resource://" + getPackageName() + "/"+R.raw.logotusena);
+        view.setVideoPath("android.resource://" + getPackageName() + "/"+R.raw.tusenavideo);
         view.start();
 
         TimerTask tarea=new TimerTask() {
             @Override
             public void run() {
-<<<<<<< HEAD
-                Intent intent=new Intent(Splass.this, Menu_Principal.class);
-=======
+                Intent intent=new Intent(Splass.this,
+                        Menu_Principal.class);
 
-                Intent intent=new Intent(Splass.this, Login.class);
-
-
-
-
->>>>>>> 0e6b41b7a8a8eea12a7126c163766a3226cb98b5
                 startActivity(intent);
                 finish();
             }

@@ -54,12 +54,6 @@
 
 
 
-
-<!--Stylos par el screem-->
-    <style name="SplasTheme" parent="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowBackground">@drawable/inicio</item>
-        
-    </style>
     <style name="fondo" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/fondos</item>
     </style>

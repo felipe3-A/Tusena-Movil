@@ -26,7 +26,8 @@ import java.util.UUID;
 public class Admin extends AppCompatActivity {
     EditText edtx_pregtunta,edtx_nivel_relativo;
     Spinner sp_trl;
-    Button btn_agregar;
+    Button btn_agregar,float_home_return_2;
+
 
     FirebaseDatabase database;
     DatabaseReference myRef;
@@ -48,6 +49,13 @@ public class Admin extends AppCompatActivity {
         edtx_nivel_relativo = findViewById(R.id.edtx_nivel_relativo);
         btn_agregar = findViewById(R.id.btn_agregarp);
         sp_trl = findViewById(R.id.sp_trl);
+        float_home_return_2=findViewById(R.id.float_home_return_2);
+        float_home_return_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Admin.this,Admin_Menu.class));
+            }
+        });
 
 
         btn_agregar.setOnClickListener(new View.OnClickListener() {

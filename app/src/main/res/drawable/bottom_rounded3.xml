@@ -3,5 +3,5 @@
     <!-- Ajusta el valor según el tamaño del relleno en el lado deseado -->
     <padding android:left="10dp" /> <!-- Ajusta el valor según el tamaño del relleno en el lado deseado -->
     <solid android:color="#329D9C" /> <!-- Color de fondo -->
-    <corners android:topLeftRadius="20dp"/>  <!-- Radio del borde inferior derecho -->
+    <corners android:topRightRadius="20dp"/>  <!-- Radio del borde inferior derecho -->
 </shape>

@@ -37,44 +37,51 @@
                     android:textColor="@color/ic_launcher_background"
                     android:textSize="30dp" />
             </LinearLayout>
-
-            <SearchView
-                android:id="@+id/perfil_btn"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/redondearsearch"
-                android:text="Buscador"
-                android:textSize="20sp" />
-
+<SearchView
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content"
+    android:background="@color/ic_launcher_background"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="530dp"
                 android:background="#205072"
                 android:orientation="vertical"
-                android:layout_marginTop="520dp"
                 android:padding="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal">
 
                     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/ira_agregar_inv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="12dp"
                         android:backgroundTint="#389c9c"
-                        app:icon="@drawable/baseline_person_search_24"
+                        app:icon="@drawable/baseline_add_24"
                         app:iconTint="@color/ic_launcher_background" />
 
                     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/go_agragar_preguntas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:backgroundTint="#389c9c"
+                        app:icon="@drawable/baseline_question_mark_24"
+                        app:iconTint="@color/ic_launcher_background" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/exit_admin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="12dp"

@@ -37,7 +37,7 @@
                       android:layout_marginStart="30sp"
                       android:layout_marginTop="10dp"
                       android:text="Login"
-                      android:textColor="@color/white"
+                      android:textColor="@color/ic_launcher_background"
                       android:textSize="25sp"
                       android:textStyle="bold" />
                </LinearLayout>
@@ -95,6 +95,7 @@
                    android:backgroundTint="#205072"
                    android:onClick="Menu"
                    android:text="Login"
+                   android:textColor="@color/ic_launcher_background"
                    android:textSize="20dp"
                    app:cornerRadius="10dp" />
 

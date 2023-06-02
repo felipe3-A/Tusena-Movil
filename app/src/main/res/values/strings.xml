@@ -73,4 +73,13 @@
     <string name="trl1">Trl1</string>
 
 
+
+    <string name="i_1">El termino de Trl (Technological Readiness Level),o Niveles de preparación tecnológica, es una tecnologia que se encarga de medir o calcular en que estado de calidad esta un proyecto o un producto </string>
+    <string name="i_2">Estos conceptos son niveles que se usan para saber cual es la calidad de un producto,en total existen 9 niveles, entre mayor el numero es mejor la calidad del producto</string>
+   <string name="i_3">El metodo de calificacion de nuestra calculadora es si tu prododucto cumple con TODOS los lineamientos, inmediatamente este producto sube de nivel, en caso de que este producto no cumpla con algunos de los requisitos, el producto quedaria en el nivel que establesido</string>
+
+    <string name="p_1">¿Que es Trl1?</string>
+    <string name="p_2">¿Que significa Trl1,Trl2..?</string>
+    <string name="p_3">¿Como funciona la calculadora de TuSena?</string>
+
 </resources>

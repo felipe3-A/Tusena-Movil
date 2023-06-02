@@ -2,6 +2,7 @@ package com.felipe.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ public class Admin2 extends AppCompatActivity {
 
     EditText edtx_nombre_proyecto,edtx_investigador,edtx_identificacion,edtx_no_producto,edtx_tipo_proyecto,edtx_numeroproyecto;
 
-    Button btn_agregarinvestigador;
+    Button btn_agregarinvestigador,btn_return_home;
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -39,6 +40,14 @@ public class Admin2 extends AppCompatActivity {
         edtx_identificacion=findViewById(R.id.edtx_identificacion);
         edtx_no_producto=findViewById(R.id.edtx_n_producto);
         btn_agregarinvestigador=findViewById(R.id.btn_agregarinvestigador);
+        btn_return_home=findViewById(R.id.float_home_return);
+
+        btn_return_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Admin2.this,Admin_Menu.class));
+            }
+        });
 
         btn_agregarinvestigador.setOnClickListener(new View.OnClickListener() {
             @Override

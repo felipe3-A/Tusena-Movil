@@ -13,22 +13,23 @@
         android:layout_gravity="center"
         android:textSize="45dp"
         android:text="Su porcentaje es:"/>
-<TextView
-    android:background="@color/color_boton"
-        android:layout_width="300dp"
-       android:layout_gravity="center"
-         android:layout_height="60dp"
-      android:padding="15dp"
-      android:textColor="@color/white"
-        android:textSize="30sp"
-        android:id="@+id/resultado"/>
 
     <TextView
-        android:background="@color/color_boton_omitir"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
+        android:id="@+id/resultado"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:background="@color/color_boton"
+        android:padding="15dp"
         android:textColor="@color/white"
-        android:id="@+id/resultado_trl"/>
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/resultado_trl"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@color/color_boton_omitir"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
 </LinearLayout>
