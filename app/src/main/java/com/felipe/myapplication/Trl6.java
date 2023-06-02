@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Trl6 extends AppCompatActivity {
 
@@ -336,6 +337,7 @@ public class Trl6 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         todos6=resultado6_1+resultado6_2+resultado6_3+resultado6_4+resultado6_5+resultado6_6+resultado6_7+resultado6_8+resultado6_9+resultado6_10;
+                        cargarResultados();
 
                         if (todos6>=100){
                             Intent intent = new Intent(Trl6.this, Trl7.class);
@@ -350,6 +352,18 @@ public class Trl6 extends AppCompatActivity {
                         }
 
 
+                    }
+                    private void cargarResultados() {
+                        Resultados resultados = new Resultados();
+
+                        resultados.setId(UUID.randomUUID().toString());
+                        resultados.setInvestigador(Admin2.investigador);
+                        resultados.setProducto(Admin2.producto);
+                        resultados.setNivel(Tlr1_1.nivel);
+                        resultados.setProyecto(Admin2.proyecto);
+                        resultados.setPorcentaje(todos6);
+
+                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
                     }
                 });
 

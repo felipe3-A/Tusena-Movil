@@ -56,25 +56,12 @@
 
             </RadioGroup>
 
-<<<<<<< HEAD
 
-                    <RadioButton
-                        android:id="@+id/rb_p2_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="NO" />
 
-                </RadioGroup>
 
-            </LinearLayout>
-
-            <LinearLayout
-=======
-            //===============================
 
             <TextView
                 android:id="@+id/txt_trl1p2"
->>>>>>> 0e6b41b7a8a8eea12a7126c163766a3226cb98b5
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:padding="10dp"

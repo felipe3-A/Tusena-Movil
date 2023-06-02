@@ -69,7 +69,6 @@ public class Register extends AppCompatActivity {
 
                             if (snapshot.hasChild(numberTxt)) {
                                 Toast.makeText(Register.this, "Identificacion ya esta registrada", Toast.LENGTH_SHORT).show();
-
                             } else {
                                 //enviado datos a la bd
                                 //estamos usando el usuario como identidad única de cada persona
@@ -79,6 +78,8 @@ public class Register extends AppCompatActivity {
                                 database.child("users").child(numberTxt).child("Email").setValue(emailTxt);
                                 database.child("users").child(numberTxt).child("Identificacion").setValue(numberTxt);
                                 database.child("users").child(numberTxt).child("contraseña").setValue(passwordTxt);
+                                database.child("users").child(numberTxt).child("usuario").setValue("");
+
 
                                 Toast.makeText(Register.this, "Registro satisfactorio", Toast.LENGTH_SHORT).show();
                                 finish();

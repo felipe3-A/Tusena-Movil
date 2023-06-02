@@ -27,6 +27,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:src="@drawable/tusena_oscuro" />
+
             </LinearLayout>
 
             <SearchView
@@ -39,6 +40,25 @@
                 android:background="@drawable/redondearsearch"
                 android:text="Buscador"
                 android:textSize="20sp" />
+            <TextView
+                android:id="@+id/txt_produccto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="s" />
+            <TextView
+                android:id="@+id/txt_producctoproyecto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ssdddddddddddddddddddddddddd" />
+            <TextView
+                android:id="@+id/txt_investigador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ssdddddddddddddddddddddddddd" />
+
 
 
             <LinearLayout
@@ -56,6 +76,7 @@
                     android:layout_marginEnd="30dp"
                     android:layout_marginStart="50dp"
                     android:orientation="horizontal">
+
 
                     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                         android:layout_width="wrap_content"

@@ -11,10 +11,13 @@ import android.widget.Toast;
 
 public class Menu_Principal extends AppCompatActivity {
 
+    public static String investigador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+
+        investigador= "";
 
     }
 

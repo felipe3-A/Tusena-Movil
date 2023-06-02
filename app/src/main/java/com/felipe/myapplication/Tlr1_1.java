@@ -101,16 +101,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
     }
 
-    private void cargarResultados() {
-        Resultados resultados = new Resultados();
-
-        resultados.setId(UUID.randomUUID().toString());
-        resultados.setPorcentaje(todos);
-
-        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
-
-    }
-
 
     public void cargarP() {
 
@@ -314,10 +304,7 @@ public class Tlr1_1 extends AppCompatActivity {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
                         cargarResultados();
                         if(todos>= 100) {
-<<<<<<< HEAD
-=======
 
->>>>>>> 0e6b41b7a8a8eea12a7126c163766a3226cb98b5
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
 
@@ -335,8 +322,21 @@ public class Tlr1_1 extends AppCompatActivity {
 
                     }
                 });
+            }
 
 
+            private void cargarResultados() {
+                Resultados resultados = new Resultados();
+
+                resultados.setId(UUID.randomUUID().toString());
+                resultados.setInvestigador(Admin2.investigador);
+
+                resultados.setProducto(Admin2.producto);
+                resultados.setNivel(Tlr1_1.nivel);
+                resultados.setProyecto(Admin2.proyecto);
+                resultados.setPorcentaje(todos);
+
+                myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
             }
 
 
