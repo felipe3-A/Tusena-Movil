@@ -18,8 +18,15 @@ import java.util.UUID;
 public class Admin2 extends AppCompatActivity {
 
     EditText edtx_nombre_proyecto,edtx_investigador,edtx_identificacion,edtx_no_producto,edtx_tipo_proyecto,edtx_numeroproyecto;
+<<<<<<< HEAD
 
     Button btn_agregarinvestigador,btn_return_home;
+=======
+    public static String investigador;
+    public static String producto;
+    public static String proyecto;
+    Button btn_agregarinvestigador;
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -49,6 +56,10 @@ public class Admin2 extends AppCompatActivity {
             }
         });
 
+      investigador= edtx_investigador.getText().toString();
+      producto=edtx_no_producto.getText().toString();
+      proyecto=edtx_nombre_proyecto.getText().toString();
+
         btn_agregarinvestigador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,10 +83,10 @@ public class Admin2 extends AppCompatActivity {
                 datos_investigadores.setProductos(edtx_no_producto.getText().toString());
                 datos_investigadores.setTipocodigoproducto(edtx_tipo_proyecto.getText().toString());
                 datos_investigadores.setNumerodelproyecto(edtx_numeroproyecto.getText().toString());
+                datos_investigadores.investigador= edtx_investigador.getText().toString();
 
 
-                myRef.child("Proyecto").child(datos_investigadores.getProyecto()).child(datos_investigadores.getInvestigador()).child(datos_investigadores.getIdentificacion()).child(datos_investigadores.getProductos()).setValue(datos_investigadores.getProductos()); //insercion
-
+                myRef.child("Proyecto").child(datos_investigadores.getId()).setValue(datos_investigadores);
 
 
                 Toast.makeText(Admin2.this, "Datos insertados", Toast.LENGTH_SHORT).show();

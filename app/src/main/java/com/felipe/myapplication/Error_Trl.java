@@ -13,9 +13,10 @@ public class Error_Trl extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error_trl);
-        referenciar();
+
     }
 
+<<<<<<< HEAD
     private void referenciar() {
 
 
@@ -25,6 +26,8 @@ public class Error_Trl extends AppCompatActivity {
         respuestas.setText("Su porcentaje es  : " + Tlr1_1.todos + "%");
         respuestas_trl.setText("Su Nivel es : "+Tlr1_1.nivel);
 
+=======
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
 
 
 
@@ -57,5 +60,5 @@ public class Error_Trl extends AppCompatActivity {
 
 
 
-    }
+
 }

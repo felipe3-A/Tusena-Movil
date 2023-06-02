@@ -50,7 +50,7 @@
                    android:layout_gravity="center"
                    android:layout_marginTop="20dp"
                    android:backgroundTint="@color/color_boton_omitir"
-                   android:hint="Usuario"
+                   android:hint="@string/identificaci_on"
                    android:inputType="text"
                    app:boxCornerRadiusBottomEnd="50px"
                    app:boxCornerRadiusBottomStart="50px"

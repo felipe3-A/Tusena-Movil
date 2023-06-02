@@ -27,9 +27,15 @@ MediaPlayer mediaPlayer;
         TimerTask tarea=new TimerTask() {
             @Override
             public void run() {
+<<<<<<< HEAD
                 Intent intent=new Intent(Splass.this,
                         Menu_Principal.class);
 
+=======
+
+
+                Intent intent=new Intent(Splass.this, Tlr1_1.class);
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
                 startActivity(intent);
                 finish();
             }

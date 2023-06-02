@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Trl9 extends AppCompatActivity {
 
@@ -293,6 +294,7 @@ public class Trl9 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos9=resultado9_1+resultado9_2+resultado9_3+resultado9_5+resultado9_6+resultado9_7;
+                        cargarResultados();
 
 
                         if(todos9>= 100) {
@@ -309,6 +311,18 @@ public class Trl9 extends AppCompatActivity {
                             startActivity(intent);
                             Toast.makeText(Trl9.this, "sus resultados "+ todos9 +"%", Toast.LENGTH_SHORT).show();
                         }
+                    }
+                    private void cargarResultados() {
+                        Resultados resultados = new Resultados();
+
+                        resultados.setId(UUID.randomUUID().toString());
+                        resultados.setInvestigador(Admin2.investigador);
+                        resultados.setProducto(Admin2.producto);
+                        resultados.setNivel(Tlr1_1.nivel);
+                        resultados.setProyecto(Admin2.proyecto);
+                        resultados.setPorcentaje(todos9);
+
+                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
                     }
                 });
 

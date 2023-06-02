@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Trl3 extends AppCompatActivity {
     FirebaseDatabase database;
@@ -327,7 +328,7 @@ public class Trl3 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos3 = resultadot3_1+resultado3_2+resultado3_3+resultado3_4+resultado3_5+resultado3_6+resultado3_7+resultado3_8;
-
+                        cargarResultados();
 
                         if (todos3 >= 100) {
                             //nivel = "Tlr2";
@@ -345,8 +346,20 @@ public class Trl3 extends AppCompatActivity {
 
 
                     }
-                });
 
+                    private void cargarResultados() {
+                        Resultados resultados = new Resultados();
+
+                        resultados.setId(UUID.randomUUID().toString());
+                        resultados.setInvestigador(Admin2.investigador);
+                        resultados.setProducto(Admin2.producto);
+                        resultados.setNivel(Tlr1_1.nivel);
+                        resultados.setProyecto(Admin2.proyecto);
+                        resultados.setPorcentaje(todos3);
+
+                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                    }
+                });
             }
 
 

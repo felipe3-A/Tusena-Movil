@@ -2,12 +2,23 @@ package com.felipe.myapplication;
 
 public class Resultados {
 
+
     String id;
+
     String investigador;
     String producto;
     String valor;
+    String proyecto;
     int porcentaje;
     String nivel;
+
+    public String getProyecto() {
+        return proyecto;
+    }
+
+    public void setProyecto(String proyecto) {
+        this.proyecto = proyecto;
+    }
 
     public Resultados() {
     }
@@ -67,7 +78,8 @@ public class Resultados {
                 ", investigador='" + investigador + '\'' +
                 ", producto='" + producto + '\'' +
                 ", valor='" + valor + '\'' +
-                ", porcentaje='" + porcentaje + '\'' +
+                ", proyecto='" + proyecto + '\'' +
+                ", porcentaje=" + porcentaje +
                 ", nivel='" + nivel + '\'' +
                 '}';
     }

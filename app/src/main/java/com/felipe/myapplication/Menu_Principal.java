@@ -9,7 +9,12 @@ import android.widget.Button;
 
 
 public class Menu_Principal extends AppCompatActivity {
+<<<<<<< HEAD
 Button to_manual,to_calculadora;
+=======
+
+    public static String investigador;
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +22,7 @@ Button to_manual,to_calculadora;
         referenciar();
     }
 
+<<<<<<< HEAD
     private void referenciar() {
         to_manual=findViewById(R.id.btn_foat_to_manual);
         to_calculadora=findViewById(R.id.btn_foat_to_calculadora);
@@ -33,6 +39,10 @@ Button to_manual,to_calculadora;
                 startActivity(new Intent(Menu_Principal.this,Vista_Trls.class));
             }
         });
+=======
+        investigador= "";
+
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
     }
 
 

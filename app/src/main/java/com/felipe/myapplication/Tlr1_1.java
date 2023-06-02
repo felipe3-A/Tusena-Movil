@@ -101,16 +101,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
     }
 
-    private void cargarResultados() {
-        Resultados resultados = new Resultados();
-
-        resultados.setId(UUID.randomUUID().toString());
-        resultados.setPorcentaje(todos);
-
-        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
-
-    }
-
 
     public void cargarP() {
 
@@ -332,8 +322,21 @@ public class Tlr1_1 extends AppCompatActivity {
 
                     }
                 });
+            }
 
 
+            private void cargarResultados() {
+                Resultados resultados = new Resultados();
+
+                resultados.setId(UUID.randomUUID().toString());
+                resultados.setInvestigador(Admin2.investigador);
+
+                resultados.setProducto(Admin2.producto);
+                resultados.setNivel(Tlr1_1.nivel);
+                resultados.setProyecto(Admin2.proyecto);
+                resultados.setPorcentaje(todos);
+
+                myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
             }
 
 

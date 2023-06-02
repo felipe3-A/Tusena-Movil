@@ -32,6 +32,7 @@ public class Admin extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
+
     //DatabaseReference database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tusena-c86eb-default-rtdb.firebaseio.com/");
 
     List<Preguntas> list = new ArrayList<>();

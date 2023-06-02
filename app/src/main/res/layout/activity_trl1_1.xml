@@ -48,6 +48,7 @@
                     android:id="@+id/rg_respuestas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginEnd="10dp"
                     android:orientation="vertical"
                     android:padding="5dp">
@@ -63,12 +64,29 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NO" />
+=======
+                    android:text="SI" />
+                <RadioButton
+                    android:id="@+id/rd_p_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO" />
 
-                </RadioGroup>
+            </RadioGroup>
 
+
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
+
+
+<<<<<<< HEAD
             </LinearLayout>
 
             <LinearLayout
+=======
+
+            <TextView
+                android:id="@+id/txt_trl1p2"
+>>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
