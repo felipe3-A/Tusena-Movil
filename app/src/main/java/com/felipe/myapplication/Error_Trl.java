@@ -13,52 +13,6 @@ public class Error_Trl extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error_trl);
-
+    }
     }
 
-<<<<<<< HEAD
-    private void referenciar() {
-
-
-        respuestas=findViewById(R.id.resultado);
-        respuestas_trl=findViewById(R.id.resultado_trl);
-
-        respuestas.setText("Su porcentaje es  : " + Tlr1_1.todos + "%");
-        respuestas_trl.setText("Su Nivel es : "+Tlr1_1.nivel);
-
-=======
->>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
-
-
-
-
-//        respuestas.setText("Su porcentaje es  : "+Trl3.todos3 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl3.nivel);
-//
-//        respuestas.setText("Su porcentaje es  : "+Trl4.todos4 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl4.nivel);
-//
-//
-//        respuestas.setText("Su porcentaje es  : "+Trl5.todos5 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl5.nivel);
-//
-//        respuestas.setText("Su porcentaje es  : "+Trl6.todos6 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl6.nivel);
-//
-//        respuestas.setText("Su porcentaje es  : "+Trl7.todos7 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl7.nivel);
-//
-//
-//        respuestas.setText("Su porcentaje es  : "+Trl_8.todos8 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl_8.nivel);
-//
-//        respuestas.setText("Su porcentaje es  : "+Trl9.todos9 + "%");
-//        respuestas_trl.setText("Su Trl es : "+Trl9.nivel);
-
-
-
-
-
-
-
-}

@@ -32,7 +32,7 @@
                     android:src="@drawable/tusena_oscuro" />
 
             </LinearLayout>
-<<<<<<< HEAD
+
         </LinearLayout>
 =======
 
@@ -64,20 +64,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="ssdddddddddddddddddddddddddd" />
-
->>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
-
-
-        <SearchView
-            android:id="@+id/perfil_btn"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/redondearsearch"
-            android:text="Buscador"
-            android:textSize="20sp" />
 
 
     <LinearLayout
@@ -112,7 +98,6 @@
                 app:icon="@drawable/baseline_menu_book_24"
                 app:iconTint="@color/ic_launcher_background" />
 
-<<<<<<< HEAD
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/btn_foat_to_calculadora"
                 android:layout_width="wrap_content"
@@ -133,7 +118,6 @@
                         android:backgroundTint="#389c9c"
                         app:icon="@drawable/baseline_menu_book_24"
                         app:iconTint="@color/ic_launcher_background" />
->>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="wrap_content"

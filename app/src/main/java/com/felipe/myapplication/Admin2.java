@@ -18,15 +18,11 @@ import java.util.UUID;
 public class Admin2 extends AppCompatActivity {
 
     EditText edtx_nombre_proyecto,edtx_investigador,edtx_identificacion,edtx_no_producto,edtx_tipo_proyecto,edtx_numeroproyecto;
-<<<<<<< HEAD
-
     Button btn_agregarinvestigador,btn_return_home;
-=======
     public static String investigador;
     public static String producto;
     public static String proyecto;
-    Button btn_agregarinvestigador;
->>>>>>> c28300a169a61b5076f35a25c9fabce37b1ae651
+
     FirebaseDatabase database;
     DatabaseReference myRef;
 
