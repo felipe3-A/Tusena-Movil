@@ -51,6 +51,7 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_7,
             todos;
     public static List<Preguntas> list = new ArrayList<>();
+    public static List<Preguntas> list2= new ArrayList<>();
 
 
     @Override
@@ -94,10 +95,7 @@ public class Tlr1_1 extends AppCompatActivity {
         rd_p7 = findViewById(R.id.rb_p7);
         rd_p7_7 = findViewById(R.id.rb_p7_7);
 
-
-
         cargarP();
-
 
     }
 

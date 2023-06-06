@@ -29,13 +29,15 @@ public class Admin extends AppCompatActivity {
     Button btn_agregar,float_home_return_2;
 
 
+
+
     FirebaseDatabase database;
     DatabaseReference myRef;
 
 
     //DatabaseReference database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tusena-c86eb-default-rtdb.firebaseio.com/");
 
-    List<Preguntas> list = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class Admin extends AppCompatActivity {
         edtx_nivel_relativo = findViewById(R.id.edtx_nivel_relativo);
         btn_agregar = findViewById(R.id.btn_agregarp);
         sp_trl = findViewById(R.id.sp_trl);
+
         float_home_return_2=findViewById(R.id.float_home_return_2);
         float_home_return_2.setOnClickListener(new View.OnClickListener() {
             @Override
