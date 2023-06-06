@@ -36,7 +36,6 @@ public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionV
     Version version=versionList.get(position);
     holder.codeNameTxt.setText(version.getCodeName());
     holder.versionTxt.setText(version.getVersion());
-    holder.apiLevelTxt.setText(version.getApiLevel());
     holder.descripcionTxt.setText(version.getDescripcion());
 
 boolean isExpadable=versionList.get(position).getExpandible();
@@ -60,9 +59,7 @@ holder.expandableLayout.setVisibility(isExpadable ? View.VISIBLE : View.GONE);
             super(itemView);
             codeNameTxt=itemView.findViewById(R.id.code_name);
             versionTxt=itemView.findViewById(R.id.version);
-            apiLevelTxt=itemView.findViewById(R.id.api_level);
             descripcionTxt=itemView.findViewById(R.id.descripcion);
-
             linearLayout=itemView.findViewById(R.id.linear_layout);
             expandableLayout=itemView.findViewById(R.id.expandible_layout);
 

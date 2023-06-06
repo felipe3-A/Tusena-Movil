@@ -4,12 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/recicleview"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bottom_rounded">
+
+        <ImageView
+            android:layout_width="122dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/tusena_oscuro" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Guias y Conceptos"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicleview"
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|bottom"
+        android:layout_marginTop="10dp"
+        android:background="#205072"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|bottom"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/baseline_home_24"
+                app:iconTint="@color/ic_launcher_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </LinearLayout>
