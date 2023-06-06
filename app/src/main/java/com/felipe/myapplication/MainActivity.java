@@ -31,20 +31,12 @@ List<Version> versionList;
     private void initData() {
         versionList=new ArrayList<>();
 
-        versionList.add(new Version("Trl1","Version Trl1","Api Level 29","Descripcion"));
+        versionList.add(new Version("¿Que es Trl1?","","","El termino de Trl (Technological Readiness Level),o Niveles de preparación tecnológica, es una tecnologia que se encarga de medir o calcular en que estado de calidad esta un proyecto o un producto"));
+        versionList.add(new Version("¿Que significa Trl1,Trl2..?","","","Estos conceptos son niveles que se usan para saber cual es la calidad de un producto,en total existen 9 niveles, entre mayor el numero es mejor la calidad del producto"));
+        versionList.add(new Version("¿Como funciona la calculadora de TuSena?","","","El metodo de calificacion de nuestra calculadora es si tu prododucto cumple con TODOS los lineamientos, inmediatamente este producto sube de nivel, en caso de que este producto no cumpla con algunos de los requisitos, el producto quedaria en el nivel que establesido"));
 
-        versionList.add(new Version("Trl2","Version Trl2","Api Level 20","Descripcion"));
-        versionList.add(new Version("Trl3","Version Trl3","Api Level 26","Descripcion"));
-        versionList.add(new Version("Trl4","Version Trl4","Api Level 23","Descripcion"));
-        versionList.add(new Version("Trl5","Version Trl4","Api Level 23","Descripcion"));
-        versionList.add(new Version("Trl6","Version Trl4","Api Level 23","Descripcion"));
-        versionList.add(new Version("Trl7","Version Trl4","Api Level 23","Descripcion"));
-        versionList.add(new Version("Trl8","Version Trl4","Api Level 23","Descripcion"));
-        versionList.add(new Version("Trl9","Version Trl4","Api Level 23","Descripcion"));
     }
     public void cargarpregungta(){
-
-
 
     }
 }

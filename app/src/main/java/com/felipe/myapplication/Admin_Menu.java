@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class Admin_Menu extends AppCompatActivity {
 
     Button ir_a_agregar_preguntas;
-    Button ir_a_agregar_investigadores,exit_admin;
+    Button ir_a_agregar_investigadores,exit_admin,editar_preguntas;
 
 
     @Override
@@ -26,6 +26,14 @@ public class Admin_Menu extends AppCompatActivity {
         ir_a_agregar_preguntas=findViewById(R.id.go_agragar_preguntas);
         ir_a_agregar_investigadores=findViewById(R.id.ira_agregar_inv);
         exit_admin=findViewById(R.id.exit_admin);
+        editar_preguntas=findViewById(R.id.editar_preguntas);
+
+        editar_preguntas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Admin_Menu.this,Vista_Trls.class));
+            }
+        });
 
         exit_admin.setOnClickListener(new View.OnClickListener() {
             @Override

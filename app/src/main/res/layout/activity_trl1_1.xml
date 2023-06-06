@@ -7,6 +7,18 @@
     tools:context=".Tlr1_1"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bottom_rounded">
+
+        <ImageView
+            android:layout_width="122dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/tusena_oscuro" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,17 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="7dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Preguntas Tlr1"
-                android:textStyle="bold" />
+            android:orientation="vertical">
 
             ------------------------------------------------------------------------------------------------------
 

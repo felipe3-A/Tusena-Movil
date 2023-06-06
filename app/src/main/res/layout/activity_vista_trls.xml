@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,8 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="3">
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -34,10 +29,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="605dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
-        android:padding="9dp">
+        android:layout_weight="-5"
+        android:padding="19dp">
 
         <Button
             android:id="@+id/ir_a_trl1"
@@ -45,108 +41,109 @@
             android:layout_height="60dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:background="@drawable/boton_redondo2"
             android:text="Trl1"
+            android:shadowRadius="@integer/material_motion_duration_short_1"
+            android:backgroundTint="@color/purple_700"
             android:textColor="@color/ic_launcher_background"
-            android:textColorLink="#00BCD4"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
             android:layout_height="60dp"
-            android:textSize="18sp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/purple_700"
-            android:text="Trl2" />
+            android:text="Trl2"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
-            android:textSize="18sp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/purple_700"
-            android:text="Trl3" />
+            android:text="Trl3"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textSize="18sp"
             android:layout_marginStart="30dp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/purple_700"
-            android:text="Trl4" />
+            android:text="Trl4"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/purple_700"
-            android:text="Trl4" />
+            android:text="Trl4"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
-            android:textSize="18sp"
-            android:backgroundTint="@color/purple_700"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="Trl6" />
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl6"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textSize="18sp"
             android:layout_marginStart="30dp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/purple_700"
-            android:text="Trl7" />
+            android:text="Trl7"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
-            android:backgroundTint="@color/purple_700"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="Trl8" />
+            android:backgroundTint="@color/purple_700"
+            android:text="Trl8"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/ic_launcher_background"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/purple_700"
-            android:text="Trl9" />
+            android:text="Trl9"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center_vertical|bottom"
         android:background="#205072"
+        android:layout_weight="3"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -161,10 +158,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|bottom"
                 android:backgroundTint="#389c9c"
-                app:icon="@drawable/baseline_home_24"
                 android:onClick="home"
+                app:icon="@drawable/baseline_home_24"
                 app:iconTint="@color/ic_launcher_background" />
-
 
 
         </LinearLayout>
@@ -173,4 +169,3 @@
 
 
 </LinearLayout>
-</ScrollView>

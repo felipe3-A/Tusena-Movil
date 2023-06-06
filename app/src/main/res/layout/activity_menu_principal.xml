@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".Menu_Principal">
-
-
 <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-   >
+    tools:context=".Menu_Principal">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,12 +23,25 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:src="@drawable/tusena_oscuro" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¡Bienvenido!"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="25sp"
+                    android:textColor="@color/ic_launcher_background"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
         </LinearLayout>
-=======
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <SearchView
                 android:id="@+id/perfil_btn"
                 android:layout_width="match_parent"
@@ -46,94 +52,80 @@
                 android:background="@drawable/redondearsearch"
                 android:text="Buscador"
                 android:textSize="20sp" />
-            <TextView
-                android:id="@+id/txt_produccto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="s" />
-            <TextView
-                android:id="@+id/txt_producctoproyecto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="ssdddddddddddddddddddddddddd" />
-            <TextView
-                android:id="@+id/txt_investigador"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="ssdddddddddddddddddddddddddd" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#205072"
-        android:orientation="vertical"
-        android:layout_marginTop="535dp"
-        android:layout_gravity="center_vertical|bottom"
-        android:padding="20dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#389c9c"
-                android:layout_gravity="center_vertical|bottom"
-                app:icon="@drawable/baseline_home_24"
-                app:iconTint="@color/ic_launcher_background" />
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp">
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/btn_foat_to_manual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|bottom"
-                android:layout_marginStart="50dp"
-                android:backgroundTint="#389c9c"
-                app:icon="@drawable/baseline_menu_book_24"
-                app:iconTint="@color/ic_launcher_background" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="337dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/btn_foat_to_calculadora"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|bottom"
-                android:backgroundTint="#389c9c"
-                android:layout_marginStart="50dp"
-                app:icon="@drawable/baseline_person_search_24"
-                app:iconTint="@color/ic_launcher_background"
-                android:onClick="i"/>
-=======
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:layout_marginTop="155dp"
+                android:background="#205072"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
                     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="13dp"
-                        android:layout_marginEnd="13dp"
+                        android:layout_gravity="center_vertical|bottom"
+                        android:backgroundTint="#389c9c"
+                        app:icon="@drawable/baseline_home_24"
+                        app:iconTint="@color/ic_launcher_background" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/btn_foat_to_manual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_marginStart="50dp"
                         android:backgroundTint="#389c9c"
                         app:icon="@drawable/baseline_menu_book_24"
                         app:iconTint="@color/ic_launcher_background" />
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|bottom"
-                android:backgroundTint="#389c9c"
-                app:icon="@drawable/icon_exit"
-                android:onClick="logout"
-                android:layout_marginStart="50dp"
-                app:iconTint="@color/ic_launcher_background" />
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/ir_a_calculadora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_marginStart="50dp"
+                        android:backgroundTint="#389c9c"
+                        app:icon="@drawable/baseline_calculate_24"
+                        app:iconTint="@color/ic_launcher_background" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/btn_float_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_marginStart="50dp"
+                        android:backgroundTint="#389c9c"
+                        app:icon="@drawable/icon_exit"
+                        app:iconTint="@color/ic_launcher_background" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-
 </LinearLayout>
-</ScrollView>
+
 
