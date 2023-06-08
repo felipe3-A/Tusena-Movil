@@ -45,23 +45,14 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-
-
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|bottom"
+                android:layout_gravity="center"
                 android:backgroundTint="#389c9c"
                 app:icon="@drawable/baseline_home_24"
                 app:iconTint="@color/ic_launcher_background" />
 
-        </LinearLayout>
 
     </LinearLayout>
 

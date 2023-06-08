@@ -14,10 +14,6 @@
         android:theme="@style/Theme.Tusena_Movil"
         tools:targetApi="31">
         <activity
-            android:theme="@style/Sin_Header"
-            android:name=".Manual_trls"
-            android:exported="false" />
-        <activity
             android:name=".Vista_Trls"
             android:exported="false"
             android:theme="@style/Sin_Header" />
