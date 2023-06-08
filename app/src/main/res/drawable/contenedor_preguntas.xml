@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <padding android:left="20dp" /> <!-- Ajusta el valor según el tamaño del relleno en el lado deseado -->
+<<<<<<< HEAD
+    <solid android:color="#329D9C" /> <!-- Color de fondo -->
+    <corners android:bottomRightRadius="50dp" /><!-- Radio del borde inferior derecho -->
+=======
     <solid android:color="#EDEDED" /> <!-- Color de fondo -->
     /><!-- Radio del borde inferior derecho -->
+>>>>>>> 72a02642c7d01742ed144797f66d0d5cfeb683da
 </shape>
