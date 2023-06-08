@@ -56,7 +56,11 @@ public class Login extends AppCompatActivity {
 
                                 if (getPassword.equals(passwordTxt)) {
                                     Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
+                                   startActivity(new Intent(Login.this, Menu_Principal.class));
+=======
                                     startActivity(new Intent(Login.this, Menu_Principal.class));
+>>>>>>> ac67db2ee012451131e74411e15c75efeb0971a9
 
                                     //validacion de roles
                                     final String getUser = snapshot.child(textTxt).child("usuario").getValue(String.class);
@@ -80,15 +84,7 @@ public class Login extends AppCompatActivity {
                                 }
                             } else {
                                 Toast.makeText(Login.this, "Usuario incorrecto", Toast.LENGTH_SHORT).show();
-
-
                             }
-
-
-
-
-
-
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
