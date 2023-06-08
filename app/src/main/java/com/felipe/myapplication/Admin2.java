@@ -48,8 +48,8 @@ public class Admin2 extends AppCompatActivity {
         investigador= edtx_investigador.getText().toString();
         producto=edtx_no_producto.getText().toString();
         proyecto=edtx_nombre_proyecto.getText().toString();
-        investigador="zule";
-        producto="arepas";
+       // investigador="zule";
+        //producto="arepas";
 
 
 

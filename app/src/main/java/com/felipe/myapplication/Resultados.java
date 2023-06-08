@@ -39,8 +39,8 @@ public class Resultados {
         this.investigador = investigador;
     }
 
-    public String getProducto() {
-        return producto;
+    public String getProducto(String producto) {
+        return this.producto;
     }
 
     public void setProducto(String producto) {

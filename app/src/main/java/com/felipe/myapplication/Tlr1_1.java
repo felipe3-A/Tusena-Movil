@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -24,10 +27,12 @@ import java.util.List;
 import java.util.UUID;
 
 public class Tlr1_1 extends AppCompatActivity {
+
+
     FirebaseDatabase database;
     DatabaseReference myref;
 
-  public static String nivel;
+ // public static String nivel;
     Button btn_calcular;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7;
 
@@ -58,6 +63,8 @@ public class Tlr1_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trl1_1);
+
+
         txt_trl1p1 = findViewById(R.id.txt_trl1p1);
         txt_trl1p2 = findViewById(R.id.txt_trl1p2);
         txt_trl1p3 = findViewById(R.id.txt_trl1p3);
@@ -310,7 +317,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
                         }
                        else{
-                            nivel = "Tlr1";
+                            //nivel = "Tlr1";
                             Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
@@ -328,13 +335,14 @@ public class Tlr1_1 extends AppCompatActivity {
 
                 resultados.setId(UUID.randomUUID().toString());
                 resultados.setInvestigador(Admin2.investigador);
-
                 resultados.setProducto(Admin2.producto);
-                resultados.setNivel(Tlr1_1.nivel);
+                resultados.setNivel(Admin.nivel);
                 resultados.setProyecto(Admin2.proyecto);
                 resultados.setPorcentaje(todos);
 
                 myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+
+                Toast.makeText(Tlr1_1.this, "Datos Cargados ", Toast.LENGTH_SHORT).show();
             }
 
 
@@ -346,6 +354,8 @@ public class Tlr1_1 extends AppCompatActivity {
         });
 
     }
+
+
 }
 
 

@@ -28,7 +28,7 @@ public class Admin extends AppCompatActivity {
     Spinner sp_trl;
     Button btn_agregar,float_home_return_2;
 
-
+    public static String nivel;
 
 
     FirebaseDatabase database;
@@ -52,6 +52,8 @@ public class Admin extends AppCompatActivity {
         edtx_nivel_relativo = findViewById(R.id.edtx_nivel_relativo);
         btn_agregar = findViewById(R.id.btn_agregarp);
         sp_trl = findViewById(R.id.sp_trl);
+        nivel=sp_trl.getSelectedItem().toString();
+
 
         float_home_return_2=findViewById(R.id.float_home_return_2);
         float_home_return_2.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +79,7 @@ public class Admin extends AppCompatActivity {
                 preguntas_trl.setPregunta(edtx_pregtunta.getText().toString());
                 preguntas_trl.setNivelRelativo(edtx_nivel_relativo.getText().toString());
                 preguntas_trl.setNivel((sp_trl.getSelectedItem().toString()));
+                nivel=sp_trl.getSelectedItem().toString();
 
 
 
