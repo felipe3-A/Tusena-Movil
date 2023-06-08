@@ -57,21 +57,33 @@
     <style name="contenedor_preguntas">
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_marginTop">30dp</item>
+
     </style>
 <!--    Intento para hacer lo de preguntas-->
     <style name="respuestas">
         <item name="android:layout_marginEnd">10dp</item>
         <item name="android:padding">5dp</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:textColor">@color/ic_launcher_background</item>
+        <item name="android:background">@color/purple_700</item>
+        <item name="android:textColor">@color/cajas_boton</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 
+<!--    Radiobuttons-->
+<style name="radiobutons">
+    <item name="android:buttonTint">@color/ic_launcher_background</item>
+
+
+    <item name="android:textColor">@color/ic_launcher_background</item>
+</style>
 <!--    Para las preguntas-->
     <style name="preguntas">
         <item name="android:background">@drawable/contenedor_preguntas</item>
         <item name="android:layout_weight">2</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+<!--    Respuestas-->
 
 
 

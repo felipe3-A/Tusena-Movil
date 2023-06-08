@@ -11,201 +11,214 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="144dp"
+                android:src="@drawable/logo_tusena_splass"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="30dp">
+          >
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:background="#EDEDED"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Registrarse"
+                    android:textColor="@color/cajas_boton"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_boton_omitir"
+                    android:hint="Nombres"
+                    app:boxCornerRadiusBottomEnd="50px"
+                    app:boxCornerRadiusBottomStart="50px"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ic_launcher_background"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_apellido"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_boton_omitir"
+                    android:hint="@string/apellidos"
+                    android:inputType="text"
+                    app:boxCornerRadiusBottomEnd="50px"
+                    app:boxCornerRadiusBottomStart="50px"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ic_launcher_background"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_boton_omitir"
+                    android:hint="@string/email"
+                    app:boxCornerRadiusBottomEnd="50px"
+                    app:boxCornerRadiusBottomStart="50px"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ic_launcher_background"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_boton_omitir"
+                    android:hint="@string/numero_identificacion"
+                    app:boxCornerRadiusBottomEnd="50px"
+                    app:boxCornerRadiusBottomStart="50px"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ic_launcher_background"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_boton_omitir"
+                    android:hint="@string/password"
+                    app:boxCornerRadiusBottomEnd="50px"
+                    app:boxCornerRadiusBottomStart="50px"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ic_launcher_background"
+                        android:inputType="textPassword"
+                        app:boxCornerRadiusBottomEnd="@dimen/material_emphasis_high_type" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_cpassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_boton_omitir"
+                    android:hint="@string/cpassword"
+                    app:boxCornerRadiusBottomEnd="50px"
+                    app:boxCornerRadiusBottomStart="50px"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ic_launcher_background"
+                        android:inputType="textPassword"
+                        app:boxCornerRadiusBottomEnd="@dimen/material_emphasis_high_type" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btn_registar"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#205072"
+                    android:onClick="login"
+                    android:text="@string/registrarse"
+                    android:textColor="@color/ic_launcher_background"
+                    android:textSize="15dp"
+                    app:cornerRadius="10dp"
+                    tools:ignore="TextSizeCheck" />
 
                 <LinearLayout
-                    android:layout_width="400dp"
-                    android:layout_height="680dp"
-                    android:orientation="vertical"
-                    >
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-                    <LinearLayout
-                        android:layout_width="403dp"
-                        android:layout_height="95dp"
-                        android:background="#205072"
-                        android:padding="4dp">
-
-                        <ImageView
-                            android:layout_width="109dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/logo_tusena" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10sp"
-                            android:layout_marginTop="3dp"
-                            android:text="Registrarse"
-                            android:textColor="@color/ic_launcher_background"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:id="@+id/txt_name"
-                        android:layout_width="350dp"
-                        android:layout_height="65dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="@color/color_boton_omitir"
-                        android:layout_marginTop="10dp"
-                        android:hint="Nombres"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:endIconMode="clear_text"
-                        app:boxCornerRadiusBottomStart="50px">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:id="@+id/txt_apellido"
-                        android:layout_width="350dp"
-                        app:endIconMode="clear_text"
-                        android:layout_height="65dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="@color/color_boton_omitir"
-                        android:layout_marginTop="10dp"
-                        android:inputType="text"
-                        android:hint="@string/apellidos"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:boxCornerRadiusBottomStart="50px">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:id="@+id/txt_email"
-                        android:layout_width="350dp"
-                        android:layout_height="65dp"
-                        app:endIconMode="clear_text"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:hint="@string/email"
-                        android:backgroundTint="@color/color_boton_omitir"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:boxCornerRadiusBottomStart="50px">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textEmailAddress" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:id="@+id/txt_number"
-                        android:layout_width="350dp"
-                        app:endIconMode="clear_text"
-                        android:layout_height="65dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:hint="@string/numero_identificacion"
-                        android:backgroundTint="@color/color_boton_omitir"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:boxCornerRadiusBottomStart="50px">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:id="@+id/txt_password"
-                        android:layout_width="350dp"
-                        android:layout_height="65dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/color_boton_omitir"
-                        android:hint="@string/password"
-                        app:passwordToggleEnabled = "true"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:boxCornerRadiusBottomStart="50px">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textPassword"
-                            app:boxCornerRadiusBottomEnd="@dimen/material_emphasis_high_type" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:id="@+id/txt_cpassword"
-                        android:layout_width="350dp"
-                        app:passwordToggleEnabled="true"
-                        android:layout_height="65dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/color_boton_omitir"
-                        android:hint="@string/cpassword"
-                        app:boxCornerRadiusBottomEnd="50px"
-                        app:boxCornerRadiusBottomStart="50px">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textPassword"
-                            app:boxCornerRadiusBottomEnd="@dimen/material_emphasis_high_type" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <Button
-                        android:id="@+id/btn_registar"
-                        android:layout_width="160dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="#205072"
-                        android:onClick="login"
-                        android:textColor="@color/ic_launcher_background"
-                        android:text="@string/registrarse"
-                        android:textSize="15dp"
-                        app:cornerRadius="10dp"
-                        tools:ignore="TextSizeCheck" />
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="9dp">
+                        android:text="@string/ya_tienes_cuenta" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ya_tienes_cuenta" />
-                        <TextView
-                            android:id="@+id/inicio_ya"
-                            android:layout_marginStart="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/inicia_sesión_ahora"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/inicio_ya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/inicia_sesión_ahora"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
+            </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
+</LinearLayout>
     </ScrollView>
 
 </LinearLayout>

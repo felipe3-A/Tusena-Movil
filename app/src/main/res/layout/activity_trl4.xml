@@ -49,6 +49,7 @@
         android:layout_marginEnd="10dp"
         android:id="@+id/rg4_respuestas1"
         android:layout_width="wrap_content"
+        style="@style/respuestas"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
