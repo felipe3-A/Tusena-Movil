@@ -27,6 +27,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <EditText
+                android:id="@+id/edtx_id_contenedor_preguntas1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Iden"
+                android:textSize="20sp" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/datos_i"/>
 
             ------------------------------------------------------------------------------------------------------
 

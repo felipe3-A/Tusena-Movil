@@ -37,7 +37,7 @@ Button trl1_b;
         Toast.makeText(this, "Has cerrado sesion con exito", Toast.LENGTH_SHORT).show();
     }
     public void home(View view){
-        Intent intent=new Intent(this, Menu_Principal.class);
+        Intent intent=new Intent(this, Admin_Menu.class);
         startActivity(intent);
     }
 }

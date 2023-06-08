@@ -1,7 +1,7 @@
 package com.felipe.myapplication;
 
 public class Datos {
-
+    String contenedor;
     String id;
     String proyecto;
     String investigador;
@@ -13,7 +13,10 @@ public class Datos {
     public Datos() {
     }
 
-    public Datos(String id, String proyecto, String investigador, String identificacion, String productos, String tipocodigoproducto, String numerodelproyecto) {
+
+
+    public Datos(String contenedor,String id, String proyecto, String investigador, String identificacion, String productos, String tipocodigoproducto, String numerodelproyecto) {
+        this.contenedor=contenedor;
         this.id = id;
         this.proyecto = proyecto;
         this.investigador = investigador;
@@ -21,6 +24,15 @@ public class Datos {
         this.productos = productos;
         this.tipocodigoproducto = tipocodigoproducto;
         this.numerodelproyecto = numerodelproyecto;
+    }
+
+    public String getContenedor() {
+        return contenedor;
+    }
+
+
+    public void setContenedor(String contenedor) {
+        this.contenedor = contenedor;
     }
 
     public String getId() {
@@ -82,7 +94,8 @@ public class Datos {
     @Override
     public String toString() {
         return "Datos{" +
-                "id='" + id + '\'' +
+                "contenedor='" + contenedor + '\'' +
+                ", id='" + id + '\'' +
                 ", proyecto='" + proyecto + '\'' +
                 ", investigador='" + investigador + '\'' +
                 ", identificacion='" + identificacion + '\'' +

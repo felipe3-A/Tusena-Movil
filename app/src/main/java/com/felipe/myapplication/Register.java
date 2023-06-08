@@ -69,6 +69,7 @@ public class Register extends AppCompatActivity {
 
                             if (snapshot.hasChild(numberTxt)) {
                                 Toast.makeText(Register.this, "Identificacion ya esta registrada", Toast.LENGTH_SHORT).show();
+                                finish();
                             } else {
                                 //enviado datos a la bd
                                 //estamos usando el usuario como identidad única de cada persona
@@ -84,8 +85,11 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "Registro satisfactorio", Toast.LENGTH_SHORT).show();
                                 finish();
 
+                                startActivity(new Intent(Register.this, Login.class));
+                                finish();
 
                             }
+
 
 
                         }
