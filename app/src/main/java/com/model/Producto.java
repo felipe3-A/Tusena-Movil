@@ -1,6 +1,6 @@
 package com.model;
 
-public class Post {
+public class Producto {
 
     String producto_titulo;
     String producto_ano;
@@ -9,6 +9,21 @@ public class Post {
     String funcionario_iden;
     String funcionario_nombre;
     String funcionario_apellido;
+    String proyecto_nombre;
+
+    public Producto() {
+    }
+
+    public Producto(String producto_titulo, String producto_ano, String producto_tipo, String producto_subtipo, String funcionario_iden, String funcionario_nombre, String funcionario_apellido, String proyecto_nombre) {
+        this.producto_titulo = producto_titulo;
+        this.producto_ano = producto_ano;
+        this.producto_tipo = producto_tipo;
+        this.producto_subtipo = producto_subtipo;
+        this.funcionario_iden = funcionario_iden;
+        this.funcionario_nombre = funcionario_nombre;
+        this.funcionario_apellido = funcionario_apellido;
+        this.proyecto_nombre = proyecto_nombre;
+    }
 
     public String getProducto_titulo() {
         return producto_titulo;
@@ -66,9 +81,17 @@ public class Post {
         this.funcionario_apellido = funcionario_apellido;
     }
 
+    public String getProyecto_nombre() {
+        return proyecto_nombre;
+    }
+
+    public void setProyecto_nombre(String proyecto_nombre) {
+        this.proyecto_nombre = proyecto_nombre;
+    }
+
     @Override
     public String toString() {
-        return "Post{" +
+        return "Producto{" +
                 "producto_titulo='" + producto_titulo + '\'' +
                 ", producto_ano='" + producto_ano + '\'' +
                 ", producto_tipo='" + producto_tipo + '\'' +
@@ -76,6 +99,7 @@ public class Post {
                 ", funcionario_iden='" + funcionario_iden + '\'' +
                 ", funcionario_nombre='" + funcionario_nombre + '\'' +
                 ", funcionario_apellido='" + funcionario_apellido + '\'' +
+                ", proyecto_nombre='" + proyecto_nombre + '\'' +
                 '}';
     }
 }
