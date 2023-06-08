@@ -27,17 +27,8 @@ Button trl1_b;
         });
     }
 
-    public void i(View view){
-        Intent intent=new Intent(this, Vista_Trls.class);
-        startActivity(intent);
-    }
-    public void logout(View view){
-        Intent intent=new Intent(this, Login.class);
-        startActivity(intent);
-        Toast.makeText(this, "Has cerrado sesion con exito", Toast.LENGTH_SHORT).show();
-    }
     public void home(View view){
-        Intent intent=new Intent(this, Menu_Principal.class);
+        Intent intent=new Intent(this, Admin_Menu.class);
         startActivity(intent);
     }
 }
