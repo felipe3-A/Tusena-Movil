@@ -64,8 +64,6 @@ public class Menu_Principal extends AppCompatActivity {
         obtener_automatico();
 
         datosusers = findViewById(R.id.datos_perfil);
-
-
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         datosusers.setText("");
