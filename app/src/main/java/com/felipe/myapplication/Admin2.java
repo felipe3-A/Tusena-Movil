@@ -72,6 +72,12 @@ public class Admin2 extends AppCompatActivity {
 
 
             private void agregar() {
+                final String txtinvestigador = edtx_investigador.getText().toString();
+                final String txtidentificacion_i = edtx_identificacion.getText().toString();
+                final String txt_nombre_proyecto = edtx_nombre_proyecto.getText().toString();
+                final String txtno_producto = edtx_no_producto.getText().toString();
+                final String txt_tipo_producto = edtx_tipo_proyecto.getText().toString();
+                final String txt_numero_proyecto = edtx_numeroproyecto.getText().toString();
 
                 database = FirebaseDatabase.getInstance(); //conexion
                 myRef = database.getReference(); // referencia
@@ -86,13 +92,19 @@ public class Admin2 extends AppCompatActivity {
                 datos_investigadores.setProductos(edtx_no_producto.getText().toString());
                 datos_investigadores.setTipocodigoproducto(edtx_tipo_proyecto.getText().toString());
                 datos_investigadores.setNumerodelproyecto(edtx_numeroproyecto.getText().toString());
-                datos_investigadores.investigador= edtx_investigador.getText().toString();
+                datos_investigadores.investigador = edtx_investigador.getText().toString();
+
+                if (txt_nombre_proyecto.isEmpty() || txt_numero_proyecto.isEmpty() || txtidentificacion_i.isEmpty() || txtinvestigador.isEmpty() || txtno_producto.isEmpty() ||txt_tipo_producto.isEmpty() ) {
+                    Toast.makeText(Admin2.this, "Por favor llenar todos los campos", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    myRef.child("Proyecto").child(datos_investigadores.getId()).setValue(datos_investigadores);
+                    Toast.makeText(Admin2.this, "Datos insertados", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Admin2.this,Admin_Menu.class));
+                }
 
 
-                myRef.child("Proyecto").child(datos_investigadores.getId()).setValue(datos_investigadores);
 
-
-                Toast.makeText(Admin2.this, "Datos insertados", Toast.LENGTH_SHORT).show();
 
             }
         });

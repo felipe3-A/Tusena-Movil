@@ -71,26 +71,41 @@
                     android:layout_gravity="center"
                     android:entries="@array/Trl"
                     />
-
-                <EditText
-                    android:layout_marginTop="40dp"
-                    android:id="@+id/edtx_nivel_relativo"
-                    android:layout_width="300dp"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/nivel_relativo"
                     app:endIconMode="clear_text"
                     android:layout_gravity="center"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/edtx_nivel_relativo"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <EditText
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:id="@+id/edtx_pregtunta"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
                     android:hint="@string/preguntas"
                     app:endIconMode="clear_text"
                     android:layout_gravity="center"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
 
                 <Button
                     android:id="@+id/btn_agregarp"
