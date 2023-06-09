@@ -65,11 +65,9 @@ public class Register extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             //compruebe si identificacion no está registrado antes
-
-
                             if (snapshot.hasChild(numberTxt)) {
-                                Toast.makeText(Register.this, "Identificacion ya esta registrada", Toast.LENGTH_SHORT).show();
-                                finish();
+                                Toast.makeText(Register.this, "Lo sentimos, Identificacion ya esta registrada", Toast.LENGTH_SHORT).show();
+
                             } else {
                                 //enviado datos a la bd
                                 //estamos usando el usuario como identidad única de cada persona
@@ -85,14 +83,15 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "Registro satisfactorio", Toast.LENGTH_SHORT).show();
                                 finish();
 
-                                startActivity(new Intent(Register.this, Login.class));
-                                finish();
+
 
                             }
-
+                            startActivity(new Intent(Register.this, Login.class));
+                            finish();
 
 
                         }
+
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {

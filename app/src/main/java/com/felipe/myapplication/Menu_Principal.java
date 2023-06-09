@@ -90,14 +90,14 @@ public class Menu_Principal extends AppCompatActivity {
     }
 
 
-    private void obtenerDatos(int id){
+    private void obtenerDatos(int id) {
 
-        ProducctoService service= retrofit.create(ProducctoService.class);
-        Call<ProductoRespuesta> productoRespuestaCall =service.obtenerListaProducto(id);
+        ProducctoService service = retrofit.create(ProducctoService.class);
+        Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
         productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
             @Override
             public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     ProductoRespuesta productoRespuesta = response.body();
                     List<Producto> listproducto = productoRespuesta.getProducto();
                     binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
@@ -105,22 +105,22 @@ public class Menu_Principal extends AppCompatActivity {
                     binding.id3.setText(listproducto.get(0).getProducto_titulo());
                     binding.id4.setText(listproducto.get(0).getFuncionario_iden());
 
-                    Log.e(TAG,"cosumo" +response.body());
-                    Toast.makeText(Menu_Principal.this, ""+response.body(), Toast.LENGTH_SHORT).show();
-                }else{
+                    Log.e(TAG, "cosumo" + response.body());
+                    Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
+                } else {
                     Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                Log.e(TAG,"onFailure" +t.getMessage());
+                Log.e(TAG, "onFailure" + t.getMessage());
 
 
             }
         });
 
-
+    }
 
 
 
@@ -193,4 +193,3 @@ public class Menu_Principal extends AppCompatActivity {
     }*/
 
 
-}
