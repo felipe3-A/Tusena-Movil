@@ -8,8 +8,9 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ProducctoService {
-    @GET("productos/{id}")
-    Call<List<Producto>> obtenerListaProducto(@Path("id")String  id);
+    @GET("producto/{id}")
+    Call<List<ProductoRespuesta>> obtenerListaProducto(@Query("id") String  id);
 }

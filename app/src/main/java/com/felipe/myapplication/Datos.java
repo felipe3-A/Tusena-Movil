@@ -93,15 +93,11 @@ public class Datos {
 
     @Override
     public String toString() {
-        return "Datos{" +
-                "contenedor='" + contenedor + '\'' +
-                ", id='" + id + '\'' +
-                ", proyecto='" + proyecto + '\'' +
-                ", investigador='" + investigador + '\'' +
-                ", identificacion='" + identificacion + '\'' +
-                ", productos='" + productos + '\'' +
-                ", tipocodigoproducto='" + tipocodigoproducto + '\'' +
-                ", numerodelproyecto='" + numerodelproyecto + '\'' +
-                '}';
+        return "Autor = " + investigador+'\n'+
+                "Proyecto = " + proyecto + '\n' +
+                "Identificacion del investigador = " + identificacion + '\n'+
+                "Productos = " + productos + '\n' +
+                "Tipo codigo del producto = " + tipocodigoproducto + '\n' +
+                "Numero del proyecto = " + numerodelproyecto + '\n' ;
     }
 }

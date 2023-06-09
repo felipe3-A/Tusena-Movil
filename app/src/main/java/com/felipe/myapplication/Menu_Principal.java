@@ -23,12 +23,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-import com.model.Producto;
-import com.model.ProductoRespuesta;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,69 +30,81 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import com.google.firebase.database.ValueEventListener;
+import com.model.Producto;
+import com.model.ProductoRespuesta;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class Menu_Principal extends AppCompatActivity {
 
-  private Retrofit retrofit;
+    private Retrofit retrofit;
+    ActivityMenuPrincipalBinding binding;
+    TextView recibeid;
 
-  ActivityMenuPrincipalBinding binding;
-    Button to_manual, to_calculadora, to_logout;
+    TextView datosusers;
 
+    FirebaseDatabase database;
+    DatabaseReference myref;
 
+    ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_menu_principal);
-        //referenciar();
+        setContentView(R.layout.activity_menu_principal);
+
+        datosusers = findViewById(R.id.datos_perfil);
+
+        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
+        myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        datosusers.setText("");
 
 
-        binding.rosa.getText().toString();
-        binding.id1.getText();
-        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                binding.id1.setText("");
-                obtenerDatos(binding.rosa.getText().toString());
-                Toast.makeText(Menu_Principal.this, "soii" , Toast.LENGTH_SHORT).show();
+        Bundle recibe_parametros = this.getIntent().getExtras();
+        if (recibe_parametros != null) {
+            String recibe_id = recibe_parametros.getString("identificacion_login");
+//            Toast.makeText(this, "Id usuario" + recibe_id, Toast.LENGTH_SHORT).show();
 
-            }
-        });
-        //binding.edtBody.getText().toString();
+            myref.child("Proyecto").orderByChild("identificacion").equalTo(recibe_id).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-
-
-
-    }
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        Datos datos = dataSnapshot.getValue(Datos.class);
+                        String t="";
+                        t+=datos.investigador.toString()+"\n";
+                        t+=datos.identificacion.toString()+"\n";
+                        t+=datos.productos.toString()+"\n";
 
 
-    private void obtenerDatos(String id){
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+                        binding.datosPerfil.setText(t);
+                        Toast.makeText(Menu_Principal.this, "Investigador "+t, Toast.LENGTH_SHORT).show();
 
-        ProducctoService service = retrofit.create(ProducctoService.class);
-        Call<List<Producto>> productoCall = service.obtenerListaProducto(id);
-        productoCall.enqueue(new Callback<List<Producto>>() {
-            @Override
-            public void onResponse(Call<List<Producto>> call, Response<List<Producto>> response) {
-                List<Producto> productos=response.body();
-                for(Producto p:productos){
-                    String datos="";
-                    datos+="producto_titulo"+p.getProducto_titulo()+"\n";
-                    binding.rosa.append(datos);
+//                        almacenar.add(datos);
+//                        adapter = new ArrayAdapter<Datos>(Menu_Principal.this, android.R.layout.simple_list_item_1, almacenar);
+//                        binding.datosPerfil.setAdapter(adapter);
+                    }
+
                 }
-                Toast.makeText(Menu_Principal.this, "ffff", Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void onFailure(Call<List<Producto>> call, Throwable t) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        }
+    }
+}
+
+
+
+
 
 
 
@@ -117,9 +123,10 @@ public class Menu_Principal extends AppCompatActivity {
 
                 }else{
                     Log.e(TAG,"onresponse" +response.errorBody());
-                }
+
             }*/
-            }
+
+
 
            /* @Override
             public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
@@ -170,4 +177,3 @@ public class Menu_Principal extends AppCompatActivity {
     }*/
 
 
-}
