@@ -75,124 +75,16 @@ public class Menu_Principal extends AppCompatActivity {
             String recibe_id = recibe_parametros.getString("identificacion_login");
 //            Toast.makeText(this, "Id usuario" + recibe_id, Toast.LENGTH_SHORT).show();
 
-        /*binding.rosa.getText().toString();
-        binding.id1.getText();*/
-
-
-<<<<<<< HEAD
-
-
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int id =Integer.parseInt(binding.rosa.getText().toString());
-                binding.rosa1.getText().toString();
-                binding.id3.getText().toString();
-                binding.id4.getText().toString();
 
 
 
 
-
-
-                Toast.makeText(Menu_Principal.this, "soii" , Toast.LENGTH_SHORT).show();
-                obtenerDatos(id);
-
-
-            }
-        });
-        //binding.edtBody.getText().toString();
-
-    }
-
-
-    private void obtenerDatos(int id) {
-
-        ProducctoService service = retrofit.create(ProducctoService.class);
-        Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
-        productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
-            @Override
-            public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
-                if (response.isSuccessful()) {
-                    ProductoRespuesta productoRespuesta = response.body();
-                    List<Producto> listproducto = productoRespuesta.getProducto();
-                    binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
-                    binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
-                    binding.id3.setText(listproducto.get(0).getProducto_titulo());
-                    binding.id4.setText(listproducto.get(0).getFuncionario_iden());
-
-                    Log.e(TAG, "cosumo" + response.body());
-                    Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                Log.e(TAG, "onFailure" + t.getMessage());
-
-
-            }
-        });
-
-    }
-
-
-
-
-
-
-
-                /*if(response.isSuccessful()) {
-                    Toast.makeText(Menu_Principal.this, "siii", Toast.LENGTH_SHORT).show();
-                    ProductoRespuesta productoRespuesta = response.body();
-
-
-
-
-                    Log.e(TAG,"CONSUMO" + response.body());
-                    Toast.makeText(Menu_Principal.this, ""+response.body(), Toast.LENGTH_SHORT).show();
-
-                }else{
-                    Log.e(TAG,"onresponse" +response.errorBody());
-                }
-            }*/
-            }
-
-           /* @Override
-            public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                Log.e(TAG,"onresponse" +t.getMessage());
-
-            }
-        });
-
-    }
-
-
-
-
-
-
-   /* private void referenciar() {
-        to_manual = findViewById(R.id.btn_foat_to_manual);
-        to_logout = findViewById(R.id.btn_float_exit);
-        to_calculadora = findViewById(R.id.ir_a_calculadora);
-
-
-            to_calculadora.setOnClickListener(new View.OnClickListener() {
-
-=======
             retrofit = new Retrofit.Builder()
                     .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
->>>>>>> 7f760510357db2323696bc85853233af37eaeae3
+
                 @Override
                 public void onClick(View view) {
                     int id = Integer.parseInt(binding.rosa.getText().toString());
