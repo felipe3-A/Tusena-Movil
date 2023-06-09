@@ -23,7 +23,7 @@ public class ProductoRespuesta {
     }
 
     @Override
-    public String toString() {
+    public String  toString() {
         return "ProductoRespuesta{" +
                 "producto=" + producto +
                 '}';

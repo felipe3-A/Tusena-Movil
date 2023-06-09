@@ -11,6 +11,11 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ProducctoService {
+
     @GET("producto/{id}")
     Call<List<ProductoRespuesta>> obtenerListaProducto(@Query("id") String  id);
+
+    @GET("productos/{id}")
+    Call<ProductoRespuesta> obtenerListaProducto(@Path("id")int  id);
+
 }
