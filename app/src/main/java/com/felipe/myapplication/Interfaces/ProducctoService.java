@@ -11,5 +11,6 @@ import retrofit2.http.Path;
 
 public interface ProducctoService {
     @GET("productos/{id}")
-    Call<List<Producto>> obtenerListaProducto(@Path("id")String  id);
+    Call<ProductoRespuesta> obtenerListaProducto(@Path("id")int  id);
+
 }

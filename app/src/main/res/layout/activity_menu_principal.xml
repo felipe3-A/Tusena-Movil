@@ -24,7 +24,7 @@
                     android:layout_gravity="center"
                     android:src="@drawable/tusena_oscuro" />
                 <TextView
-                    android:id="@+id/rosa"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="¡Bienvenido!"
@@ -67,22 +67,22 @@
                     android:layout_height="337dp"
                     android:orientation="vertical">
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/id_1" />
+                        android:id="@+id/rosa" />
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="consumo"
                         android:id="@+id/btn_consumo1" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/id_2" />
+                        android:id="@+id/rosa1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/id_3" />
+                        android:id="@+id/id3" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

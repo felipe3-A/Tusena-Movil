@@ -40,6 +40,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Menu_Principal extends AppCompatActivity {
 
   private Retrofit retrofit;
+  public static  String consumo;
 
   ActivityMenuPrincipalBinding binding;
     Button to_manual, to_calculadora, to_logout;
@@ -55,50 +56,72 @@ public class Menu_Principal extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        binding.rosa.getText().toString();
-        binding.id1.getText();
+        /*binding.rosa.getText().toString();
+        binding.id1.getText();*/
+
+
+
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
         binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.id1.setText("");
-                obtenerDatos(binding.rosa.getText().toString());
+                int id =Integer.parseInt(binding.rosa.getText().toString());
+                binding.rosa1.getText().toString();
+                binding.id3.getText().toString();
+                binding.id4.getText().toString();
+
+
+
+
+
+
                 Toast.makeText(Menu_Principal.this, "soii" , Toast.LENGTH_SHORT).show();
+                obtenerDatos(id);
+
 
             }
         });
         //binding.edtBody.getText().toString();
 
-
-
-
     }
 
 
-    private void obtenerDatos(String id){
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+    private void obtenerDatos(int id){
 
-        ProducctoService service = retrofit.create(ProducctoService.class);
-        Call<List<Producto>> productoCall = service.obtenerListaProducto(id);
-        productoCall.enqueue(new Callback<List<Producto>>() {
+        ProducctoService service= retrofit.create(ProducctoService.class);
+        Call<ProductoRespuesta> productoRespuestaCall =service.obtenerListaProducto(id);
+        productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
             @Override
-            public void onResponse(Call<List<Producto>> call, Response<List<Producto>> response) {
-                List<Producto> productos=response.body();
-                for(Producto p:productos){
-                    String datos="";
-                    datos+="producto_titulo"+p.getProducto_titulo()+"\n";
-                    binding.rosa.append(datos);
+            public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
+                if(response.isSuccessful()){
+                    ProductoRespuesta productoRespuesta = response.body();
+                    List<Producto> listproducto = productoRespuesta.getProducto();
+                    binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
+                    binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
+                    binding.id3.setText(listproducto.get(0).getProducto_titulo());
+                    binding.id4.setText(listproducto.get(0).getFuncionario_iden());
+
+                    Log.e(TAG,"cosumo" +response.body());
+                    Toast.makeText(Menu_Principal.this, ""+response.body(), Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(Menu_Principal.this, "ffff", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(Call<List<Producto>> call, Throwable t) {
+            public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
+                Log.e(TAG,"onFailure" +t.getMessage());
+
 
             }
         });
+
+
+
 
 
 
