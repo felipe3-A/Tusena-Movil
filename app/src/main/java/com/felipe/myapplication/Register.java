@@ -83,11 +83,18 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "Registro satisfactorio", Toast.LENGTH_SHORT).show();
                                 finish();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7f760510357db2323696bc85853233af37eaeae3
 
                             }
                             startActivity(new Intent(Register.this, Login.class));
                             finish();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f760510357db2323696bc85853233af37eaeae3
 
 
                         }

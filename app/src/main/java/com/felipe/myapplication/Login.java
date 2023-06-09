@@ -53,12 +53,13 @@ public class Login extends AppCompatActivity {
 
                                 //ahora obtenga la contraseña del usuario de la bd y conéctela con la contraseña ingresada por el usuario
                                 final String getPassword = snapshot.child(textTxt).child("contraseña").getValue(String.class);
-
+                                final String identificacion=textTxt;
 
 
                                 if (getPassword.equals(passwordTxt)) {
                                     Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
-                                   startActivity(new Intent(Login.this, Menu_Principal.class));
+                                   Intent intent=new Intent(Login.this, Menu_Principal.class);
+                                   startActivity(intent);
 
 
                                     //validacion de roles
@@ -71,8 +72,9 @@ public class Login extends AppCompatActivity {
 
                                     if (getUser.equals("user")) {
                                         Toast.makeText(Login.this, "Has iniciado como Usuario", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(Login.this, Menu_Principal.class);
-                                        startActivity(intent);
+                                        Intent intento = new Intent(Login.this, Menu_Principal.class);
+                                        intento.putExtra("identificacion_login",identificacion);
+                                        startActivity(intento);
                                         finish();
                                     }
 
