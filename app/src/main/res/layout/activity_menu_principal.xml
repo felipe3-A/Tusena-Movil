@@ -43,7 +43,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="70"
+        android:layout_weight="90"
+        android:padding="10dp"
         android:orientation="vertical">
 
         <SearchView
@@ -59,98 +60,125 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            app:cardCornerRadius="20dp">
-
-            <TextView
-                android:id="@+id/datos_perfil"
+            android:orientation="vertical"
+            app:cardCornerRadius="20dp"
+          >
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:textSize="20sp"
-                android:layout_marginEnd="10dp" />
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rosa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/rosa1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/id3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/id_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/id_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/id_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/rosa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/rosa1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/id3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/id_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/id_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/id_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/purple_700"
-                    android:orientation="horizontal">
 
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|bottom"
-                        android:backgroundTint="#389c9c"
-                        app:icon="@drawable/baseline_home_24"
-                        app:iconTint="@color/ic_launcher_background" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_gravity="center"
+        android:background="#205072"
+        android:layout_weight="10"
+        android:orientation="vertical">
 
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:id="@+id/btn_foat_to_manual"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|bottom"
-                        android:layout_marginStart="20dp"
-                        android:backgroundTint="#389c9c"
-                        app:icon="@drawable/baseline_menu_book_24"
-                        app:iconTint="@color/ic_launcher_background" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:id="@+id/ir_a_calculadora"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|bottom"
-                        android:layout_marginStart="20dp"
-                        android:backgroundTint="#389c9c"
-                        app:icon="@drawable/baseline_calculate_24"
-                        app:iconTint="@color/ic_launcher_background" />
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/baseline_home_24"
+                app:iconTint="@color/ic_launcher_background" />
 
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:id="@+id/btn_float_exit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|bottom"
-                        android:layout_marginStart="20dp"
-                        android:backgroundTint="#389c9c"
-                        app:icon="@drawable/icon_exit"
-                        app:iconTint="@color/ic_launcher_background" />
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btn_foat_to_manual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/baseline_menu_book_24"
+                app:iconTint="@color/ic_launcher_background" />
 
-                </LinearLayout>
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/ir_a_calculadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/baseline_calculate_24"
+                app:iconTint="@color/ic_launcher_background" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btn_float_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/icon_exit"
+                app:iconTint="@color/ic_launcher_background" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
             </LinearLayout>
 

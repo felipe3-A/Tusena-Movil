@@ -65,12 +65,12 @@ public class Menu_Principal extends AppCompatActivity {
 
 
         id4 = findViewById(R.id.id_4);
-        datosusers = findViewById(R.id.datos_perfil);
+//        datosusers = findViewById(R.id.datos_perfil);
 
 
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        datosusers.setText("");
+//        datosusers.setText("");
 
 
         retrofit = new Retrofit.Builder()
@@ -111,19 +111,18 @@ public class Menu_Principal extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ProductoRespuesta productoRespuesta = response.body();
                     List<Producto> listproducto = productoRespuesta.getProducto();
-                    binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
-                    binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
-                    binding.id3.setText(listproducto.get(0).getProducto_titulo());
-                    binding.id4.setText(listproducto.get(0).getFuncionario_iden());
+                    binding.rosa.setText("Nombre : "+listproducto.get(0).getFuncionario_nombre());
+                    binding.rosa1.setText("Apellido :"+listproducto.get(0).getFuncionario_apellido());
+                    binding.id3.setText("Titulo de proyecto : "+listproducto.get(0).getProducto_titulo());
+                    binding.id4.setText("Id de Investigador : "+listproducto.get(0).getFuncionario_iden());
+                    binding.id5.setText("Año / Producto : "+listproducto.get(0).getProducto_ano());
+                    binding.id6.setText("SubProducto : "+listproducto.get(0).getProducto_subtipo());
 
-                    binding.rosa1.getText().toString();
-                    binding.id3.getText().toString();
-                    binding.id4.getText().toString();
 
-                    Log.e(TAG, "cosumo" + response.body());
-                    Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(Menu_Principal.this, "No datos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Menu_Principal.this, "Bienvenid@ "+listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
+                }
+                else {
+
                 }
             }
 
