@@ -73,6 +73,25 @@ public class Menu_Principal extends AppCompatActivity {
 //        datosusers.setText("");
 
 
+<<<<<<< HEAD
+
+
+        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.rosa1.getText().toString();
+                binding.id3.getText().toString();
+                binding.id4.getText().toString();
+
+
+                obtenerDatos(id);
+
+            }
+        });
+
+
+=======
+>>>>>>> 29b1fbd9b7da28500ef89ac566b994dee53971b8
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -137,6 +156,96 @@ public class Menu_Principal extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
+            private void obtenerDatos(int id) {
+                Toast.makeText(this, "soii"+id, Toast.LENGTH_SHORT).show();
+
+                ProducctoService service = retrofit.create(ProducctoService.class);
+                Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
+                productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
+                    @Override
+                    public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
+
+
+
+
+                        if (response.isSuccessful()) {
+                            ProductoRespuesta productoRespuesta = response.body();
+                            List<Producto> listproducto = productoRespuesta.getProducto();
+                            binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
+                            binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
+                            binding.id3.setText(listproducto.get(0).getProducto_titulo());
+                            binding.id4.setText(listproducto.get(0).getFuncionario_iden());
+
+                            Log.e(TAG, "cosumo" + response.body());
+                            Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
+                        Log.e(TAG, "onFailure" + t.getMessage());
+
+
+                    }
+                });
+
+
+            }
+
+
+
+
+  /*  private void obtener_automatico() {
+        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
+        myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
+
+
+        Bundle recibe_parametros = this.getIntent().getExtras();
+        if (recibe_parametros != null) {
+            String recibe_id = recibe_parametros.getString("identificacion_login");
+//            Toast.makeText(this, "Id usuario" + recibe_id, Toast.LENGTH_SHORT).show();
+
+            myref.child("Proyecto").orderByChild("identificacion").equalTo(recibe_id).addValueEventListener(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        Datos datos = dataSnapshot.getValue(Datos.class);
+                        String t = "";
+                        t += datos.investigador.toString() + "\n";
+                        t += datos.identificacion.toString() + "\n";
+                        t += datos.productos.toString() + "\n";
+
+                        binding.datosPerfil.setText(t);
+
+                        Toast.makeText(Menu_Principal.this, "Bienvenid@ " + datos.investigador, Toast.LENGTH_SHORT).show();
+
+                        nombre_investigador=datos.investigador;
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+
+
+        }
+        binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
+            }
+        });
+    }*/
+=======
 
 //    private void obtener_automatico() {
 //        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
@@ -182,6 +291,7 @@ public class Menu_Principal extends AppCompatActivity {
 //            }
 //        });
 //    }
+>>>>>>> 29b1fbd9b7da28500ef89ac566b994dee53971b8
 
 
 
