@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
@@ -43,26 +43,27 @@
                     android:layout_weight="2"
                     android:background="@drawable/contenedor_preguntas"
                     android:padding="10dp"
-                    android:textColor="@color/ic_launcher_background"
                     android:textSize="20dp" />
 
                 <RadioGroup
                     android:id="@+id/rg2_respuestas2"
                     style="@style/respuestas"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
                     android:orientation="vertical"
                     android:padding="5dp">
 
                     <RadioButton
                         android:id="@+id/rd2_p1"
+                        style="@style/radiobutons"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SI" />
 
                     <RadioButton
                         android:id="@+id/rb2_p_1"
+                        style="@style/radiobutons"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NO" />
@@ -80,7 +81,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:textColor="@color/ic_launcher_background"
                     android:layout_weight="2"
                     android:textSize="20dp"
                     android:background="@drawable/contenedor_preguntas" />
@@ -88,8 +88,9 @@
                 <RadioGroup
                     android:id="@+id/rd2_repuesta2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
+                    style="@style/respuestas"
                     android:padding="5dp"
                     android:orientation="vertical">
 
@@ -97,9 +98,11 @@
                         android:id="@+id/rb2_p2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb2_p2_2"
+                        style="@style/radiobutons"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NO" />
@@ -117,7 +120,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:textColor="@color/ic_launcher_background"
                 android:textSize="20dp"
                 android:background="@drawable/contenedor_preguntas"
                 android:layout_weight="2"/>
@@ -126,6 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                style="@style/respuestas"
                 android:padding="5dp"
                 android:layout_marginEnd="10dp">
 
@@ -133,9 +136,11 @@
                     android:id="@+id/rb2_p3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/radiobutons"
                     android:text="SI" />
                 <RadioButton
                     android:id="@+id/rb2_p3_3"
+                    style="@style/radiobutons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NO" />
@@ -153,25 +158,27 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:layout_weight="2"
-                    android:textColor="@color/ic_launcher_background"
                     android:textSize="20dp"
                     android:background="@drawable/contenedor_preguntas" />
                 <RadioGroup
                     android:id="@+id/rg2_respuestas4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="5dp"
+                    style="@style/respuestas"
                     android:layout_marginEnd="10dp">
 
                     <RadioButton
                         android:id="@+id/rb2_p4"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb2_p4_4"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="NO" />
 
@@ -185,9 +192,8 @@
                 <TextView
                     android:id="@+id/txt_trl2p5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="10dp"
-                    android:textColor="@color/ic_launcher_background"
                     android:layout_weight="2"
                     android:textSize="20dp"
                     android:background="@drawable/contenedor_preguntas" />
@@ -197,17 +203,20 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="5dp"
+                    style="@style/respuestas"
                     android:layout_marginEnd="10dp">
 
                     <RadioButton
                         android:id="@+id/rb2_p5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb2_p5_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="NO" />
 
                 </RadioGroup>
@@ -223,24 +232,26 @@
                   android:layout_height="wrap_content"
                   android:layout_weight="2"
                   android:padding="10dp"
-                  android:textColor="@color/ic_launcher_background"
                   android:textSize="20dp"
                   android:background="@drawable/contenedor_preguntas" />
               <RadioGroup
                   android:id="@+id/rg2_respuestas6"
                   android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
+                  android:layout_height="match_parent"
                   android:orientation="vertical"
+                  style="@style/respuestas"
                   android:padding="5dp"
                   android:layout_marginEnd="10dp">
 
                   <RadioButton
                       android:id="@+id/rb2_p6"
                       android:layout_width="wrap_content"
+                      style="@style/radiobutons"
                       android:layout_height="wrap_content"
                       android:text="SI" />
                   <RadioButton
                       android:id="@+id/rb2_p6_6"
+                      style="@style/radiobutons"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="NO" />
@@ -257,24 +268,26 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:layout_weight="2"
-                    android:textColor="@color/ic_launcher_background"
                     android:textSize="20dp"
                     android:background="@drawable/contenedor_preguntas" />
                 <RadioGroup
                     android:id="@+id/rg2_respuestas7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
                     android:padding="5dp"
+                    style="@style/respuestas"
                     android:orientation="vertical">
 
                     <RadioButton
                         android:id="@+id/rb2_p7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb2_p7_7"
+                        style="@style/radiobutons"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NO" />
@@ -290,9 +303,8 @@
                 <TextView
                     android:id="@+id/txt_trl2p8"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="10dp"
-                    android:textColor="@color/ic_launcher_background"
                     android:layout_weight="2"
                     android:textSize="20dp"
                     android:background="@drawable/contenedor_preguntas" />
@@ -301,6 +313,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
+                    style="@style/respuestas"
                     android:layout_marginEnd="10dp"
                     android:orientation="vertical">
 
@@ -308,10 +321,12 @@
                         android:id="@+id/rb2_p8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb2_p8_8"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="NO" />
 
@@ -320,12 +335,13 @@
 
             <Button
                 android:id="@+id/btn_calcular2"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_width="162dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:textColor="@color/ic_launcher_background"
-                android:text="CALCULAR" />
-        </RelativeLayout>
+                android:layout_marginTop="30dp"
+                android:text="CALCULAR"
+                android:textColor="@color/ic_launcher_background" />
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

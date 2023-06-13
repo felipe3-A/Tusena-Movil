@@ -290,6 +290,7 @@ public class Trl7 extends AppCompatActivity {
                      public void onClick(View v) {
 
                          todos7=resultadot7_1+resultado7_2+resultado7_3+resultado7_5+resultado7_6+resultado7_7;
+                         nivel="Trl7";
                          cargarResultados();
 
 

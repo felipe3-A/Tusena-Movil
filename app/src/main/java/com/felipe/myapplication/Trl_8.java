@@ -287,6 +287,7 @@ public class Trl_8 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos8=resultadot8_1+resultado8_2+resultado8_3+resultado8_4+resultado8_5+resultado8_6+resultado8_7;
+                        nivel="Trl8";
                         cargarResultados();
 
 
