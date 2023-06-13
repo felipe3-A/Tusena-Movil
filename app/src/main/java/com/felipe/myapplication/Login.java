@@ -28,6 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
     private Retrofit retrofit;
+    public static String identificacion;
     DatabaseReference database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tusena-c86eb-default-rtdb.firebaseio.com/");
 
     @Override
@@ -85,8 +86,7 @@ public class Login extends AppCompatActivity {
 
                                     final String getUser = snapshot.child(textTxt).child("usuario").getValue(String.class);
                                     final String getAdmin = snapshot.child(textTxt).child("usuario").getValue(String.class);
-                                    final String identificacion=textTxt;
-                                    final String iden= textTxt;
+                                        identificacion=textTxt;
                                     Intent intent4 = new Intent(Login.this, Menu_Principal.class);
                                     intent4.putExtra("userId", Producto.class);
                                     startActivity(intent4);

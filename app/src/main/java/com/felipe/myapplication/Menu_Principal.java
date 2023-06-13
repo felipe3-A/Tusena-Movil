@@ -46,9 +46,12 @@ public class Menu_Principal extends AppCompatActivity {
     ActivityMenuPrincipalBinding binding;
     TextView recibeid;
 
+
+    int id = Integer.parseInt(Login.identificacion);
     public static String nombre_investigador;
 
     TextView datosusers,id4;
+
 
     FirebaseDatabase database;
     DatabaseReference myref;
@@ -64,56 +67,41 @@ public class Menu_Principal extends AppCompatActivity {
         id4 = findViewById(R.id.id_4);
         datosusers = findViewById(R.id.datos_perfil);
 
-        consumo=id4.getText().toString();
-
 
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         datosusers.setText("");
 
-<<<<<<< HEAD
-        obtener_automatico();
 
-            retrofit = new Retrofit.Builder()
-                    .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-=======
+        obtenerDatos(id);
 
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
         //Ir a
         binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu_Principal.this,Tlr1_1.class));
+                startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
             }
         });
         binding.btnFloatExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu_Principal.this,Login.class));
+                startActivity(new Intent(Menu_Principal.this, Login.class));
             }
         });
         binding.btnFoatToManual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu_Principal.this,MainActivity.class));
+                startActivity(new Intent(Menu_Principal.this, MainActivity.class));
             }
         });
->>>>>>> 1b652481cb833434ce53ad03b01f622e825e5b88
 
 
-
-        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int id = Integer.parseInt(binding.rosa.getText().toString());
-                binding.rosa1.getText().toString();
-                binding.id3.getText().toString();
-                binding.id4.getText().toString();
-
-                Toast.makeText(Menu_Principal.this, "soii", Toast.LENGTH_SHORT).show();
-                obtenerDatos(id);
-            }
+    }
 
             private void obtenerDatos(int id) {
 
@@ -122,6 +110,10 @@ public class Menu_Principal extends AppCompatActivity {
                 productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
                     @Override
                     public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
+
+                        binding.rosa1.getText().toString();
+                        binding.id3.getText().toString();
+                        binding.id4.getText().toString();
 
                         if (response.isSuccessful()) {
                             ProductoRespuesta productoRespuesta = response.body();
@@ -149,15 +141,10 @@ public class Menu_Principal extends AppCompatActivity {
 
             }
 
-        });
-    }
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 1b652481cb833434ce53ad03b01f622e825e5b88
-    private void obtener_automatico() {
+
+  /*  private void obtener_automatico() {
         database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
         myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
 
@@ -166,16 +153,9 @@ public class Menu_Principal extends AppCompatActivity {
         if (recibe_parametros != null) {
             String recibe_id = recibe_parametros.getString("identificacion_login");
 //            Toast.makeText(this, "Id usuario" + recibe_id, Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
-            myref.child("Proyecto").orderByChild("identificacion").equalTo(recibe_id).addValueEventListener(new ValueEventListener() {
-
-
-=======
-
-
 
             myref.child("Proyecto").orderByChild("identificacion").equalTo(recibe_id).addValueEventListener(new ValueEventListener() {
->>>>>>> 1b652481cb833434ce53ad03b01f622e825e5b88
+
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -210,7 +190,7 @@ public class Menu_Principal extends AppCompatActivity {
                 startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
             }
         });
-    }
+    }*/
 
 
 

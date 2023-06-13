@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.felipe.myapplication.databinding.ActivityMenuPrincipalBinding;
+import com.felipe.myapplication.databinding.ActivityTrl11Binding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +27,7 @@ import java.util.UUID;
 
 public class Tlr1_1 extends AppCompatActivity {
 
+    ActivityTrl11Binding binding;
 
     FirebaseDatabase database;
     DatabaseReference myref;
@@ -60,6 +63,9 @@ public class Tlr1_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trl1_1);
+
+        binding = ActivityTrl11Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
 
         txt_trl1p1 = findViewById(R.id.txt_trl1p1);
@@ -303,6 +309,19 @@ public class Tlr1_1 extends AppCompatActivity {
                 btn_calcular.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
+
+                        String investigador=Menu_Principal.nombre_investigador.toString();
+                        String producto;
+                        String valor;
+                        String proyecto;
+
+                        String nivel=Tlr1_1.nivel.toString();
+
+
+
+
+
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
                         nivel="Trl1";
 
@@ -332,14 +351,11 @@ public class Tlr1_1 extends AppCompatActivity {
             private void cargarResultados() {
                 Resultados resultados = new Resultados();
                 resultados.setId(UUID.randomUUID().toString());
-<<<<<<< HEAD
                 resultados.setInvestigador(Admin2.investigador);
                 resultados.setProducto("si");
                 resultados.setNivel(Admin.nivel);
-=======
                 resultados.setInvestigador(Menu_Principal.nombre_investigador);
                 resultados.setProducto(Admin2.producto);
->>>>>>> 1b652481cb833434ce53ad03b01f622e825e5b88
                 resultados.setProyecto(Admin2.proyecto);
                 resultados.setPorcentaje(todos);
                 resultados.setNivel(nivel);

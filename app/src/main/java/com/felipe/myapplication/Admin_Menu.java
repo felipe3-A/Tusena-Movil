@@ -9,12 +9,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Admin_Menu extends AppCompatActivity {
 
     Button ir_a_agregar_preguntas;
     Button ir_a_agregar_investigadores,exit_admin,editar_preguntas;
     Button btn_go_investigadores,getBtn_go_tlr;
 
+    FirebaseDatabase database;
+    DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +33,8 @@ public class Admin_Menu extends AppCompatActivity {
         ir_a_agregar_investigadores=findViewById(R.id.ira_agregar_inv);
         exit_admin=findViewById(R.id.exit_admin);
         editar_preguntas=findViewById(R.id.editar_preguntas);
+        btn_go_investigadores=findViewById(R.id.btn_busq_investigadores);
+        //getBtn_go_tlr=findViewById(R.id.btn_busq_trl);
 
         editar_preguntas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +64,13 @@ public class Admin_Menu extends AppCompatActivity {
                startActivity(new Intent(Admin_Menu.this, Admin2.class));
            }
        });
+
+        btn_go_investigadores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
 }
