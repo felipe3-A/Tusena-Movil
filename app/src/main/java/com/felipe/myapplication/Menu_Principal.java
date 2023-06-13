@@ -73,7 +73,20 @@ public class Menu_Principal extends AppCompatActivity {
         datosusers.setText("");
 
 
-        obtenerDatos(id);
+
+
+        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.rosa1.getText().toString();
+                binding.id3.getText().toString();
+                binding.id4.getText().toString();
+
+
+                obtenerDatos(id);
+
+            }
+        });
 
 
         retrofit = new Retrofit.Builder()
@@ -104,6 +117,7 @@ public class Menu_Principal extends AppCompatActivity {
     }
 
             private void obtenerDatos(int id) {
+                Toast.makeText(this, "soii"+id, Toast.LENGTH_SHORT).show();
 
                 ProducctoService service = retrofit.create(ProducctoService.class);
                 Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
@@ -111,9 +125,8 @@ public class Menu_Principal extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
 
-                        binding.rosa1.getText().toString();
-                        binding.id3.getText().toString();
-                        binding.id4.getText().toString();
+
+
 
                         if (response.isSuccessful()) {
                             ProductoRespuesta productoRespuesta = response.body();

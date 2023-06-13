@@ -86,10 +86,10 @@ public class Login extends AppCompatActivity {
 
                                     final String getUser = snapshot.child(textTxt).child("usuario").getValue(String.class);
                                     final String getAdmin = snapshot.child(textTxt).child("usuario").getValue(String.class);
-                                        identificacion=textTxt;
-                                    Intent intent4 = new Intent(Login.this, Menu_Principal.class);
-                                    intent4.putExtra("userId", Producto.class);
-                                    startActivity(intent4);
+                                    identificacion=textTxt;
+                                   // Intent intent4 = new Intent(Login.this, Menu_Principal.class);
+                                 //   intent4.putExtra("userId",identificacion);
+                                  //  startActivity(intent4);
 
 
 
