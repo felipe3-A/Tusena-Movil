@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.felipe.myapplication.Interfaces.ProducctoService;
 import com.felipe.myapplication.databinding.ActivityMenuPrincipalBinding;
+import com.felipe.myapplication.databinding.ActivityTrl11Binding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,7 +42,6 @@ import java.util.List;
 
 public class Menu_Principal extends AppCompatActivity {
 
-
     private Retrofit retrofit;
     ActivityMenuPrincipalBinding binding;
     TextView recibeid;
@@ -49,7 +49,7 @@ public class Menu_Principal extends AppCompatActivity {
     public static String consumo;
 
 
-    TextView datosusers;
+    TextView datosusers,id4;
 
     FirebaseDatabase database;
     DatabaseReference myref;
@@ -61,36 +61,26 @@ public class Menu_Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-        obtener_automatico();
 
+        id4 = findViewById(R.id.id_4);
         datosusers = findViewById(R.id.datos_perfil);
+
+        consumo=id4.getText().toString();
+
+
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         datosusers.setText("");
 
-
-
-
-<<<<<<< HEAD
-
-
-
+        obtener_automatico();
 
             retrofit = new Retrofit.Builder()
                     .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-            binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-
-=======
-        /*binding.rosa.getText().toString();
-        binding.id1.getText();*/
 
 
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+
         binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,6 +103,7 @@ public class Menu_Principal extends AppCompatActivity {
                 productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
                     @Override
                     public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
+
                         if (response.isSuccessful()) {
                             ProductoRespuesta productoRespuesta = response.body();
                             List<Producto> listproducto = productoRespuesta.getProducto();
@@ -142,7 +133,6 @@ public class Menu_Principal extends AppCompatActivity {
         });
     }
 
-
     private void obtener_automatico() {
         database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
         myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
@@ -150,10 +140,9 @@ public class Menu_Principal extends AppCompatActivity {
         if (recibe_parametros != null) {
             String recibe_id = recibe_parametros.getString("identificacion_login");
 //            Toast.makeText(this, "Id usuario" + recibe_id, Toast.LENGTH_SHORT).show();
-
-
             myref.child("Proyecto").orderByChild("identificacion").equalTo(recibe_id).addValueEventListener(new ValueEventListener() {
->>>>>>> 584e943476e3f763b48743148f3d108225fc101c
+
+
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -180,8 +169,20 @@ public class Menu_Principal extends AppCompatActivity {
 
                 }
             });
+
+
+
         }
+        binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
+            }
+        });
     }
+
+
+
 }
 
 

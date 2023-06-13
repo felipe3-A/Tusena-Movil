@@ -335,7 +335,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
                 resultados.setId(UUID.randomUUID().toString());
                 resultados.setInvestigador(Admin2.investigador);
-                resultados.setProducto(Admin2.producto);
+                resultados.setProducto("si");
                 resultados.setNivel(Admin.nivel);
                 resultados.setProyecto(Admin2.proyecto);
                 resultados.setPorcentaje(todos);

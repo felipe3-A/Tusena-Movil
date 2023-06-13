@@ -6,7 +6,7 @@ public class Producto {
     String producto_ano;
     String producto_tipo;
     String producto_subtipo;
-    String funcionario_iden;
+ String funcionario_iden;
     String funcionario_nombre;
     String funcionario_apellido;
     String proyecto_nombre;

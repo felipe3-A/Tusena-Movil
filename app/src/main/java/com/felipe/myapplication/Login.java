@@ -7,18 +7,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.felipe.myapplication.Interfaces.ProducctoService;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.model.Producto;
+import com.model.ProductoRespuesta;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
+    private Retrofit retrofit;
     DatabaseReference database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tusena-c86eb-default-rtdb.firebaseio.com/");
 
     @Override
@@ -33,12 +42,21 @@ public class Login extends AppCompatActivity {
         final TextView registrarseahora = findViewById(R.id.registrarse_ahora);
 
 
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+
+
+
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 final String textTxt = usuario.getEditText().getText().toString();
                 final String passwordTxt = password.getEditText().getText().toString();
+
 
 
                 if (textTxt.isEmpty() || passwordTxt.isEmpty()) {
@@ -53,7 +71,7 @@ public class Login extends AppCompatActivity {
 
                                 //ahora obtenga la contraseña del usuario de la bd y conéctela con la contraseña ingresada por el usuario
                                 final String getPassword = snapshot.child(textTxt).child("contraseña").getValue(String.class);
-                                final String identificacion=textTxt;
+
 
 
                                 if (getPassword.equals(passwordTxt)) {
@@ -62,13 +80,20 @@ public class Login extends AppCompatActivity {
                                    startActivity(intent);
 
 
+
                                     //validacion de roles
 
                                     final String getUser = snapshot.child(textTxt).child("usuario").getValue(String.class);
                                     final String getAdmin = snapshot.child(textTxt).child("usuario").getValue(String.class);
+                                    final String identificacion=textTxt;
+                                    final String iden= textTxt;
+                                    Intent intent4 = new Intent(Login.this, Menu_Principal.class);
+                                    intent4.putExtra("userId", Producto.class);
+                                    startActivity(intent4);
 
 
 
+                                    
 
                                     if (getUser.equals("user")) {
                                         Toast.makeText(Login.this, "Has iniciado como Usuario", Toast.LENGTH_SHORT).show();
