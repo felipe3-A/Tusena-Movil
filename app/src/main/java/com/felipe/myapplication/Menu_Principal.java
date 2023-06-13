@@ -73,25 +73,19 @@ public class Menu_Principal extends AppCompatActivity {
 //        datosusers.setText("");
 
 
-<<<<<<< HEAD
-
-
-        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                binding.rosa1.getText().toString();
-                binding.id3.getText().toString();
-                binding.id4.getText().toString();
-
-
-                obtenerDatos(id);
-
-            }
-        });
-
-
-=======
->>>>>>> 29b1fbd9b7da28500ef89ac566b994dee53971b8
+//        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                binding.rosa1.getText().toString();
+//                binding.id3.getText().toString();
+//                binding.id4.getText().toString();
+//
+//
+//                obtenerDatos(id);
+//
+//            }
+//        });
+//
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -156,45 +150,6 @@ public class Menu_Principal extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
-            private void obtenerDatos(int id) {
-                Toast.makeText(this, "soii"+id, Toast.LENGTH_SHORT).show();
-
-                ProducctoService service = retrofit.create(ProducctoService.class);
-                Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
-                productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
-                    @Override
-                    public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
-
-
-
-
-                        if (response.isSuccessful()) {
-                            ProductoRespuesta productoRespuesta = response.body();
-                            List<Producto> listproducto = productoRespuesta.getProducto();
-                            binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
-                            binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
-                            binding.id3.setText(listproducto.get(0).getProducto_titulo());
-                            binding.id4.setText(listproducto.get(0).getFuncionario_iden());
-
-                            Log.e(TAG, "cosumo" + response.body());
-                            Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                        Log.e(TAG, "onFailure" + t.getMessage());
-
-
-                    }
-                });
-
-
-            }
-
 
 
 
@@ -245,7 +200,7 @@ public class Menu_Principal extends AppCompatActivity {
             }
         });
     }*/
-=======
+
 
 //    private void obtener_automatico() {
 //        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
@@ -291,7 +246,7 @@ public class Menu_Principal extends AppCompatActivity {
 //            }
 //        });
 //    }
->>>>>>> 29b1fbd9b7da28500ef89ac566b994dee53971b8
+
 
 
 
