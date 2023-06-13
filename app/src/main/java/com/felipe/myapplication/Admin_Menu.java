@@ -13,13 +13,14 @@ public class Admin_Menu extends AppCompatActivity {
 
     Button ir_a_agregar_preguntas;
     Button ir_a_agregar_investigadores,exit_admin,editar_preguntas;
-
+    Button btn_go_investigadores,getBtn_go_tlr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu);
         refernciar();
+
     }
 
     private void refernciar() {
@@ -34,6 +35,7 @@ public class Admin_Menu extends AppCompatActivity {
                 startActivity(new Intent(Admin_Menu.this,Vista_Trls.class));
             }
         });
+
 
         exit_admin.setOnClickListener(new View.OnClickListener() {
             @Override

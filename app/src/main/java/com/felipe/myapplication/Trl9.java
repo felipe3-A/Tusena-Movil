@@ -294,6 +294,7 @@ public class Trl9 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos9=resultado9_1+resultado9_2+resultado9_3+resultado9_5+resultado9_6+resultado9_7;
+                        nivel="Trl9";
                         cargarResultados();
 
 

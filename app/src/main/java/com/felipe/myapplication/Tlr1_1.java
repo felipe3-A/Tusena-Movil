@@ -6,10 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -32,7 +29,7 @@ public class Tlr1_1 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myref;
 
- // public static String nivel;
+  public static String nivel;
     Button btn_calcular;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7;
 
@@ -307,20 +304,21 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
+                        nivel="Trl1";
+
                         cargarResultados();
                         if(todos>= 100) {
-
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
-
                                 Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos + "%" ,Toast.LENGTH_SHORT).show();
-
                         }
                        else{
-                            //nivel = "Tlr1";
                             Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
+
+
+
                         }
 
 
@@ -330,16 +328,21 @@ public class Tlr1_1 extends AppCompatActivity {
             }
 
 
+
             private void cargarResultados() {
                 Resultados resultados = new Resultados();
-
                 resultados.setId(UUID.randomUUID().toString());
+<<<<<<< HEAD
                 resultados.setInvestigador(Admin2.investigador);
                 resultados.setProducto("si");
                 resultados.setNivel(Admin.nivel);
+=======
+                resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                resultados.setProducto(Admin2.producto);
+>>>>>>> 1b652481cb833434ce53ad03b01f622e825e5b88
                 resultados.setProyecto(Admin2.proyecto);
                 resultados.setPorcentaje(todos);
-
+                resultados.setNivel(nivel);
                 myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
 
                 Toast.makeText(Tlr1_1.this, "Datos Cargados ", Toast.LENGTH_SHORT).show();

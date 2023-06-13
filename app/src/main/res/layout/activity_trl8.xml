@@ -37,7 +37,6 @@
               <TextView
                   android:id="@+id/txt_trl8p1"
                   android:layout_width="match_parent"
-                  android:layout_marginTop="10dp"
                   android:layout_height="wrap_content"
                   android:padding="10dp"
                   style="@style/preguntas"
@@ -53,11 +52,13 @@
                       android:id="@+id/rd8_p1"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      style="@style/radiobutons"
                       android:text="SI" />
                   <RadioButton
                       android:id="@+id/rd8_p_1"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      style="@style/radiobutons"
                       android:text="NO" />
 
               </RadioGroup>
@@ -88,10 +89,12 @@
                         android:id="@+id/rb8_p2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb8_p_2"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="NO" />
 
@@ -119,10 +122,12 @@
         <RadioButton
             android:id="@+id/rb8_p3"
             android:layout_width="wrap_content"
+            style="@style/radiobutons"
             android:layout_height="wrap_content"
             android:text="SI" />
         <RadioButton
             android:id="@+id/rb8_p_3"
+            style="@style/radiobutons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NO" />
@@ -149,12 +154,14 @@
                     <RadioButton
                         android:id="@+id/rb8_p4"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb8_p_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="NO" />
 
                 </RadioGroup>
@@ -181,9 +188,11 @@
                        android:id="@+id/rb8_p5"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       style="@style/radiobutons"
                        android:text="SI" />
                    <RadioButton
                        android:id="@+id/rb8_p_5"
+                       style="@style/radiobutons"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="NO" />
@@ -211,10 +220,12 @@
                         android:id="@+id/rb8_p6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/radiobutons"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb8_p_6"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="NO" />
 
@@ -241,11 +252,13 @@
                     <RadioButton
                         android:id="@+id/rb8_p7"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="SI" />
                     <RadioButton
                         android:id="@+id/rb8_p_7"
                         android:layout_width="wrap_content"
+                        style="@style/radiobutons"
                         android:layout_height="wrap_content"
                         android:text="NO" />
 
@@ -257,7 +270,8 @@
             <Button
                 android:id="@+id/btn_calcular8"
                 android:layout_width="170dp"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
                 android:textColor="@color/ic_launcher_background"
                 android:layout_gravity="center"
                 android:text="Calcular" />

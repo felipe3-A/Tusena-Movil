@@ -328,6 +328,7 @@ public class Trl3 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos3 = resultadot3_1+resultado3_2+resultado3_3+resultado3_4+resultado3_5+resultado3_6+resultado3_7+resultado3_8;
+                        nivel="Trl3";
                         cargarResultados();
 
                         if (todos3 >= 100) {

@@ -4,7 +4,6 @@ public class Resultados {
 
 
     String id;
-
     String investigador;
     String producto;
     String valor;

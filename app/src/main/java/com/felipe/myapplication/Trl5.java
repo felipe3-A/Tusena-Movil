@@ -323,6 +323,7 @@ public class Trl5 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos5=resultadot5_1+resultado5_2+resultado5_3+resultado5_4+resultado5_5+resultado5_6+resultado5_7+resultado5_8;
+                        nivel="Trl5";
                         cargarResultados();
 
 

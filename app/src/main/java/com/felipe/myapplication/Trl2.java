@@ -1,23 +1,17 @@
 package com.felipe.myapplication;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -359,6 +353,7 @@ public class Trl2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
+                nivel="Trl2";
                 cargarResultados();
 
                 if(todos2>= 100) {
@@ -386,7 +381,7 @@ public class Trl2 extends AppCompatActivity {
                 resultados.setId(UUID.randomUUID().toString());
                 resultados.setInvestigador("Admin2.investigador");
                 resultados.setProducto("Admin2.producto");
-                resultados.setNivel("Admin.nivel");
+                resultados.setNivel(nivel);
                 resultados.setProyecto("Admin2.proyecto");
                 resultados.setPorcentaje(todos2);
 

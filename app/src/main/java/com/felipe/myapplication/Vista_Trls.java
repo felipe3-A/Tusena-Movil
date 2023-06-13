@@ -22,7 +22,7 @@ Button trl1_b;
         trl1_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Vista_Trls.this, Tlr1_1.class));
+                startActivity(new Intent(Vista_Trls.this, Trl1_admin.class));
             }
         });
     }
