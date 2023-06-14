@@ -76,7 +76,7 @@ public class Login extends AppCompatActivity {
 
 
                                 if (getPassword.equals(passwordTxt)) {
-                                    Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
+                                   // Toast.makeText(Login.this, "inicio sesión con éxito", Toast.LENGTH_SHORT).show();
                                    Intent intent=new Intent(Login.this, Menu_Principal.class);
                                    startActivity(intent);
 
@@ -86,19 +86,19 @@ public class Login extends AppCompatActivity {
 
                                     final String getUser = snapshot.child(textTxt).child("usuario").getValue(String.class);
                                     final String getAdmin = snapshot.child(textTxt).child("usuario").getValue(String.class);
-<<<<<<< HEAD
+
                                     identificacion=textTxt;
                                    // Intent intent4 = new Intent(Login.this, Menu_Principal.class);
                                  //   intent4.putExtra("userId",identificacion);
                                   //  startActivity(intent4);
-=======
+
 
                                         identificacion=textTxt;
 
                                     Intent intent4 = new Intent(Login.this, Menu_Principal.class);
                                     intent4.putExtra("userId", Producto.class);
                                     startActivity(intent4);
->>>>>>> 29b1fbd9b7da28500ef89ac566b994dee53971b8
+
 
 
 
