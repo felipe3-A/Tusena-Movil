@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.felipe.myapplication.databinding.ActivityMenuPrincipalBinding;
 import com.felipe.myapplication.databinding.ActivityTrl11Binding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,17 +24,21 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
 public class Tlr1_1 extends AppCompatActivity {
 
-    ActivityTrl11Binding binding;
+    //Actualizar base de datos
 
+
+    ActivityTrl11Binding binding;
     FirebaseDatabase database;
     DatabaseReference myref;
 
   public static String nivel;
+  public static String producto_investigador;
     Button btn_calcular;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7;
 
@@ -56,8 +62,6 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_7,
             todos;
     public static List<Preguntas> list = new ArrayList<>();
-    public static List<Preguntas> list2= new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +70,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
         binding = ActivityTrl11Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
 
         txt_trl1p1 = findViewById(R.id.txt_trl1p1);
         txt_trl1p2 = findViewById(R.id.txt_trl1p2);
@@ -106,6 +109,7 @@ public class Tlr1_1 extends AppCompatActivity {
         rd_p7_7 = findViewById(R.id.rb_p7_7);
 
         cargarP();
+
 
     }
 
@@ -309,22 +313,15 @@ public class Tlr1_1 extends AppCompatActivity {
                 btn_calcular.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
-
-                        String investigador=Menu_Principal.nombre_investigador.toString();
-                        String producto;
-                        String valor;
-                        String proyecto;
-
-                        String nivel=Tlr1_1.nivel.toString();
-
-
-
-
-
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
-                        nivel="Trl1";
 
+
+                        String nivel="Trl1";
+
+                        upDateDatos(nivel);
+
+
+                        Toast.makeText(Tlr1_1.this, "1"+producto_investigador, Toast.LENGTH_SHORT).show();
                         cargarResultados();
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
@@ -336,29 +333,20 @@ public class Tlr1_1 extends AppCompatActivity {
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
 
-
-
                         }
-
-
 
                     }
                 });
             }
 
-
-
             private void cargarResultados() {
                 Resultados resultados = new Resultados();
                 resultados.setId(UUID.randomUUID().toString());
-                resultados.setInvestigador(Admin2.investigador);
-                resultados.setProducto("si");
-                resultados.setNivel(Admin.nivel);
-                resultados.setInvestigador(Menu_Principal.nombre_investigador);
-                resultados.setProducto(Admin2.producto);
-                resultados.setProyecto(Admin2.proyecto);
                 resultados.setPorcentaje(todos);
                 resultados.setNivel(nivel);
+                resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                resultados.setProducto(Menu_Principal.producto_investigador);
+
                 myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
 
                 Toast.makeText(Tlr1_1.this, "Datos Cargados ", Toast.LENGTH_SHORT).show();
@@ -372,6 +360,23 @@ public class Tlr1_1 extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void upDateDatos(String nivel) {
+        HashMap Resultado=new HashMap();
+        Resultado.put("nivel",nivel);
+
+        myref=FirebaseDatabase.getInstance().getReference("Respuestas");
+        myref.child(nivel).updateChildren(Resultado).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+
+                if (task.isSuccessful()){
+                    String nivel_up="Trl2";
+
+                }
+            }
+        });
     }
 
 

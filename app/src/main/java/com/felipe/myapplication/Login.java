@@ -98,14 +98,7 @@ public class Login extends AppCompatActivity {
                                     Intent intent4 = new Intent(Login.this, Menu_Principal.class);
                                     intent4.putExtra("userId", Producto.class);
                                     startActivity(intent4);
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 0ec75113b5af4e74b61798742d0b4f7b1e45b0bf
-
-
-                                    
 
                                     if (getUser.equals("user")) {
                                         Toast.makeText(Login.this, "Has iniciado como Usuario", Toast.LENGTH_SHORT).show();

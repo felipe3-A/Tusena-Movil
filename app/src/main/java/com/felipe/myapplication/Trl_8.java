@@ -314,7 +314,7 @@ public class Trl_8 extends AppCompatActivity {
 
                         resultados.setId(UUID.randomUUID().toString());
                         resultados.setInvestigador(Admin2.investigador);
-                        resultados.getProducto(Admin2.producto);
+                        resultados.getProducto();
                         resultados.setNivel(Admin.nivel);
                         resultados.setProyecto(Admin2.proyecto);
                         resultados.setPorcentaje(todos8);

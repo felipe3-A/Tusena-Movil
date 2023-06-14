@@ -1,29 +1,26 @@
 package com.felipe.myapplication;
 
 import static android.content.ContentValues.TAG;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.app.ProgressDialog;
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.felipe.myapplication.Interfaces.ProducctoService;
 import com.felipe.myapplication.databinding.ActivityMenuPrincipalBinding;
-import com.felipe.myapplication.databinding.ActivityTrl11Binding;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,68 +28,59 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import com.google.firebase.database.ValueEventListener;
 import com.model.Producto;
 import com.model.ProductoRespuesta;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 
 
 public class Menu_Principal extends AppCompatActivity {
-
     private Retrofit retrofit;
+
+
     ActivityMenuPrincipalBinding binding;
+    ArrayList<String> productList;
+    Handler mainHandler = new Handler();
+    ProgressDialog progressDialog;
+    ArrayAdapter<String> listAdapter;
+
+
     TextView recibeid;
-
-
     int id = Integer.parseInt(Login.identificacion);
     public static String nombre_investigador;
+    public static  String producto_investigador;
 
-    TextView datosusers, id4;
-
-
-    FirebaseDatabase database;
-    DatabaseReference myref;
-
-    ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-
-        id4 = findViewById(R.id.id_4);
-//        datosusers = findViewById(R.id.datos_perfil);
-
-
+//        id4 = findViewById(R.id.id_4);
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//        datosusers.setText("");
+
+        new obtener().start();
 
 
-<<<<<<< HEAD
-=======
-//        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                binding.rosa1.getText().toString();
-//                binding.id3.getText().toString();
-//                binding.id4.getText().toString();
-//
-//
-//                obtenerDatos(id);
-//
-//            }
-//        });
-//
->>>>>>> 0ec75113b5af4e74b61798742d0b4f7b1e45b0bf
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
         //Ir a
         binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,50 +102,30 @@ public class Menu_Principal extends AppCompatActivity {
         });
 
         obtenerDatos(id);
+        iniciarlistadeproductos();
+
+        binding.recibeProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                startActivity(new Intent(Menu_Principal.this,Tlr1_1.class));
+               String textItemList = (productList.get(position));
+               producto_investigador=textItemList;
+            }
+        });
+
+
     }
 
-<<<<<<< HEAD
+    private void iniciarlistadeproductos() {
+        productList = new ArrayList<>();
+        listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,productList);
+        binding.recibeProductos.setAdapter(listAdapter);
 
 
-            private void obtenerDatos(int id) {
-
-                ProducctoService service = retrofit.create(ProducctoService.class);
-                Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
-                productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
-                    @Override
-                    public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
+    }
 
 
-
-
-                        if (response.isSuccessful()) {
-                            ProductoRespuesta productoRespuesta = response.body();
-                            List<Producto> listproducto = productoRespuesta.getProducto();
-                            binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
-                            binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
-                            binding.id3.setText(listproducto.get(0).getProducto_titulo());
-                            binding.id4.setText(listproducto.get(0).getFuncionario_iden());
-
-                            Log.e(TAG, "cosumo" + response.body());
-                            Toast.makeText(Menu_Principal.this, "Bienvenid@" +" " + listproducto.get(0).getFuncionario_nombre() +" "+""+ listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
-
-                            // Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                        Log.e(TAG, "onFailure" + t.getMessage());
-
-
-                    }
-                });
-
-
-            }
-=======
     private void obtenerDatos(int id) {
 
         ProducctoService service = retrofit.create(ProducctoService.class);
@@ -165,36 +133,94 @@ public class Menu_Principal extends AppCompatActivity {
         productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
             @Override
             public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
-
                 if (response.isSuccessful()) {
                     ProductoRespuesta productoRespuesta = response.body();
                     List<Producto> listproducto = productoRespuesta.getProducto();
-                    binding.rosa.setText("Nombre : "+listproducto.get(0).getFuncionario_nombre());
-                    binding.rosa1.setText("Apellido :"+listproducto.get(0).getFuncionario_apellido());
-                    binding.id3.setText("Titulo de proyecto : "+listproducto.get(0).getProducto_titulo());
-                    binding.id4.setText("Id de Investigador : "+listproducto.get(0).getFuncionario_iden());
-                    binding.id5.setText("Año / Producto : "+listproducto.get(0).getProducto_ano());
-                    binding.id6.setText("SubProducto : "+listproducto.get(0).getProducto_subtipo());
+                    nombre_investigador= listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido();
+                    Toast.makeText(Menu_Principal.this, "Bienvenid@" + " " + listproducto.get(0).getFuncionario_nombre() + " " + "" + listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
 
-
-                    Toast.makeText(Menu_Principal.this, "Bienvenid@ "+listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
-                }
-                else {
-
+                } else {
+                    Toast.makeText(Menu_Principal.this, "Este usuario no existe o se ha borrado de la base de datos" + response.errorBody(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
                 Log.e(TAG, "onFailure" + t.getMessage());
-
-
             }
         });
+    }
 
+    class obtener extends Thread {
+        String data = "";
+
+        @Override
+        public void run() {
+
+            mainHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    progressDialog = new ProgressDialog(Menu_Principal.this);
+                    progressDialog.setMessage("Buscando datos...");
+                    progressDialog.setCancelable(false);
+                    progressDialog.show();
+                }
+            });
+
+            try {
+                URL url = new URL("https://nodejs-deploy-render-e0el.onrender.com/productos/"+Login.identificacion);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+                String line;
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    data = data + line;
+                }
+
+                if (!data.isEmpty()) {
+
+                    JSONObject jsonObject = new JSONObject(data);
+                    JSONArray products = jsonObject.getJSONArray("producto");
+                    productList.clear();
+
+                    for (int i = 0; i < products.length(); i++) {
+                        JSONObject datos = products.getJSONObject(i);
+                        String dato = datos.getString("producto_titulo");
+                        productList.add(dato);
+                    }
+                }
+
+
+                mainHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (progressDialog.isShowing())
+                            progressDialog.dismiss();
+                           listAdapter.notifyDataSetChanged();
+                        {
+
+                        }
+                    }
+                });
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        }
 
     }
->>>>>>> 0ec75113b5af4e74b61798742d0b4f7b1e45b0bf
+
+
+}
+
+
 
 
 
@@ -296,7 +322,7 @@ public class Menu_Principal extends AppCompatActivity {
 
 
 
-}
+
 
 
 

@@ -350,8 +350,8 @@ public class Trl5 extends AppCompatActivity {
                         Resultados resultados = new Resultados();
 
                         resultados.setId(UUID.randomUUID().toString());
-                        resultados.setInvestigador(Admin2.investigador);
-                        resultados.setProducto(Admin2.producto);
+                        resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                        resultados.setProducto(Menu_Principal.producto_investigador);
                         resultados.setNivel(Admin.nivel);
                         resultados.setProyecto(Admin2.proyecto);
                         resultados.setPorcentaje(todos5);
