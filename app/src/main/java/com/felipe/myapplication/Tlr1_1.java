@@ -71,6 +71,12 @@ public class Tlr1_1 extends AppCompatActivity {
         binding = ActivityTrl11Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        String dato=Menu_Principal.nombre_investigador;
+        binding.getProyectName.setText(dato);
+
+        String dato2=Menu_Principal.producto_investigador;
+        binding.getProductName.setText("Estas analizando el producto : "+ dato2);
+
         txt_trl1p1 = findViewById(R.id.txt_trl1p1);
         txt_trl1p2 = findViewById(R.id.txt_trl1p2);
         txt_trl1p3 = findViewById(R.id.txt_trl1p3);
@@ -314,14 +320,8 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
+                        nivel="Trl1";
 
-
-                        String nivel="Trl1";
-
-
-
-
-                        Toast.makeText(Tlr1_1.this, "1"+producto_investigador, Toast.LENGTH_SHORT).show();
                         cargarResultados();
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
@@ -345,7 +345,11 @@ public class Tlr1_1 extends AppCompatActivity {
                 resultados.setPorcentaje(todos);
                 resultados.setNivel(nivel);
                 resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                resultados.setId_investigador(Menu_Principal.id_investigador);
                 resultados.setProducto(Menu_Principal.producto_investigador);
+                resultados.setAnio(Menu_Principal.anio);
+                resultados.setProyecto(Menu_Principal.proyecto);
+                resultados.setTipo_producto(Menu_Principal.tipo);
 
                 myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
 
