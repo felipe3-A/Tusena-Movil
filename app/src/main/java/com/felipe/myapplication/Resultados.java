@@ -1,8 +1,6 @@
 package com.felipe.myapplication;
 
 public class Resultados {
-
-
     String id;
     String investigador;
     String producto;
@@ -38,7 +36,7 @@ public class Resultados {
         this.investigador = investigador;
     }
 
-    public String getProducto(String producto) {
+    public String getProducto() {
         return this.producto;
     }
 

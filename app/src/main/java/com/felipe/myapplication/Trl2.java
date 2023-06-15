@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -355,6 +358,7 @@ public class Trl2 extends AppCompatActivity {
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
                 nivel="Trl2";
                 cargarResultados();
+                upDateDatos(nivel);
 
                 if(todos2>= 100) {
 
@@ -379,10 +383,9 @@ public class Trl2 extends AppCompatActivity {
                 Resultados resultados = new Resultados();
 
                 resultados.setId(UUID.randomUUID().toString());
-                resultados.setInvestigador("Admin2.investigador");
-                resultados.setProducto("Admin2.producto");
+                resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                resultados.setProducto(Menu_Principal.producto_investigador);
                 resultados.setNivel(nivel);
-                resultados.setProyecto("Admin2.proyecto");
                 resultados.setPorcentaje(todos2);
 
                 myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
@@ -393,6 +396,20 @@ public class Trl2 extends AppCompatActivity {
 
 
 
+    }
+
+    private void upDateDatos(String nivel) {
+        HashMap Resultado=new HashMap();
+        Resultado.put("nivel",nivel);
+
+        myref=FirebaseDatabase.getInstance().getReference();
+        myref.child(nivel).updateChildren(Resultado).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+
+                if (task.isSuccessful()){}
+            }
+        });
     }
 
 

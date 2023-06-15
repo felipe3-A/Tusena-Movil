@@ -295,7 +295,7 @@ public class Trl7 extends AppCompatActivity {
 
 
                          if(todos7>= 100) {
-                             //nivel = "Tlr4";
+                             nivel = "Tlr4";
 
                              Intent intent = new Intent(Trl7.this, Trl_8.class);
                              startActivity(intent);
@@ -314,9 +314,9 @@ public class Trl7 extends AppCompatActivity {
                          Resultados resultados = new Resultados();
 
                          resultados.setId(UUID.randomUUID().toString());
-                         resultados.setInvestigador(Admin2.investigador);
-                         resultados.setProducto(Admin2.producto);
-                         resultados.setNivel(Admin.nivel);
+                         resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                         resultados.setProducto(Menu_Principal.producto_investigador);
+                         resultados.setNivel(nivel);
                          resultados.setProyecto(Admin2.proyecto);
                          resultados.setPorcentaje(todos7);
 
