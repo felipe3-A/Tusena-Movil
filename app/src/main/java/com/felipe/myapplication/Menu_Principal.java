@@ -76,7 +76,7 @@ public class Menu_Principal extends AppCompatActivity {
         new obtener().start();
 
 
-<<<<<<< HEAD
+
 
 //        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -92,8 +92,6 @@ public class Menu_Principal extends AppCompatActivity {
 //        });
 //
 
-=======
->>>>>>> 61e2e0b74da239a1ecc59b37e7e5adc0b43c9fa5
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -135,54 +133,14 @@ public class Menu_Principal extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
 
-=======
     private void iniciarlistadeproductos() {
         productList = new ArrayList<>();
         listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,productList);
         binding.recibeProductos.setAdapter(listAdapter);
->>>>>>> 61e2e0b74da239a1ecc59b37e7e5adc0b43c9fa5
-
-
     }
 
 
-<<<<<<< HEAD
-
-
-                        if (response.isSuccessful()) {
-                            ProductoRespuesta productoRespuesta = response.body();
-                            List<Producto> listproducto = productoRespuesta.getProducto();
-                            binding.rosa.setText(listproducto.get(0).getFuncionario_nombre());
-                            binding.rosa1.setText(listproducto.get(0).getFuncionario_apellido());
-                            binding.id3.setText(listproducto.get(0).getProducto_titulo());
-                            binding.id4.setText(listproducto.get(0).getFuncionario_iden());
-
-                            Log.e(TAG, "cosumo" + response.body());
-                            Toast.makeText(Menu_Principal.this, "Bienvenid@" +" " + listproducto.get(0).getFuncionario_nombre() +" "+""+ listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
-
-                            // Toast.makeText(Menu_Principal.this, "" + response.body(), Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(Menu_Principal.this, "onResponse" + response.errorBody(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                        Log.e(TAG, "onFailure" + t.getMessage());
-
-
-                    }
-                });
-
-
-            }
-
-
-
-
-=======
     private void obtenerDatos(int id) {
 
         ProducctoService service = retrofit.create(ProducctoService.class);
@@ -207,7 +165,6 @@ public class Menu_Principal extends AppCompatActivity {
             }
         });
     }
->>>>>>> 61e2e0b74da239a1ecc59b37e7e5adc0b43c9fa5
 
     class obtener extends Thread {
         String data = "";
@@ -273,8 +230,7 @@ public class Menu_Principal extends AppCompatActivity {
 
         }
 
-<<<<<<< HEAD
-=======
+
     }
 
 
@@ -282,7 +238,7 @@ public class Menu_Principal extends AppCompatActivity {
 
 
 
->>>>>>> 61e2e0b74da239a1ecc59b37e7e5adc0b43c9fa5
+
 
 
 
