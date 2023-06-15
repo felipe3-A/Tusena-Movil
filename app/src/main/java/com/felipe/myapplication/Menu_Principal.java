@@ -73,8 +73,7 @@ public class Menu_Principal extends AppCompatActivity {
 //        datosusers.setText("");
 
 
-<<<<<<< HEAD
-=======
+
 //        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -88,7 +87,7 @@ public class Menu_Principal extends AppCompatActivity {
 //            }
 //        });
 //
->>>>>>> 0ec75113b5af4e74b61798742d0b4f7b1e45b0bf
+
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -116,7 +115,7 @@ public class Menu_Principal extends AppCompatActivity {
         obtenerDatos(id);
     }
 
-<<<<<<< HEAD
+
 
 
             private void obtenerDatos(int id) {
@@ -157,44 +156,11 @@ public class Menu_Principal extends AppCompatActivity {
 
 
             }
-=======
-    private void obtenerDatos(int id) {
-
-        ProducctoService service = retrofit.create(ProducctoService.class);
-        Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
-        productoRespuestaCall.enqueue(new Callback<ProductoRespuesta>() {
-            @Override
-            public void onResponse(Call<ProductoRespuesta> call, Response<ProductoRespuesta> response) {
-
-                if (response.isSuccessful()) {
-                    ProductoRespuesta productoRespuesta = response.body();
-                    List<Producto> listproducto = productoRespuesta.getProducto();
-                    binding.rosa.setText("Nombre : "+listproducto.get(0).getFuncionario_nombre());
-                    binding.rosa1.setText("Apellido :"+listproducto.get(0).getFuncionario_apellido());
-                    binding.id3.setText("Titulo de proyecto : "+listproducto.get(0).getProducto_titulo());
-                    binding.id4.setText("Id de Investigador : "+listproducto.get(0).getFuncionario_iden());
-                    binding.id5.setText("Año / Producto : "+listproducto.get(0).getProducto_ano());
-                    binding.id6.setText("SubProducto : "+listproducto.get(0).getProducto_subtipo());
 
 
-                    Toast.makeText(Menu_Principal.this, "Bienvenid@ "+listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
-                }
-                else {
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ProductoRespuesta> call, Throwable t) {
-                Log.e(TAG, "onFailure" + t.getMessage());
 
 
-            }
-        });
 
-
-    }
->>>>>>> 0ec75113b5af4e74b61798742d0b4f7b1e45b0bf
 
 
 
