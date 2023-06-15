@@ -318,7 +318,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
                         String nivel="Trl1";
 
-                        upDateDatos(nivel);
+
 
 
                         Toast.makeText(Tlr1_1.this, "1"+producto_investigador, Toast.LENGTH_SHORT).show();
@@ -362,22 +362,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
     }
 
-    private void upDateDatos(String nivel) {
-        HashMap Resultado=new HashMap();
-        Resultado.put("nivel",nivel);
-
-        myref=FirebaseDatabase.getInstance().getReference("Respuestas");
-        myref.child(nivel).updateChildren(Resultado).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull Task task) {
-
-                if (task.isSuccessful()){
-                    String nivel_up="Trl2";
-
-                }
-            }
-        });
-    }
 
 
 }
