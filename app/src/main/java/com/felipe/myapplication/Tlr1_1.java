@@ -60,7 +60,7 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_6,
             resultadop7,
             resultadop_7,
-            todos;
+          todos;
     public static List<Preguntas> list = new ArrayList<>();
 
     @Override
@@ -320,20 +320,19 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        /*String investigador = Menu_Principal.nombre_investigador;
+                        String investigador = Menu_Principal.nombre_investigador;
                         String producto = Menu_Principal.producto_investigador;
                         String nivel = Tlr1_1.nivel;
-                        int porcentaje = todos;*/
+                        int porcentaje = todos;
 
-                       // updateData(investigador,producto,nivel,porcentaje);
+                        updateData(investigador,producto,nivel,porcentaje);
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
                         nivel="Trl1";
-<<<<<<< HEAD
-                       cargarResultados();
-=======
 
-                        cargarResultados();
->>>>>>> 13de1a5d3f8ceab0ad95b2012f8c6a8625535643
+                       cargarResultados();
+
+
+
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
@@ -368,7 +367,7 @@ public class Tlr1_1 extends AppCompatActivity {
             }
 
 
-           /* private void updateData(String investigador, String producto, String nivel,int porcentaje) {
+           private void updateData(String investigador, String producto, String nivel,int porcentaje) {
                 HashMap resulttado =new HashMap();
                 resulttado.put("investigador",investigador);
                 resulttado.put("producto",producto);
@@ -392,7 +391,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
 
 
-            }*/
+            }
 
 
 

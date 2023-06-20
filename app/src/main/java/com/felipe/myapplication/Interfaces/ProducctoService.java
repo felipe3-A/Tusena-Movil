@@ -15,7 +15,7 @@ import retrofit2.http.Query;
 public interface ProducctoService {
 
     @GET("productos/{id}")
-    Call<ProductoRespuesta> obtenerListaProducto(@Path("id")int  id);
+    Call<ProductoRespuesta> obtenerListaProducto(@Path("id")int id);
 
 
 

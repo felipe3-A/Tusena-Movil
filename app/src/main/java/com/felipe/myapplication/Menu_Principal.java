@@ -99,9 +99,9 @@ public class Menu_Principal extends AppCompatActivity {
                 startActivity(new Intent(Menu_Principal.this, MainActivity.class));
             }
         });
-
         obtenerDatos(id);
         iniciarlistadeproductos();
+
 
         binding.recibeProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -111,6 +111,15 @@ public class Menu_Principal extends AppCompatActivity {
                producto_investigador=textItemList;
             }
         });
+
+        binding.btnBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(Menu_Principal.this,Buscador_Botones.class));
+
+            }
+        });
+
+
 
 
     }
@@ -169,7 +178,7 @@ public class Menu_Principal extends AppCompatActivity {
                 public void run() {
                     progressDialog = new ProgressDialog(Menu_Principal.this);
                     progressDialog.setMessage("Buscando datos...");
-                    progressDialog.setCancelable(false);
+                    progressDialog.setCancelable(true);
                     progressDialog.show();
                 }
             });
@@ -234,6 +243,17 @@ public class Menu_Principal extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   /*  private void obtener_automatico() {
         database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
         myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
@@ -274,68 +294,8 @@ public class Menu_Principal extends AppCompatActivity {
 
 
         }
-        binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
-            }
-        });
+
     }*/
-
-
-//    private void obtener_automatico() {
-//        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
-//        myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
-//
-//
-//        Bundle recibe_parametros = this.getIntent().getExtras();
-//        if (recibe_parametros != null) {
-//            String recibe_id = recibe_parametros.getString("identificacion_login");
-////            Toast.makeText(this, "Id usuario" + recibe_id, Toast.LENGTH_SHORT).show();
-//
-//            myref.child("Proyecto").orderByChild("identificacion").equalTo(recibe_id).addValueEventListener(new ValueEventListener() {
-//
-//                @Override
-//                public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                        Datos datos = dataSnapshot.getValue(Datos.class);
-//                        String t = "";
-//                        t += datos.investigador.toString() + "\n";
-//                        t += datos.identificacion.toString() + "\n";
-//                        t += datos.productos.toString() + "\n";
-//
-//                        binding.datosPerfil.setText(t);
-//
-//                        Toast.makeText(Menu_Principal.this, "Bienvenid@ " + datos.investigador, Toast.LENGTH_SHORT).show();
-//
-//                        nombre_investigador = datos.investigador;
-//                    }
-//
-//                }
-//
-//                @Override
-//                public void onCancelled(@NonNull DatabaseError error) {
-//
-//                }
-//            });
-//        }
-//        binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
-//            }
-//        });
-//    }
-
-
-
-
-
-
-
-
-
 
 
 

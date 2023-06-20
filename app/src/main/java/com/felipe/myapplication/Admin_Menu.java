@@ -33,8 +33,8 @@ public class Admin_Menu extends AppCompatActivity {
         ir_a_agregar_investigadores=findViewById(R.id.ira_agregar_inv);
         exit_admin=findViewById(R.id.exit_admin);
         editar_preguntas=findViewById(R.id.editar_preguntas);
-        btn_go_investigadores=findViewById(R.id.btn_busq_investigadores);
-        //getBtn_go_tlr=findViewById(R.id.btn_busq_trl);
+
+        //,getBtn_go_tlr=findViewById(R.id.btn_busq_trl);
 
         editar_preguntas.setOnClickListener(new View.OnClickListener() {
             @Override

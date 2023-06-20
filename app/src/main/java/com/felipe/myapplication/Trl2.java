@@ -366,6 +366,7 @@ public class Trl2 extends AppCompatActivity {
         });
 
 
+
         btn_calcular2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -378,7 +379,7 @@ public class Trl2 extends AppCompatActivity {
                 String producto = Menu_Principal.producto_investigador;
 
 
-                updateData(resultados.id,nivel,todos2, investigador,producto);
+                //updateData(resultados.id,nivel,todos2, investigador,producto);
 
 
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
@@ -406,7 +407,7 @@ public class Trl2 extends AppCompatActivity {
 
             }
 
-            private void updateData(String id,String nivel,int todos2,String investigador, String producto) {
+           /* private void updateData(String id,String nivel,int todos2,String investigador, String producto) {
                 HashMap resulttado =new HashMap();
                 resulttado.put("id",id);
                 resulttado.put("nivel",nivel);
@@ -430,7 +431,7 @@ public class Trl2 extends AppCompatActivity {
                         }
                     }
                 });
-            }
+            }*/
 
            /* private void cargarResultados() {
                 Resultados resultados = new Resultados();
