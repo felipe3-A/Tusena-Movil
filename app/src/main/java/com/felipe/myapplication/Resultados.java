@@ -4,10 +4,50 @@ public class Resultados {
     String id;
     String investigador;
     String producto;
-    String valor;
     String proyecto;
-    int porcentaje;
     String nivel;
+    int porcentaje;
+
+    String tipo_producto;
+    String subtipo;
+    String anio;
+    String id_investigador;
+
+
+    public Resultados() {
+    }
+
+    public String getTipo_producto() {
+        return tipo_producto;
+    }
+
+    public void setTipo_producto(String tipo_producto) {
+        this.tipo_producto = tipo_producto;
+    }
+
+    public String getSubtipo() {
+        return subtipo;
+    }
+
+    public void setSubtipo(String subtipo) {
+        this.subtipo = subtipo;
+    }
+
+    public String getAnio() {
+        return anio;
+    }
+
+    public void setAnio(String anio) {
+        this.anio = anio;
+    }
+
+    public String getId_investigador() {
+        return id_investigador;
+    }
+
+    public void setId_investigador(String id_investigador) {
+        this.id_investigador = id_investigador;
+    }
 
     public String getProyecto() {
         return proyecto;
@@ -15,9 +55,6 @@ public class Resultados {
 
     public void setProyecto(String proyecto) {
         this.proyecto = proyecto;
-    }
-
-    public Resultados() {
     }
 
     public String getId() {
@@ -44,13 +81,6 @@ public class Resultados {
         this.producto = producto;
     }
 
-    public String getValor() {
-        return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
 
     public int getPorcentaje() {
         return porcentaje;
@@ -68,16 +98,16 @@ public class Resultados {
         this.nivel = nivel;
     }
 
+
     @Override
     public String toString() {
         return "Resultados{" +
                 "id='" + id + '\'' +
                 ", investigador='" + investigador + '\'' +
                 ", producto='" + producto + '\'' +
-                ", valor='" + valor + '\'' +
                 ", proyecto='" + proyecto + '\'' +
                 ", porcentaje=" + porcentaje +
-                ", nivel='" + nivel + '\'' +
-                '}';
+                ", nivel='" + nivel + '\'' ;
+
     }
 }

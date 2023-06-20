@@ -63,34 +63,23 @@ public class Menu_Principal extends AppCompatActivity {
     public static String nombre_investigador;
     public static  String producto_investigador;
 
+    public  static  String proyecto;
+    public static String anio;
+    public static String subProducto;
+    public static String tipo;
+
+    public static String id_investigador;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-//        id4 = findViewById(R.id.id_4);
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         new obtener().start();
-
-
-
-
-//        binding.btnConsumo1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                binding.rosa1.getText().toString();
-//                binding.id3.getText().toString();
-//                binding.id4.getText().toString();
-//
-//
-//                obtenerDatos(id);
-//
-//            }
-//        });
-//
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
@@ -98,12 +87,6 @@ public class Menu_Principal extends AppCompatActivity {
                 .build();
 
         //Ir a
-        binding.irACalculadora.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Menu_Principal.this, Tlr1_1.class));
-            }
-        });
         binding.btnFloatExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,7 +106,6 @@ public class Menu_Principal extends AppCompatActivity {
         binding.recibeProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 startActivity(new Intent(Menu_Principal.this,Tlr1_1.class));
                String textItemList = (productList.get(position));
                producto_investigador=textItemList;
@@ -132,7 +114,6 @@ public class Menu_Principal extends AppCompatActivity {
 
 
     }
-
 
     private void iniciarlistadeproductos() {
         productList = new ArrayList<>();
@@ -151,7 +132,18 @@ public class Menu_Principal extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ProductoRespuesta productoRespuesta = response.body();
                     List<Producto> listproducto = productoRespuesta.getProducto();
+
                     nombre_investigador= listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido();
+                    id_investigador=listproducto.get(0).getFuncionario_iden();
+                    subProducto=listproducto.get(0).getProducto_subtipo();
+                    tipo=listproducto.get(0).getProducto_tipo();
+                    anio=listproducto.get(0).getProducto_ano();
+                    proyecto=listproducto.get(0).getProyecto_nombre();
+
+                    String nombre_investigador=listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido();;
+                    binding.NombreInvestigador.setText("Investigador : "+nombre_investigador);
+
+
                     Toast.makeText(Menu_Principal.this, "Bienvenid@" + " " + listproducto.get(0).getFuncionario_nombre() + " " + "" + listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
 
                 } else {
