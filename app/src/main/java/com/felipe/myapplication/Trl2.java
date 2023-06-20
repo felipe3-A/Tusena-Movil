@@ -25,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 public class Trl2 extends AppCompatActivity {
@@ -33,7 +34,8 @@ public class Trl2 extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static String nivel;
+    public static String nivel2;
+    public static String prueba;
     TextView txt_trl2p1, txt_trl2p2, txt_trl2p3, txt_trl2p4, txt_trl2p5, txt_trl2p6, txt_trl2p7,txt_trl2p8;
     RadioGroup rg2_respuestas,rg2_respuestas2,rg2_respuestas3,rg2_respuestas4,rg2_respuestas5,rg2_respuestas6,rg2_respuestas7,rg2_respuestas8;
     RadioButton rb2_p1, rb2_p_1,rb2_p2, b2_p2_2,rb2_p3, rb2_p3_3,rb2_p4, rb2_p4_4,rb2_p5, rb2_p5_5,rb2_p6, rb2_p6_6,rb2_p7, rb2_p7_7,rb2_p8,rb2_p8_8;
@@ -372,30 +374,32 @@ public class Trl2 extends AppCompatActivity {
 
                 Resultados resultados = new Resultados();
                 resultados.setId(UUID.randomUUID().toString());
-                resultados.setNivel(nivel);
                 resultados.setPorcentaje(todos2);
-                String investigador = Menu_Principal.nombre_investigador;
-                String producto = Menu_Principal.producto_investigador;
+                resultados.setNivel(nivel2);
+                resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                resultados.setId_investigador(Menu_Principal.id_investigador);
+                resultados.setProducto(Menu_Principal.producto_investigador);
+                resultados.setAnio(Menu_Principal.anio);
+                resultados.setProyecto(Menu_Principal.proyecto);
+                resultados.setTipo_producto(Menu_Principal.tipo);
 
-
-                updateData(resultados.id,nivel,todos2, investigador,producto);
-
-
+                String id_investigador=Menu_Principal.id_investigador;
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
-                nivel="Trl2";
+                nivel2="Trl2";
                // cargarResultados();
 
 
 
                 if(todos2>= 100) {
-
+                    updateData(nivel2,id_investigador,todos2);
                     Intent intent = new Intent(Trl2.this, Trl3.class);
                     startActivity(intent);
                     Toast.makeText(Trl2.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos2 + "%" ,Toast.LENGTH_SHORT).show();
 
                 }
                 else{
-                    nivel="Trl2";
+                    nivel2="Trl2";
+                    updateData1(id_investigador);
                     Intent intent = new Intent(Trl2.this, Error_Trl.class);
                     startActivity(intent);
                     Toast.makeText(Trl2.this, "sus resultados "+ todos2 +"%", Toast.LENGTH_SHORT).show();
@@ -403,46 +407,44 @@ public class Trl2 extends AppCompatActivity {
 
 
 
-
             }
 
-            private void updateData(String id,String nivel,int todos2,String investigador, String producto) {
+            private void updateData(String nivel2,String id_investigador,int porcentaje) {
                 HashMap resulttado =new HashMap();
-                resulttado.put("id",id);
-                resulttado.put("nivel",nivel);
-                resulttado.put("porcentaje",todos2);
-                resulttado.put("investigador",investigador);
-                resulttado.put("producto",producto);
+                resulttado.put("nivel",nivel2);
+                resulttado.put("porcentaje",porcentaje);
 
-
-
-                // myref = FirebaseDatabase.getInstance().getReference("Respuestas");
-                myref.child("Respuestas").updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                myref=FirebaseDatabase.getInstance().getReference("Respuestas");
+                myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
+
                         if (task.isSuccessful()){
-                            Toast.makeText(Trl2.this, "Resultados actualizados", Toast.LENGTH_SHORT).show();
-
-
-
+                            Toast.makeText(Trl2.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
                         }else {
-                            Toast.makeText(Trl2.this, "No se actualizaron resultados", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Trl2.this, "Err0r", Toast.LENGTH_SHORT).show();
                         }
+
                     }
                 });
             }
+            private void updateData1(String id_investigador) {
+                HashMap resulttado =new HashMap();
 
-           /* private void cargarResultados() {
-                Resultados resultados = new Resultados();
+                myref=FirebaseDatabase.getInstance().getReference("Respuestas");
+                myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
 
-                resultados.setId(UUID.randomUUID().toString());
-                resultados.setInvestigador(Menu_Principal.nombre_investigador);
-                resultados.setProducto(Menu_Principal.producto_investigador);
-                resultados.setNivel(nivel);
-                resultados.setPorcentaje(todos2);
+                        if (task.isSuccessful()){
+                            Toast.makeText(Trl2.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(Trl2.this, "Err0r", Toast.LENGTH_SHORT).show();
+                        }
 
-                myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
-            }*/
+                    }
+                });
+            }
 
 
 
@@ -450,23 +452,8 @@ public class Trl2 extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
 

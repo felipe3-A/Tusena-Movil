@@ -39,7 +39,7 @@ public class Admin_Menu extends AppCompatActivity {
         editar_preguntas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Admin_Menu.this,Vista_Trls.class));
+                startActivity(new Intent(Admin_Menu.this,Admin.class));
             }
         });
 
@@ -55,6 +55,8 @@ public class Admin_Menu extends AppCompatActivity {
        ir_a_agregar_preguntas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 startActivity(new Intent(Admin_Menu.this, Admin.class));
             }
         });
@@ -65,12 +67,7 @@ public class Admin_Menu extends AppCompatActivity {
            }
        });
 
-        btn_go_investigadores.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
     }
 
 }

@@ -169,7 +169,7 @@ public class Menu_Principal extends AppCompatActivity {
                 public void run() {
                     progressDialog = new ProgressDialog(Menu_Principal.this);
                     progressDialog.setMessage("Buscando datos...");
-                    progressDialog.setCancelable(false);
+                    progressDialog.setCancelable(true);
                     progressDialog.show();
                 }
             });
