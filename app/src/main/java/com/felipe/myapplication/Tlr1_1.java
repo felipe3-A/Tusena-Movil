@@ -60,7 +60,12 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_6,
             resultadop7,
             resultadop_7,
+<<<<<<< HEAD
           todos;
+=======
+
+    todos;
+>>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
     public static List<Preguntas> list = new ArrayList<>();
 
     @Override
@@ -328,11 +333,15 @@ public class Tlr1_1 extends AppCompatActivity {
                         updateData(investigador,producto,nivel,porcentaje);
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
                         nivel="Trl1";
+<<<<<<< HEAD
 
                        cargarResultados();
 
 
 
+=======
+                       cargarResultados();
+>>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);

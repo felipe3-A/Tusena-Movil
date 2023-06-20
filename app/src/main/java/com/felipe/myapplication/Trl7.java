@@ -312,13 +312,16 @@ public class Trl7 extends AppCompatActivity {
 
                      private void cargarResultados() {
                          Resultados resultados = new Resultados();
-
                          resultados.setId(UUID.randomUUID().toString());
-                         resultados.setInvestigador(Menu_Principal.nombre_investigador);
-                         resultados.setProducto(Menu_Principal.producto_investigador);
-                         resultados.setNivel(nivel);
-                         resultados.setProyecto(Admin2.proyecto);
                          resultados.setPorcentaje(todos7);
+                         resultados.setNivel(nivel);
+                         resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                         resultados.setId_investigador(Menu_Principal.id_investigador);
+                         resultados.setProducto(Menu_Principal.producto_investigador);
+                         resultados.setAnio(Menu_Principal.anio);
+                         resultados.setProyecto(Menu_Principal.proyecto);
+                         resultados.setTipo_producto(Menu_Principal.tipo);
+
 
                          myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
                      }
