@@ -367,7 +367,7 @@ public class Tlr1_1 extends AppCompatActivity {
                 resultados.setTipo_producto(Menu_Principal.tipo);
                 resultados.setId_producto(Menu_Principal.id_producto);
 
-                myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                myref.child("Respuestas").child(resultados.getProducto()).setValue(resultados); //insercion
 
                 Toast.makeText(Tlr1_1.this, "Nivel "+nivel, Toast.LENGTH_SHORT).show();
             }

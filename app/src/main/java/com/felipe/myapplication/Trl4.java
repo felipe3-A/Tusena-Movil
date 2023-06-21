@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,7 +30,7 @@ public class Trl4 extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static String nivel;
+    public static String nivel4;
     Button btn_calcular4;
     TextView txt_trl4p1, txt_trl4p2, txt_trl4p3, txt_trl4p4, txt_trl4p5, txt_trl4p6, txt_trl4p7;
 
@@ -127,22 +130,21 @@ public class Trl4 extends AppCompatActivity {
                 txt_trl4p7.setText(list.get(6).getPregunta());
 
 
-
                 rg4_respuestas1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                        switch (i){
+                        switch (i) {
                             case R.id.rd4_p1:
 
-                                resultadot4_1= (resultadot4_1+15);
-                                resultado4_1_1=resultadot4_1;
+                                resultadot4_1 = (resultadot4_1 + 15);
+                                resultado4_1_1 = resultadot4_1;
                                 cargarP();
                                 // Toast.makeText(Trl3.this, "Su porcentaje es: "+resultado , Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rd4_p_1:
-                                resultadot4_1=0;
-                                resultado4_1_1=resultadot4_1;
+                                resultadot4_1 = 0;
+                                resultado4_1_1 = resultadot4_1;
                                 cargarP();
                                 // Toast.makeText(Trl3.this, "ghjj"+resultado, Toast.LENGTH_SHORT).show();
                                 break;
@@ -241,7 +243,7 @@ public class Trl4 extends AppCompatActivity {
                                 break;
 
                             case R.id.rb4_p_5:
-                                resultado4_5 =0;
+                                resultado4_5 = 0;
                                 resultado4_5_5 = resultado4_5;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
@@ -259,14 +261,14 @@ public class Trl4 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb4_p6:
 
-                                resultado4_6 =  (resultado4_6 + 15);
+                                resultado4_6 = (resultado4_6 + 15);
                                 resultado4_6_6 = resultado4_6;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb4_p_6:
-                                resultado4_6 =0;
+                                resultado4_6 = 0;
                                 resultado4_6_6 = resultado4_6;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
@@ -282,7 +284,7 @@ public class Trl4 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb4_p7:
 
-                                resultado4_7 = (resultado4_7 +25);
+                                resultado4_7 = (resultado4_7 + 25);
                                 resultado4_7_7 = resultado4_7;
                                 //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
@@ -290,7 +292,7 @@ public class Trl4 extends AppCompatActivity {
                                 break;
 
                             case R.id.rb4_p_7:
-                                resultado4_7 =0;
+                                resultado4_7 = 0;
                                 resultado4_7_7 = resultado4_7;
                                 cargarP();
                                 //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
@@ -303,33 +305,10 @@ public class Trl4 extends AppCompatActivity {
                 btn_calcular4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        todos4=resultadot4_1+resultado4_2+resultado4_3+resultado4_5+resultado4_6+resultado4_7;
-                        nivel="Trl4";
-                        cargarResultados();
-
-
-                        if(todos4>= 100) {
-                            //nivel = "Tlr4";
-
-                            Intent intent = new Intent(Trl4.this, Trl5.class);
-                            startActivity(intent);
-                            Toast.makeText(Trl4.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos4 + "%" ,Toast.LENGTH_SHORT).show();
-
-                        }
-                        else{
-                            nivel = "Tlr4";
-                            Intent intent = new Intent(Trl4.this, Error_Trl.class);
-                            startActivity(intent);
-                            Toast.makeText(Trl4.this, "sus resultados "+ todos4 +"%", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-
-                    private void cargarResultados() {
                         Resultados resultados = new Resultados();
                         resultados.setId(UUID.randomUUID().toString());
                         resultados.setPorcentaje(todos4);
-                        resultados.setNivel(nivel);
+                        resultados.setNivel(nivel4);
                         resultados.setInvestigador(Menu_Principal.nombre_investigador);
                         resultados.setId_investigador(Menu_Principal.id_investigador);
                         resultados.setProducto(Menu_Principal.producto_investigador);
@@ -337,11 +316,69 @@ public class Trl4 extends AppCompatActivity {
                         resultados.setProyecto(Menu_Principal.proyecto);
                         resultados.setTipo_producto(Menu_Principal.tipo);
 
+                        todos4 = resultadot4_1 + resultado4_2 + resultado4_3 + resultado4_5 + resultado4_6 + resultado4_7;
+                        nivel4 = "Trl4";
 
-                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                        String nombre_producto = Menu_Principal.producto_investigador;
+                        String id_producto = Menu_Principal.id_producto_individual;
+                        String id_investigador = Menu_Principal.id_investigador;
+
+
+                        if (todos4 >= 100) {
+                            //nivel = "Tlr4";
+
+                            Intent intent = new Intent(Trl4.this, Trl5.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl4.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos4 + "%", Toast.LENGTH_SHORT).show();
+
+                        } else {
+                            nivel4 = "Tlr4";
+                            Intent intent = new Intent(Trl4.this, Error_Trl.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl4.this, "sus resultados " + todos4 + "%", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                });
 
+                });
+            }
+                    private void updateData(String nivel4,String producto_nombre,String id_investigador,String id_producto ) {
+
+                        HashMap resulttado =new HashMap();
+                        resulttado.put("nivel",nivel4);
+                        resulttado.put("porcentaje",todos4);
+
+
+                        myref.child("Respuestas").child(producto_nombre).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()){
+                                    Toast.makeText(Trl4.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(Trl4.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+
+                    }
+
+                    private void updateData1(String id_investigador) {
+                        HashMap resulttado =new HashMap();
+
+
+                        myref.child("Respuestas").updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()){
+                                    Toast.makeText(Trl4.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(Trl4.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
 
 
             }
