@@ -60,12 +60,9 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_6,
             resultadop7,
             resultadop_7,
-<<<<<<< HEAD
           todos;
-=======
 
-    todos;
->>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
+
     public static List<Preguntas> list = new ArrayList<>();
 
     @Override
@@ -325,23 +322,17 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        String investigador = Menu_Principal.nombre_investigador;
+                       /* String investigador = Menu_Principal.nombre_investigador;
                         String producto = Menu_Principal.producto_investigador;
                         String nivel = Tlr1_1.nivel;
-                        int porcentaje = todos;
+                        int porcentaje = todos;*/
 
-                        updateData(investigador,producto,nivel,porcentaje);
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
                         nivel="Trl1";
-<<<<<<< HEAD
+
 
                        cargarResultados();
 
-
-
-=======
-                       cargarResultados();
->>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
@@ -374,35 +365,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                 Toast.makeText(Tlr1_1.this, "Datos Cargados ", Toast.LENGTH_SHORT).show();
             }
-
-
-           private void updateData(String investigador, String producto, String nivel,int porcentaje) {
-                HashMap resulttado =new HashMap();
-                resulttado.put("investigador",investigador);
-                resulttado.put("producto",producto);
-                resulttado.put("nivel",nivel);
-                resulttado.put("porcentaje",porcentaje);
-
-                myref = FirebaseDatabase.getInstance().getReference("Respuestas");
-                myref.child(investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(Tlr1_1.this, "Resultados actulizados", Toast.LENGTH_SHORT).show();
-
-
-
-                        }else {
-                            Toast.makeText(Tlr1_1.this, "No se actualizaron resultados", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-
-
-            }
-
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
