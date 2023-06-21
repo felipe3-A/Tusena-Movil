@@ -16,6 +16,13 @@ public class Error_Trl extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error_trl);
+        button=findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Error_Trl.this,Menu_Principal.class));
+            }
+        });
 
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {

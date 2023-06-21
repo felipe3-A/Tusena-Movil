@@ -60,8 +60,13 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_6,
             resultadop7,
             resultadop_7,
+<<<<<<< HEAD
+          todos;
+
+=======
 
     todos;
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
 
     public static List<Preguntas> list = new ArrayList<>();
 
@@ -323,6 +328,19 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
+<<<<<<< HEAD
+                       /* String investigador = Menu_Principal.nombre_investigador;
+                        String producto = Menu_Principal.producto_investigador;
+                        String nivel = Tlr1_1.nivel;
+                        int porcentaje = todos;*/
+
+                        todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
+                        nivel="Trl1";
+
+
+                       cargarResultados();
+
+=======
 
 
                         todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
@@ -333,6 +351,7 @@ public class Tlr1_1 extends AppCompatActivity {
                        cargarResultados();
 
 
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
@@ -372,6 +391,13 @@ public class Tlr1_1 extends AppCompatActivity {
                 Toast.makeText(Tlr1_1.this, "Nivel "+nivel, Toast.LENGTH_SHORT).show();
             }
 
+<<<<<<< HEAD
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+=======
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
         });
 
 

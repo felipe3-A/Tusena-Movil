@@ -382,16 +382,27 @@ public class Trl2 extends AppCompatActivity {
                 resultados.setAnio(Menu_Principal.anio);
                 resultados.setProyecto(Menu_Principal.proyecto);
                 resultados.setTipo_producto(Menu_Principal.tipo);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
                 String id_investigador=Menu_Principal.id_investigador;
+
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
+<<<<<<< HEAD
+                int porcentaje =todos2;
+
+=======
                 nivel2="Trl2";
                 String id_=(resultados.getId());
+<<<<<<< HEAD
                 String id_producto=Menu_Principal.id_producto_individual;
                 String nombre_producto=Menu_Principal.producto_investigador;
+=======
+                String id_producto=Menu_Principal.id_producto;
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
+>>>>>>> fee65185dea7116d7b98114c2122ae02a9e899c5
                // cargarResultados();
-
-
 
                 if(todos2>= 100) {
                     updateData(nivel2,nombre_producto,id_investigador,id_producto);
@@ -409,19 +420,42 @@ public class Trl2 extends AppCompatActivity {
                 }
             }
 
+<<<<<<< HEAD
             private void updateData(String nivel2,String producto_nombre,String id_investigador,String id_producto ) {
+=======
+<<<<<<< HEAD
+
+
+
+            private void updateData(String nivel2,String id_investigador,int porcentaje) {
+
+                HashMap<String, Object> resulttado =new HashMap<String, Object>();
+                resulttado.put("nivel",nivel2);
+                resulttado.put("porcentaje",porcentaje);
+                myref=FirebaseDatabase.getInstance().getReference();
+                myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+=======
+            private void updateData(String nivel2,String id_,String id_investigador,String producto_id) {
+>>>>>>> fee65185dea7116d7b98114c2122ae02a9e899c5
 
                 HashMap resulttado =new HashMap();
                 resulttado.put("nivel",nivel2);
                 resulttado.put("porcentaje",todos2);
 
 
+<<<<<<< HEAD
                 myref.child("Respuestas").child(producto_nombre).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+=======
+                myref=FirebaseDatabase.getInstance().getReference("Respuestas");
+                myref.child(producto_id);
+                myref.updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
+>>>>>>> fee65185dea7116d7b98114c2122ae02a9e899c5
                     @Override
                     public void onComplete(@NonNull Task task) {
 
                         if (task.isSuccessful()){
-                            Toast.makeText(Trl2.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Trl2.this, "Datos actualizados", Toast.LENGTH_SHORT).show();
                         }else {
                             Toast.makeText(Trl2.this, "Err0r", Toast.LENGTH_SHORT).show();
                         }
@@ -432,8 +466,13 @@ public class Trl2 extends AppCompatActivity {
             }
 
 
+<<<<<<< HEAD
+            private void updateData1(String id_investigador) {
+                HashMap<String, Object> resulttado =new HashMap<>();
+=======
             private void updateData1(String id_investigador,String id) {
                 HashMap resulttado =new HashMap();
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
 
 
                 myref.child("Respuestas").updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {

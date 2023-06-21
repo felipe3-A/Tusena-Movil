@@ -56,9 +56,9 @@ public class Menu_Principal extends AppCompatActivity {
     ProgressDialog progressDialog;
     ArrayAdapter<String> listAdapter;
 
-
     TextView recibeid;
-    int id = Integer.parseInt(Login.identificacion);
+    String id =Login.identificacion;
+
     public static String nombre_investigador;
     public static  String producto_investigador;
 
@@ -130,7 +130,7 @@ public class Menu_Principal extends AppCompatActivity {
     }
 
 
-    private void obtenerDatos(int id) {
+    private void obtenerDatos(String id) {
 
         ProducctoService service = retrofit.create(ProducctoService.class);
         Call<ProductoRespuesta> productoRespuestaCall = service.obtenerListaProducto(id);
