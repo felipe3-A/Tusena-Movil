@@ -68,6 +68,7 @@ public class Menu_Principal extends AppCompatActivity {
     public static String tipo;
 
     public static String id_investigador;
+    public static String id_producto;
 
 
     @Override
@@ -147,6 +148,7 @@ public class Menu_Principal extends AppCompatActivity {
                     tipo=listproducto.get(0).getProducto_tipo();
                     anio=listproducto.get(0).getProducto_ano();
                     proyecto=listproducto.get(0).getProyecto_nombre();
+                    id_producto=listproducto.get(0).getProducto_id();
 
                     String nombre_investigador=listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido();;
                     binding.NombreInvestigador.setText("Investigador : "+nombre_investigador);

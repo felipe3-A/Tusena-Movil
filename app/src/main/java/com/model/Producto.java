@@ -6,6 +6,8 @@ public class Producto {
     String producto_ano;
     String producto_tipo;
     String producto_subtipo;
+
+    String producto_id;
     String funcionario_iden;
     String funcionario_nombre;
     String funcionario_apellido;
@@ -14,10 +16,11 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String producto_titulo, String producto_ano, String producto_tipo, String producto_subtipo, String funcionario_iden, String funcionario_nombre, String funcionario_apellido, String proyecto_nombre) {
+    public Producto(String producto_titulo, String producto_ano, String producto_tipo, String producto_subtipo, String funcionario_iden, String funcionario_nombre, String funcionario_apellido, String proyecto_nombre,String producto_id) {
         this.producto_titulo = producto_titulo;
         this.producto_ano = producto_ano;
         this.producto_tipo = producto_tipo;
+        this.producto_id=producto_id;
         this.producto_subtipo = producto_subtipo;
         this.funcionario_iden = funcionario_iden;
         this.funcionario_nombre = funcionario_nombre;
@@ -25,6 +28,9 @@ public class Producto {
         this.proyecto_nombre = proyecto_nombre;
     }
 
+    public String getProducto_id() {return producto_id;}
+
+    public void setProducto_id(String producto_id) {this.producto_id = producto_id;}
     public String getProducto_titulo() {
         return producto_titulo;
     }
@@ -99,7 +105,7 @@ public class Producto {
                 ", funcionario_iden='" + funcionario_iden + '\'' +
                 ", funcionario_nombre='" + funcionario_nombre + '\'' +
                 ", funcionario_apellido='" + funcionario_apellido + '\'' +
-                ", proyecto_nombre='" + proyecto_nombre + '\'' +
+                ", proyecto_nombre='" + proyecto_nombre + '\'' +producto_id+
                 '}';
     }
 }

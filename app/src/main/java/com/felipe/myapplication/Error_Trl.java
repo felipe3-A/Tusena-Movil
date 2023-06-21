@@ -24,6 +24,13 @@ public class Error_Trl extends AppCompatActivity {
             }
         });
 
+        button=findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Error_Trl.this,Menu_Principal.class));
+            }
+        });
 
     }
 

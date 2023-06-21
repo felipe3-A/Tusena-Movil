@@ -4,6 +4,8 @@ public class Resultados {
     String id;
     String investigador;
     String producto;
+
+    String id_producto;
     String proyecto;
     String nivel;
     int porcentaje;
@@ -98,6 +100,10 @@ public class Resultados {
         this.nivel = nivel;
     }
 
+    public String getId_producto() {return id_producto;}
+
+    public void setId_producto(String id_producto) {this.id_producto = id_producto;}
+
 
     @Override
     public String toString() {
@@ -107,6 +113,7 @@ public class Resultados {
                 ", producto='" + producto + '\'' +
                 ", proyecto='" + proyecto + '\'' +
                 ", porcentaje=" + porcentaje +
+                id_producto+
                 ", nivel='" + nivel + '\'' ;
 
     }

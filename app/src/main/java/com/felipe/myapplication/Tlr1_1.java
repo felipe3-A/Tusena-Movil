@@ -37,13 +37,13 @@ public class Tlr1_1 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myref;
 
-  public static String nivel;
-  public static String producto_investigador;
+    public static String nivel;
+    public static String producto_investigador;
     Button btn_calcular;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7;
 
-    RadioGroup rg_respuestas,rg_respuestas2,rg_respuestas3,rg_respuestas4,rg_respuestas5,rg_respuestas6,rg_respuestas7;
-    RadioButton rd_p1, rd_p_1,rd_p2, rd_p2_2,rd_p3, rd_p3_3,rd_p4, rd_p4_4,rd_p5, rd_p5_5,rd_p6, rd_p6_6,rd_p7, rd_p7_7;
+    RadioGroup rg_respuestas, rg_respuestas2, rg_respuestas3, rg_respuestas4, rg_respuestas5, rg_respuestas6, rg_respuestas7;
+    RadioButton rd_p1, rd_p_1, rd_p2, rd_p2_2, rd_p3, rd_p3_3, rd_p4, rd_p4_4, rd_p5, rd_p5_5, rd_p6, rd_p6_6, rd_p7, rd_p7_7;
 
     public static int
             resultado,
@@ -60,8 +60,13 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_6,
             resultadop7,
             resultadop_7,
+<<<<<<< HEAD
           todos;
 
+=======
+
+    todos;
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
 
     public static List<Preguntas> list = new ArrayList<>();
 
@@ -73,11 +78,11 @@ public class Tlr1_1 extends AppCompatActivity {
         binding = ActivityTrl11Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        String dato=Menu_Principal.nombre_investigador;
+        String dato = Menu_Principal.nombre_investigador;
         binding.getProyectName.setText(dato);
 
-        String dato2=Menu_Principal.producto_investigador;
-        binding.getProductName.setText("Estas analizando el producto : "+ dato2);
+        String dato2 = Menu_Principal.producto_investigador;
+        binding.getProductName.setText("Estas analizando el producto : " + dato2);
 
         txt_trl1p1 = findViewById(R.id.txt_trl1p1);
         txt_trl1p2 = findViewById(R.id.txt_trl1p2);
@@ -120,6 +125,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
 
     }
+
 
 
     public void cargarP() {
@@ -322,6 +328,7 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
+<<<<<<< HEAD
                        /* String investigador = Menu_Principal.nombre_investigador;
                         String producto = Menu_Principal.producto_investigador;
                         String nivel = Tlr1_1.nivel;
@@ -333,6 +340,18 @@ public class Tlr1_1 extends AppCompatActivity {
 
                        cargarResultados();
 
+=======
+
+
+                        todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
+                        nivel="Trl1";
+
+
+
+                       cargarResultados();
+
+
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
                         if(todos>= 100) {
                                 Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                                 startActivity(intent);
@@ -349,7 +368,12 @@ public class Tlr1_1 extends AppCompatActivity {
                 });
             }
 
-           private void cargarResultados() {
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+
+            private void cargarResultados() {
                 Resultados resultados = new Resultados();
                 resultados.setId(UUID.randomUUID().toString());
                 resultados.setPorcentaje(todos);
@@ -360,16 +384,20 @@ public class Tlr1_1 extends AppCompatActivity {
                 resultados.setAnio(Menu_Principal.anio);
                 resultados.setProyecto(Menu_Principal.proyecto);
                 resultados.setTipo_producto(Menu_Principal.tipo);
+                resultados.setId_producto(Menu_Principal.id_producto);
 
                 myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
 
-                Toast.makeText(Tlr1_1.this, "Datos Cargados ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Tlr1_1.this, "Nivel "+nivel, Toast.LENGTH_SHORT).show();
             }
 
+<<<<<<< HEAD
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+=======
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
         });
 
 
