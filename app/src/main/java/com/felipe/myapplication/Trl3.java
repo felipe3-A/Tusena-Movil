@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -324,22 +327,26 @@ public class Trl3 extends AppCompatActivity {
                     }
                 });
 
+
                 btn_calcular3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         todos3 = resultadot3_1+resultado3_2+resultado3_3+resultado3_4+resultado3_5+resultado3_6+resultado3_7+resultado3_8;
                         nivel="Trl3";
+                        String id_investigador=Menu_Principal.id_investigador;
+
                         cargarResultados();
 
                         if (todos3 >= 100) {
                             //nivel = "Tlr2";
-
+                            updateData(nivel,id_investigador);
                             Intent intent = new Intent(Trl3.this, Trl4.class);
                             startActivity(intent);
                             Toast.makeText(Trl3.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos3 + "%" ,Toast.LENGTH_SHORT).show();
 
                         } else {
                             nivel = "Tlr3";
+                            updateData1(id_investigador);
                             Intent intent = new Intent(Trl3.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Trl3.this, "sus resultados " + todos3 + "%", Toast.LENGTH_SHORT).show();
@@ -361,7 +368,47 @@ public class Trl3 extends AppCompatActivity {
                         resultados.setTipo_producto(Menu_Principal.tipo);
 
 
-                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                    }
+                });
+            }
+            private void updateData(String nivel,String id_investigador) {
+
+                HashMap resulttado =new HashMap();
+                resulttado.put("nivel",nivel);
+
+
+                myref=FirebaseDatabase.getInstance().getReference("Respuestas");
+                myref.orderByChild(id_investigador);
+                myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+
+                        if (task.isSuccessful()){
+                            Toast.makeText(Trl3.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(Trl3.this, "Err0r", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+
+            }
+
+
+            private void updateData1(String id) {
+                HashMap resulttado =new HashMap();
+
+                myref=FirebaseDatabase.getInstance().getReference("Respuestas");
+                myref.child(id).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+
+                        if (task.isSuccessful()){
+                            Toast.makeText(Trl3.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(Trl3.this, "Err0r", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 });
             }

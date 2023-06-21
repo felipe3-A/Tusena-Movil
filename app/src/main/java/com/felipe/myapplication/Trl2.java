@@ -25,7 +25,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Random;
 import java.util.UUID;
 
 public class Trl2 extends AppCompatActivity {
@@ -376,14 +375,6 @@ public class Trl2 extends AppCompatActivity {
                 Resultados resultados = new Resultados();
                 resultados.setId(UUID.randomUUID().toString());
                 resultados.setPorcentaje(todos2);
-<<<<<<< HEAD
-                String investigador = Menu_Principal.nombre_investigador;
-                String producto = Menu_Principal.producto_investigador;
-
-
-                //updateData(resultados.id,nivel,todos2, investigador,producto);
-
-=======
                 resultados.setNivel(nivel2);
                 resultados.setInvestigador(Menu_Principal.nombre_investigador);
                 resultados.setId_investigador(Menu_Principal.id_investigador);
@@ -391,17 +382,18 @@ public class Trl2 extends AppCompatActivity {
                 resultados.setAnio(Menu_Principal.anio);
                 resultados.setProyecto(Menu_Principal.proyecto);
                 resultados.setTipo_producto(Menu_Principal.tipo);
->>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
 
                 String id_investigador=Menu_Principal.id_investigador;
                 todos2=resultados1_1+resultado2_2+resultadop3_3+resultadop4_4+resultadop5_5+resultadop6_6+resultadop7_7+resultadop8_8;
                 nivel2="Trl2";
+                String id_=(resultados.getId());
+                String id_producto=Menu_Principal.id_producto;
                // cargarResultados();
 
 
 
                 if(todos2>= 100) {
-                    updateData(nivel2,id_investigador,todos2);
+                    updateData(nivel2,id_,id_investigador,id_producto);
                     Intent intent = new Intent(Trl2.this, Trl3.class);
                     startActivity(intent);
                     Toast.makeText(Trl2.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos2 + "%" ,Toast.LENGTH_SHORT).show();
@@ -409,27 +401,23 @@ public class Trl2 extends AppCompatActivity {
                 }
                 else{
                     nivel2="Trl2";
-                    updateData1(id_investigador);
+                    updateData1(id_investigador,id_);
                     Intent intent = new Intent(Trl2.this, Error_Trl.class);
                     startActivity(intent);
                     Toast.makeText(Trl2.this, "sus resultados "+ todos2 +"%", Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
 
-<<<<<<< HEAD
-           /* private void updateData(String id,String nivel,int todos2,String investigador, String producto) {
-=======
-            private void updateData(String nivel2,String id_investigador,int porcentaje) {
->>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
+            private void updateData(String nivel2,String id_,String id_investigador,String producto_id) {
+
                 HashMap resulttado =new HashMap();
                 resulttado.put("nivel",nivel2);
-                resulttado.put("porcentaje",porcentaje);
+                resulttado.replace(true,"Trl1","Trl2");
+
 
                 myref=FirebaseDatabase.getInstance().getReference("Respuestas");
-                myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                myref.child(producto_id);
+                myref.updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
 
@@ -441,16 +429,15 @@ public class Trl2 extends AppCompatActivity {
 
                     }
                 });
-<<<<<<< HEAD
-            }*/
-=======
+
             }
-            private void updateData1(String id_investigador) {
+
+
+            private void updateData1(String id_investigador,String id) {
                 HashMap resulttado =new HashMap();
->>>>>>> f7a195a1a5363de41dd1b63a9a0a776b1086c738
 
                 myref=FirebaseDatabase.getInstance().getReference("Respuestas");
-                myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                myref.child(id).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
 
