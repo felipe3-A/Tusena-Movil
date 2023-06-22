@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.felipe.myapplication.R;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class AdapterRespuestas extends RecyclerView.Adapter<AdapterRespuestas.viewholderrespuestas> {
     List<Resultados> resultadolist;
+
 
     public AdapterRespuestas(List<Resultados> resultadolist) {
         this.resultadolist = resultadolist;
@@ -35,8 +37,9 @@ public class AdapterRespuestas extends RecyclerView.Adapter<AdapterRespuestas.vi
         holder.rc_producto.setText(rp.getProducto());
         holder.rc_nombre_investigador.setText(rp.getInvestigador());
         holder.rc_niveltrl.setText(rp.getNivel());
-
     }
+
+
 
     @Override
     public int getItemCount() {
