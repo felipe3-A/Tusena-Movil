@@ -2,13 +2,13 @@ package com.felipe.myapplication;
 
 public class Resultados {
     public static String id;
-    String investigador;
-    String producto;
+    public  static String investigador;
+    public static  String producto;
 
-    String id_producto;
-    String proyecto;
-    String nivel;
-    int porcentaje;
+    public  static  String id_producto;
+    public  static  String proyecto;
+    public  static String nivel;
+    public static int porcentaje;
 
     String tipo_producto;
     String subtipo;

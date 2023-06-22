@@ -34,31 +34,30 @@ public class Buscador_Botones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscador_botenes);
 
-        //database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
-        //myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
-
         myref = FirebaseDatabase.getInstance().getReference().child("Respuestas");
+
         rv = findViewById(R.id.rv);
         searchView = findViewById(R.id.search);
+
         lm = new LinearLayoutManager(this);
         rv.setLayoutManager(lm);
+
         list = new ArrayList<>();
         adapter = new AdapterRespuestas(list);
+
         rv.setAdapter(adapter);
+
 
         myref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                        Resultados rp = snapshot1.getValue(Resultados.class);
-                        list.add(rp);
-                    }
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        Resultados ms = dataSnapshot.getValue(Resultados.class);
+                        list.add(ms);}
                     adapter.notifyDataSetChanged();
-
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -85,11 +84,13 @@ public class Buscador_Botones extends AppCompatActivity {
         myref.child("Respuestas").orderByChild("nivel");
         ArrayList<Resultados> mylista = new ArrayList<>();
         for (Resultados obj : list) {
+<<<<<<< HEAD
+            if (obj.getInvestigador().toLowerCase().contains(s.toLowerCase())) {
+=======
             if (obj.getProducto().toLowerCase().contains(s.toLowerCase())) {
+>>>>>>> 0c4f90ea866a6317636dee64f1559114879501b1
                 mylista.add(obj);
-
             }
-
         }
         AdapterRespuestas adapter = new AdapterRespuestas(mylista);
         rv.setAdapter(adapter);

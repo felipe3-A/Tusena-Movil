@@ -345,6 +345,7 @@ public class Trl3 extends AppCompatActivity {
 
                         todos3 = resultadot3_1+resultado3_2+resultado3_3+resultado3_4+resultado3_5+resultado3_6+resultado3_7+resultado3_8;
                         nivel3="Trl3";
+                        Tlr1_1.nivel=Tlr1_1.nivel="Tlr3";
 
                         String id_producto=Menu_Principal.id_producto_individual;
                         String id_investigador=Menu_Principal.id_investigador;
@@ -354,13 +355,16 @@ public class Trl3 extends AppCompatActivity {
 
                         if (todos3 >= 100) {
                             //nivel = "Tlr2";
+                            Resultados.nivel=Resultados.nivel="Trl3";
+                            Resultados.porcentaje=Resultados.porcentaje=todos3;
                             updateData(nivel3,todos3,nombre_producto);
                             Intent intent = new Intent(Trl3.this, Trl4.class);
                             startActivity(intent);
                             Toast.makeText(Trl3.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos3 + "%" ,Toast.LENGTH_SHORT).show();
 
                         } else {
-                            nivel3 = "Tlr3";
+                            Resultados.nivel=Resultados.nivel="Trl2";
+                            Resultados.porcentaje=Resultados.porcentaje=todos3;
                             updateData1(id_investigador);
                             Intent intent = new Intent(Trl3.this, Error_Trl.class);
                             startActivity(intent);

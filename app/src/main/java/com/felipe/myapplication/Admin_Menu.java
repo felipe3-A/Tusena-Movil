@@ -21,6 +21,7 @@ public class Admin_Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu);
+
         agregar_preguntas=findViewById(R.id.agregar_preguntas);
         exit_admin=findViewById(R.id.exit_admin);
 

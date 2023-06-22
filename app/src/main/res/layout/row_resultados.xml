@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:layout_margin="10dp"
         android:backgroundTint="@color/color_boton"
-        app:cardCornerRadius="15dp"
+        app:cardCornerRadius="6dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -25,28 +25,29 @@
                 android:layout_height="wrap_content"
                 android:text="Proyecto:"
                 android:textSize="25dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/ic_launcher_background"/>
             <TextView
                 android:id="@+id/rc_producto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Porducto:"
                 android:textSize="25dp"
-               android:textColor="@color/black"/>
+                android:textColor="@color/ic_launcher_background"/>
             <TextView
                 android:id="@+id/rc_nombre_investigador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Investigador:"
                 android:textSize="25dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/ic_launcher_background"/>
             <TextView
                 android:id="@+id/rc_niveltrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Trl:"
                 android:textSize="25dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/ic_launcher_background"/>
+
 
         </LinearLayout>
 
