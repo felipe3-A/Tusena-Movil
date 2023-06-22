@@ -1,7 +1,7 @@
 package com.felipe.myapplication;
 
 public class Resultados {
-    String id;
+    public static String id;
     String investigador;
     String producto;
 

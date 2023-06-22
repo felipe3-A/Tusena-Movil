@@ -60,13 +60,9 @@ public class Tlr1_1 extends AppCompatActivity {
             resultadop_6,
             resultadop7,
             resultadop_7,
-<<<<<<< HEAD
           todos;
 
-=======
 
-    todos;
->>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
 
     public static List<Preguntas> list = new ArrayList<>();
 
@@ -154,20 +150,20 @@ public class Tlr1_1 extends AppCompatActivity {
                 rg_respuestas.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                        switch (i){
+                        switch (i) {
                             case R.id.rd_p1:
 
-                                resultado=  (resultado+15);
-                                resultado1=resultado;
+                                resultado = (resultado + 15);
+                                resultado1 = resultado;
                                 cargarP();
-                               //Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel" , Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel" , Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rd_p_1:
-                                resultado= 0;
-                                resultado1=resultado;
+                                resultado = 0;
+                                resultado1 = resultado;
                                 cargarP();
-                               // Toast.makeText(Trl3.this, "ghjj"+resultado, Toast.LENGTH_SHORT).show();
+                                // Toast.makeText(Trl3.this, "ghjj"+resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                         }
@@ -185,14 +181,14 @@ public class Tlr1_1 extends AppCompatActivity {
                                 resultadop2 = (resultadop2 + 15);
                                 resultadop2_2 = resultadop2;
                                 cargarP();
-                             //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
+                                //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.rb_p2_2:
                                 resultadop2 = 0;
                                 resultadop2_2 = resultadop2;
                                 cargarP();
-                              //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
+                                //  Toast.makeText(Trl3.this, "ghjj" + resultado, Toast.LENGTH_SHORT).show();
                                 break;
 
 
@@ -206,7 +202,7 @@ public class Tlr1_1 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb_p3:
 
-                                resultadop3 =  (resultadop3 + 15);
+                                resultadop3 = (resultadop3 + 15);
                                 resultadop_3 = resultadop3;
                                 cargarP();
                                 //   Toast.makeText(Trl3.this, "Su porcentaje es: " + resultado, Toast.LENGTH_SHORT).show();
@@ -327,40 +323,18 @@ public class Tlr1_1 extends AppCompatActivity {
                 btn_calcular.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        todos = resultado + resultadop2 + resultadop3 + resultadop4 + resultadop5 + resultadop6 + resultadop7;
+                        nivel = "Trl1";
+                        cargarResultados();
 
-<<<<<<< HEAD
-                       /* String investigador = Menu_Principal.nombre_investigador;
-                        String producto = Menu_Principal.producto_investigador;
-                        String nivel = Tlr1_1.nivel;
-                        int porcentaje = todos;*/
-
-                        todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
-                        nivel="Trl1";
-
-
-                       cargarResultados();
-
-=======
-
-
-                        todos=resultado+resultadop2+resultadop3+resultadop4+resultadop5+resultadop6+resultadop7;
-                        nivel="Trl1";
-
-
-
-                       cargarResultados();
-
-
->>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
-                        if(todos>= 100) {
-                                Intent intent = new Intent(Tlr1_1.this, Trl2.class);
-                                startActivity(intent);
-                                Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos + "%" ,Toast.LENGTH_SHORT).show();
-                        }
-                       else{
+                        if (todos >= 100) {
+                            Intent intent = new Intent(Tlr1_1.this, Trl2.class);
+                            startActivity(intent);
+                            Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos + "%", Toast.LENGTH_SHORT).show();
+                        } else {
                             Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
                             startActivity(intent);
-                            Toast.makeText(Tlr1_1.this, "sus resultados "+ todos +"%", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Tlr1_1.this, "sus resultados " + todos + "%", Toast.LENGTH_SHORT).show();
 
                         }
 
@@ -368,10 +342,7 @@ public class Tlr1_1 extends AppCompatActivity {
                 });
             }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
 
-            }
 
             private void cargarResultados() {
                 Resultados resultados = new Resultados();
@@ -386,18 +357,16 @@ public class Tlr1_1 extends AppCompatActivity {
                 resultados.setTipo_producto(Menu_Principal.tipo);
                 resultados.setId_producto(Menu_Principal.id_producto);
 
-                myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                myref.child("Respuestas").child(resultados.getId_investigador()).setValue(resultados); //insercion
 
                 Toast.makeText(Tlr1_1.this, "Nivel "+nivel, Toast.LENGTH_SHORT).show();
             }
 
-<<<<<<< HEAD
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-=======
->>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
         });
 
 
@@ -407,6 +376,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
 
 }
+
 
 
 
