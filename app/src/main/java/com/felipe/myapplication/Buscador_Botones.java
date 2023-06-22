@@ -1,73 +1,60 @@
 package com.felipe.myapplication;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.SearchView;
-import android.widget.TextView;
-
+import com.felipe.myapplication.adapter.AdapterRespuestas;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Buscador_Botones extends AppCompatActivity {
-    SearchView busquedas2;
-    Button btn_buscar_trl;
-    EditText bus;
-
-
-    TextView buscador;
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static List<Resultados> list = new ArrayList<>();
+    ArrayList<Resultados> list;
+    RecyclerView rv;
+    SearchView searchView;
+    AdapterRespuestas adapter;
+
+    LinearLayoutManager lm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buscador_botones);
-        buscador = findViewById(R.id.busquedas);
-        busquedas2=findViewById(R.id.busquedas2);
-        btn_buscar_trl=findViewById(R.id.btn_buscar_trl);
-        btn_buscar_trl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        setContentView(R.layout.activity_buscador_botenes);
 
-                buscador.setText("");
-                buquedas(bus.getText().toString());
-            }
-        });
+        //database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
+        //myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
 
+        myref = FirebaseDatabase.getInstance().getReference().child("Respuestas");
+        rv = findViewById(R.id.rv);
+        searchView = findViewById(R.id.search);
+        lm = new LinearLayoutManager(this);
+        rv.setLayoutManager(lm);
+        list = new ArrayList<>();
+        adapter = new AdapterRespuestas(list);
+        rv.setAdapter(adapter);
 
-
-
-    }
-
-
-    public void buquedas(String s) {
-
-        database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
-        myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
-
-        Query query = myref.child("Respuestas").orderByChild("investigador");
-        query.addValueEventListener(new ValueEventListener() {
+        myref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    Resultados resultado = dataSnapshot.getValue(Resultados.class);
-                    list.add(resultado);
-                    bus.getText().toString();
+                if (snapshot.exists()) {
+                    for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                        Resultados rp = snapshot1.getValue(Resultados.class);
+                        list.add(rp);
+                    }
+                    adapter.notifyDataSetChanged();
+
                 }
-                buscador.setText(list.get(0).getNivel());
             }
 
             @Override
@@ -75,5 +62,30 @@ public class Buscador_Botones extends AppCompatActivity {
 
             }
         });
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                buscar(s);
+                return true;
+            }
+        });
+    }
+
+    private void buscar(String s) {
+        ArrayList<Resultados> mylista = new ArrayList<>();
+        for (Resultados obj : list) {
+            if (obj.getId_producto().toLowerCase().contains(s.toLowerCase())) {
+                mylista.add(obj);
+
+            }
+
+        }
+        AdapterRespuestas adapter = new AdapterRespuestas(mylista);
+        rv.setAdapter(adapter);
     }
 }

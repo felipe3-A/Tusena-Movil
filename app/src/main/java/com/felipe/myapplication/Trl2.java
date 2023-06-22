@@ -433,7 +433,7 @@ public class Trl2 extends AppCompatActivity {
             private void updateData1(String id_investigador) {
                 HashMap<String, Object> resulttado = new HashMap<>();
 
-                myref = FirebaseDatabase.getInstance().getReference("Respuestas");
+
                 myref.child("Respuestas").updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
 
                     @Override
