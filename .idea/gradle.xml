@@ -6,11 +6,8 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-<<<<<<< HEAD
         <option name="gradleHome" value="C:/gradle-6.8" />
-        <option name="gradleJvm" value="Embedded JDK" />
-=======
->>>>>>> 0c4f90ea866a6317636dee64f1559114879501b1
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
