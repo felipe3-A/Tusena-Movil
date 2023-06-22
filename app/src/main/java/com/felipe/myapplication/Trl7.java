@@ -303,19 +303,22 @@ public class Trl7 extends AppCompatActivity {
                          String id_investigador=Menu_Principal.id_investigador;
                          String nombre_producto=Menu_Principal.producto_investigador;
                          todos7=resultadot7_1+resultado7_2+resultado7_3+resultado7_5+resultado7_6+resultado7_7;
-                         nivel7="Trl7";
+
 
 
 
                          if(todos7>= 100) {
-                             nivel7 = "Tlr7";
+                             Resultados.nivel=Resultados.nivel="Trl7";
+                             Resultados.porcentaje=Resultados.porcentaje=todos7;
                              updateData(nivel7,todos7,nombre_producto);
                              Intent intent = new Intent(Trl7.this, Trl_8.class);
                              startActivity(intent);
                              Toast.makeText(Trl7.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos7 + "%" ,Toast.LENGTH_SHORT).show();
                          }
                          else{
+                             Resultados.nivel=Resultados.nivel="Trl6";
                              updateData1(id_investigador);
+                             Resultados.porcentaje=Resultados.porcentaje=todos7;
                              Intent intent = new Intent(Trl7.this, Error_Trl.class);
                              startActivity(intent);
                              Toast.makeText(Trl7.this, "sus resultados "+ todos7 +"%", Toast.LENGTH_SHORT).show();

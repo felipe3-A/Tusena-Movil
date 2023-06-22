@@ -41,7 +41,7 @@
                <TextView
                    android:id="@+id/txt_trl7p1"
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
+                   android:layout_height="match_parent"
                    style="@style/preguntas"
                    android:padding="10dp"
                    android:textSize="20dp" />
@@ -83,7 +83,7 @@
     <RadioGroup
         android:id="@+id/rd7_repuesta2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         style="@style/respuestas">
 
         <RadioButton
@@ -109,7 +109,7 @@
     <TextView
         android:id="@+id/txt_trl7p3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="10dp"
         android:textSize="20dp"
         style="@style/preguntas" />
@@ -149,7 +149,7 @@
                <RadioGroup
                    android:id="@+id/rg7_respuestas4"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
+                   android:layout_height="match_parent"
                    style="@style/respuestas">
 
                    <RadioButton
@@ -182,7 +182,7 @@
                <RadioGroup
                    android:id="@+id/rg7_respuestas5"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
+                   android:layout_height="match_parent"
                   style="@style/respuestas">
 
                    <RadioButton
@@ -215,7 +215,7 @@
                 <RadioGroup
                     android:id="@+id/rg7_respuestas6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                    style="@style/respuestas">
 
                     <RadioButton
@@ -241,7 +241,7 @@
                <TextView
                    android:id="@+id/txt_trl7p7"
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
+                   android:layout_height="match_parent"
                    android:padding="10dp"
                    android:textSize="20dp"
                    style="@style/preguntas"

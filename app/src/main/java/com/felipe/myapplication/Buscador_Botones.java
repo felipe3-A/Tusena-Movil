@@ -32,36 +32,36 @@ public class Buscador_Botones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscador_botenes);
 
-        //database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
-        //myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
-
         myref = FirebaseDatabase.getInstance().getReference().child("Respuestas");
+
         rv = findViewById(R.id.rv);
         searchView = findViewById(R.id.search);
+
         lm = new LinearLayoutManager(this);
         rv.setLayoutManager(lm);
+
         list = new ArrayList<>();
         adapter = new AdapterRespuestas(list);
+
         rv.setAdapter(adapter);
+
 
         myref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                        Resultados rp = snapshot1.getValue(Resultados.class);
-                        list.add(rp);
-                    }
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        Resultados ms = dataSnapshot.getValue(Resultados.class);
+                        list.add(ms);}
                     adapter.notifyDataSetChanged();
-
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -79,11 +79,9 @@ public class Buscador_Botones extends AppCompatActivity {
     private void buscar(String s) {
         ArrayList<Resultados> mylista = new ArrayList<>();
         for (Resultados obj : list) {
-            if (obj.getId_producto().toLowerCase().contains(s.toLowerCase())) {
+            if (obj.getInvestigador().toLowerCase().contains(s.toLowerCase())) {
                 mylista.add(obj);
-
             }
-
         }
         AdapterRespuestas adapter = new AdapterRespuestas(mylista);
         rv.setAdapter(adapter);

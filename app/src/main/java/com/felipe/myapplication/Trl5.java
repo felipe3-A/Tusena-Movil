@@ -346,7 +346,8 @@ public class Trl5 extends AppCompatActivity {
 
 
                         if(todos5>= 100) {
-                            //nivel = "Tlr5";
+                            Resultados.nivel=Resultados.nivel="Trl5";
+                            Resultados.porcentaje=Resultados.porcentaje=todos5;
                             updateData(nivel5,todos5,nombre_producto);
                             Intent intent = new Intent(Trl5.this, Trl6.class);
                             startActivity(intent);
@@ -354,8 +355,9 @@ public class Trl5 extends AppCompatActivity {
 
                         }
                         else{
+                            Resultados.nivel=Resultados.nivel="Trl4";
+                            Resultados.porcentaje=Resultados.porcentaje=todos5;
                             updateData1(id_investigador);
-                            nivel5 = "Tlr5";
                             Intent intent = new Intent(Trl5.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Trl5.this, "sus resultados "+ todos5 +"%", Toast.LENGTH_SHORT).show();

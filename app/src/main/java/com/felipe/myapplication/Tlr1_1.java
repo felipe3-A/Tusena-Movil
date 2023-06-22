@@ -38,7 +38,7 @@ public class Tlr1_1 extends AppCompatActivity {
     DatabaseReference myref;
 
     public static String nivel;
-    public static String producto_investigador;
+
     Button btn_calcular;
     TextView txt_trl1p1, txt_trl1p2, txt_trl1p3, txt_trl1p4, txt_trl1p5, txt_trl1p6, txt_trl1p7;
 
@@ -324,14 +324,17 @@ public class Tlr1_1 extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         todos = resultado + resultadop2 + resultadop3 + resultadop4 + resultadop5 + resultadop6 + resultadop7;
-                        nivel = "Trl1";
                         cargarResultados();
 
                         if (todos >= 100) {
+                            Resultados.nivel=Resultados.nivel="Trl1";
+                            Resultados.porcentaje=Resultados.porcentaje=todos;
                             Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos + "%", Toast.LENGTH_SHORT).show();
                         } else {
+                            Resultados.nivel=Resultados.nivel="Trl1";
+                            Resultados.porcentaje=Resultados.porcentaje=todos;
                             Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "sus resultados " + todos + "%", Toast.LENGTH_SHORT).show();
@@ -361,7 +364,6 @@ public class Tlr1_1 extends AppCompatActivity {
 
                 myref.child("Respuestas").child(resultados.getProducto()).setValue(resultados); //insercion
 
-                Toast.makeText(Tlr1_1.this, "Nivel "+nivel, Toast.LENGTH_SHORT).show();
             }
 
 
