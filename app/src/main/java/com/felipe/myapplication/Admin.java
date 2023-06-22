@@ -43,14 +43,14 @@ public class Admin extends AppCompatActivity {
     }
 
     private void referenciar() {
-        edtx_pregtunta = (TextInputLayout) findViewById(R.id.edtx_pregtunta);
-        edtx_nivel_relativo =(TextInputLayout) findViewById(R.id.edtx_nivel_relativo);
+       // edtx_pregtunta = (TextInputLayout) findViewById(R.id.edtx_pregtunta);
+     //   edtx_nivel_relativo =(TextInputLayout) findViewById(R.id.edtx_nivel_relativo);
         btn_agregar = findViewById(R.id.btn_agregarp);
         sp_trl = findViewById(R.id.sp_trl);
         nivel=sp_trl.getSelectedItem().toString();
 
 
-        float_home_return_2=findViewById(R.id.float_home_return_2);
+      //  float_home_return_2=findViewById(R.id.float_home_return_2);
         float_home_return_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

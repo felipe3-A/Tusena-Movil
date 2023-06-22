@@ -28,7 +28,7 @@ public class Admin_Menu extends AppCompatActivity {
         agregar_preguntas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Admin_Menu.this,Admin.class));
+                        startActivity(new Intent(Admin_Menu.this, AdministradorPreguntas.class));
             }
         });
         exit_admin.setOnClickListener(new View.OnClickListener() {

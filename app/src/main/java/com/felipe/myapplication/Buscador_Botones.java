@@ -1,6 +1,7 @@
 package com.felipe.myapplication;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -70,16 +72,23 @@ public class Buscador_Botones extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String s) {
-                buscar(s);
+               // s= "P";
+                Toast.makeText(Buscador_Botones.this, "hola"+s, Toast.LENGTH_SHORT).show();
+               buscar(s);
                 return true;
             }
         });
     }
 
     private void buscar(String s) {
+        myref.child("Respuestas").orderByChild("nivel");
         ArrayList<Resultados> mylista = new ArrayList<>();
         for (Resultados obj : list) {
+<<<<<<< HEAD
             if (obj.getInvestigador().toLowerCase().contains(s.toLowerCase())) {
+=======
+            if (obj.getProducto().toLowerCase().contains(s.toLowerCase())) {
+>>>>>>> 0c4f90ea866a6317636dee64f1559114879501b1
                 mylista.add(obj);
             }
         }
