@@ -275,7 +275,7 @@ public class Trl9 extends AppCompatActivity {
                         switch (i) {
                             case R.id.rb9_p7:
 
-                                resultado9_7 = (resultado9_7 +10);
+                                resultado9_7 = (resultado9_7 +20);
                                 resultado9_7_7 = resultado9_7;
                                 //txtresultado.setText("sus puntos" + puntos);
                                 cargarP();
@@ -316,9 +316,9 @@ public class Trl9 extends AppCompatActivity {
                             //nivel = "Tlr4";
 
                             updateData(nivel9,todos9,nombre_producto);
-                            Intent intent = new Intent(Trl9.this, Error_Trl.class);
+                            Intent intent = new Intent(Trl9.this, Menu_Principal.class);
                             startActivity(intent);
-                            Toast.makeText(Trl9.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos9 + "%" ,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Trl9.this, "Muy Bien tu producto es lo mejor" + " " +  todos9 + "%" ,Toast.LENGTH_SHORT).show();
 
                         }
                         else{

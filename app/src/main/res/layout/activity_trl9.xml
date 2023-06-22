@@ -17,6 +17,11 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:src="@drawable/tusena_oscuro" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Trl9"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <ScrollView
