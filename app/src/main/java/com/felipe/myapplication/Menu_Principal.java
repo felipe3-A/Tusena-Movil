@@ -70,6 +70,8 @@ public class Menu_Principal extends AppCompatActivity {
     public static String id_investigador;
     public static String id_producto;
 
+    public  static  String id_producto_individual;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,13 +104,14 @@ public class Menu_Principal extends AppCompatActivity {
         obtenerDatos(id);
         iniciarlistadeproductos();
 
-
         binding.recibeProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(Menu_Principal.this,Tlr1_1.class));
                String textItemList = (productList.get(position));
                producto_investigador=textItemList;
+
+
             }
         });
 
@@ -118,10 +121,6 @@ public class Menu_Principal extends AppCompatActivity {
 
             }
         });
-
-
-
-
     }
 
     private void iniciarlistadeproductos() {
@@ -148,9 +147,10 @@ public class Menu_Principal extends AppCompatActivity {
                     tipo=listproducto.get(0).getProducto_tipo();
                     anio=listproducto.get(0).getProducto_ano();
                     proyecto=listproducto.get(0).getProyecto_nombre();
-                    id_producto=listproducto.get(0).getProducto_id();
+                    id_producto_individual=listproducto.get(0).getProducto_id();
 
-                    String nombre_investigador=listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido();;
+
+                    String nombre_investigador=listproducto.get(0).getFuncionario_nombre()+" "+listproducto.get(0).getFuncionario_apellido();
                     binding.NombreInvestigador.setText("Investigador : "+nombre_investigador);
 
 
@@ -204,11 +204,10 @@ public class Menu_Principal extends AppCompatActivity {
 
                     for (int i = 0; i < products.length(); i++) {
                         JSONObject datos = products.getJSONObject(i);
-                        String dato = datos.getString("producto_titulo");
+                        String dato = datos.getString("producto_id");
                         productList.add(dato);
                     }
                 }
-
 
                 mainHandler.post(new Runnable() {
                     @Override

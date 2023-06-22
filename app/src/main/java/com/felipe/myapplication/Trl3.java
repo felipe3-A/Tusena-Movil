@@ -29,7 +29,7 @@ import java.util.UUID;
 public class Trl3 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static String nivel;
+    public static String nivel3;
     Button btn_calcular3;
     TextView txt_trl3p1, txt_trl3p2, txt_trl3p3, txt_trl3p4, txt_trl3p5, txt_trl3p6, txt_trl3p7, txt_trl3p8;
 
@@ -332,6 +332,44 @@ public class Trl3 extends AppCompatActivity {
                 btn_calcular3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                        Resultados resultados = new Resultados();
+                        resultados.setId(UUID.randomUUID().toString());
+                        resultados.setPorcentaje(todos3);
+                        resultados.setNivel(nivel3);
+                        resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                        resultados.setId_investigador(Menu_Principal.id_investigador);
+                        resultados.setProducto(Menu_Principal.producto_investigador);
+                        resultados.setAnio(Menu_Principal.anio);
+                        resultados.setProyecto(Menu_Principal.proyecto);
+                        resultados.setTipo_producto(Menu_Principal.tipo);
+
+                        todos3 = resultadot3_1+resultado3_2+resultado3_3+resultado3_4+resultado3_5+resultado3_6+resultado3_7+resultado3_8;
+                        nivel3="Trl3";
+                        String nombre_producto=Menu_Principal.producto_investigador;
+                        String id_producto=Menu_Principal.id_producto_individual;
+                        String id_investigador=Menu_Principal.id_investigador;
+
+                        if (todos3 >= 100) {
+                            //nivel = "Tlr2";
+                            updateData(nivel3,nombre_producto,id_investigador,id_producto);
+                            Intent intent = new Intent(Trl3.this, Trl4.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl3.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos3 + "%" ,Toast.LENGTH_SHORT).show();
+
+                        } else {
+                            nivel3 = "Tlr3";
+                            updateData1(id_investigador);
+                            Intent intent = new Intent(Trl3.this, Error_Trl.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl3.this, "sus resultados " + todos3 + "%", Toast.LENGTH_SHORT).show();
+                        }
+=======
+<<<<<<< HEAD
+>>>>>>> 4c2bcdf919605481c88718ab7e6e5eb4e9a7213b
                         todos3 = resultadot3_1 + resultado3_2 + resultado3_3 + resultado3_4 + resultado3_5 + resultado3_6 + resultado3_7 + resultado3_8;
                         nivel = "Trl3";
                         String id_investigador=Menu_Principal.nombre_investigador;
@@ -379,17 +417,35 @@ public class Trl3 extends AppCompatActivity {
                             }
                         });
 
+<<<<<<< HEAD
 
                     }
                 });
             }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fee65185dea7116d7b98114c2122ae02a9e899c5
+                    }
+                });
+            }
+            private void updateData(String nivel3,String producto_nombre,String id_investigador,String id_producto ) {
+>>>>>>> 4c2bcdf919605481c88718ab7e6e5eb4e9a7213b
 
 
             private void updateData1(String id_investigador ) {
                 HashMap resulttado =new HashMap();
+<<<<<<< HEAD
 
                 myref=FirebaseDatabase.getInstance().getReference("Respuestas");
                 myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+=======
+                resulttado.put("nivel",nivel3);
+                resulttado.put("porcentaje",todos3);
+
+
+                myref.child("Respuestas").child(producto_nombre).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+>>>>>>> 4c2bcdf919605481c88718ab7e6e5eb4e9a7213b
                     @Override
                     public void onComplete(@NonNull Task task) {
 
@@ -400,6 +456,49 @@ public class Trl3 extends AppCompatActivity {
                         }
 
                     }
+<<<<<<< HEAD
+=======
+                });
+
+            }
+
+            private void updateData1(String id_investigador) {
+                HashMap resulttado =new HashMap();
+
+
+                myref.child("Respuestas").updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+
+                        if (task.isSuccessful()){
+                            Toast.makeText(Trl3.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(Trl3.this, "Err0r", Toast.LENGTH_SHORT).show();
+                        }
+
+>>>>>>> 00aae8339ef3f6ce1e547ccf567a15cc038142b4
+                    }
+
+
+                    private void updateData1(String id_investigador) {
+                        HashMap resulttado = new HashMap();
+
+
+                        myref.child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl3.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl3.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
+
+>>>>>>> 4c2bcdf919605481c88718ab7e6e5eb4e9a7213b
 
                 });
 
