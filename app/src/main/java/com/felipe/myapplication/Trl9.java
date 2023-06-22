@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,7 +32,7 @@ public class Trl9 extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static String nivel;
+    public static String nivel9;
     Button btn_calcular9;
     TextView txt_trl9p1, txt_trl9p2, txt_trl9p3, txt_trl9p4, txt_trl9p5, txt_trl9p6, txt_trl9p7;
 
@@ -293,40 +296,74 @@ public class Trl9 extends AppCompatActivity {
                 btn_calcular9.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        Resultados resultados = new Resultados();
+                        resultados.setId(UUID.randomUUID().toString());
+                        resultados.setPorcentaje(todos9);
+                        resultados.setNivel(nivel9);
+                        resultados.setInvestigador(Menu_Principal.nombre_investigador);
+                        resultados.setId_investigador(Menu_Principal.id_investigador);
+                        resultados.setProducto(Menu_Principal.producto_investigador);
+                        resultados.setAnio(Menu_Principal.anio);
+                        resultados.setProyecto(Menu_Principal.proyecto);
+
                         todos9=resultado9_1+resultado9_2+resultado9_3+resultado9_5+resultado9_6+resultado9_7;
-                        nivel="Trl9";
-                        cargarResultados();
+                        nivel9="Trl9";
+                        String id_investigador=Menu_Principal.id_investigador;
+                        String nombre_producto=Menu_Principal.producto_investigador;
 
 
                         if(todos9>= 100) {
                             //nivel = "Tlr4";
 
+                            updateData(nivel9,todos9,nombre_producto);
                             Intent intent = new Intent(Trl9.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Trl9.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos9 + "%" ,Toast.LENGTH_SHORT).show();
 
                         }
                         else{
-                            nivel = "Tlr9";
+                            updateData1(id_investigador);
+                            nivel9 = "Tlr9";
                             Intent intent = new Intent(Trl9.this, Error_Trl.class);
                             startActivity(intent);
                             Toast.makeText(Trl9.this, "sus resultados "+ todos9 +"%", Toast.LENGTH_SHORT).show();
                         }
                     }
-                    private void cargarResultados() {
-                        Resultados resultados = new Resultados();
-                        resultados.setId(UUID.randomUUID().toString());
-                        resultados.setPorcentaje(todos9);
-                        resultados.setNivel(nivel);
-                        resultados.setInvestigador(Menu_Principal.nombre_investigador);
-                        resultados.setId_investigador(Menu_Principal.id_investigador);
-                        resultados.setProducto(Menu_Principal.producto_investigador);
-                        resultados.setAnio(Menu_Principal.anio);
-                        resultados.setProyecto(Menu_Principal.proyecto);
-                        resultados.setTipo_producto(Menu_Principal.tipo);
+                    private void updateData(String nivel9, int porcentaje,String nombre_producto) {
 
-                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                        HashMap resulttado = new HashMap();
+                        resulttado.put("nivel", nivel9);
+                        resulttado.put("porcentaje",porcentaje);
+
+                        myref.child("Respuestas").child(nombre_producto).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl9.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl9.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
                     }
+                    private void updateData1(String id_investigador) {
+                        HashMap resulttado = new HashMap();
+                        myref.child("Respuestas").child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl9.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl9.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
+
                 });
 
 

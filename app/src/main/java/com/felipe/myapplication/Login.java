@@ -102,7 +102,7 @@ public class Login extends AppCompatActivity {
                                     if (getAdmin.equals("admin")) {
                                         Toast.makeText(Login.this, "Has iniciado como Admin", Toast.LENGTH_SHORT).show();
                                         Intent intent2 = new Intent(Login.this, Admin_Menu.class);
-
+                                        intent2.putExtra("identificacion_login",identificacion);
                                         startActivity(intent2);
                                         finish();
                                     }

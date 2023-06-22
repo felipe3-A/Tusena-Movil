@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,7 +31,7 @@ public class Trl5 extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static String nivel;
+    public static String nivel5;
     Button btn_calcular5;
     TextView txt_trl5p1, txt_trl5p2, txt_trl5p3, txt_trl5p4, txt_trl5p5, txt_trl5p6, txt_trl5p7,txt_trl5p8;
     RadioGroup rg5_respuestas1,rg5_respuestas2,rg5_respuestas3,rg5_respuestas4,rg5_respuestas5,rg5_respuestas6,rg5_respuestas7,rg5_respuestas8;
@@ -322,35 +325,10 @@ public class Trl5 extends AppCompatActivity {
                 btn_calcular5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        todos5=resultadot5_1+resultado5_2+resultado5_3+resultado5_4+resultado5_5+resultado5_6+resultado5_7+resultado5_8;
-                        nivel="Trl5";
-                        cargarResultados();
-
-
-                        if(todos5>= 100) {
-                            //nivel = "Tlr5";
-
-                            Intent intent = new Intent(Trl5.this, Trl6.class);
-                            startActivity(intent);
-                            Toast.makeText(Trl5.this, "Muy Bien, Sigues al siguiente nivel" + " " +  todos5, Toast.LENGTH_SHORT).show();
-
-                        }
-                        else{
-                            nivel = "Tlr5";
-                            Intent intent = new Intent(Trl5.this, Error_Trl.class);
-                            startActivity(intent);
-                            Toast.makeText(Trl5.this, "sus resultados "+ todos5 +"%", Toast.LENGTH_SHORT).show();
-                        }
-
-
-
-                    }
-
-                    private void cargarResultados() {
                         Resultados resultados = new Resultados();
                         resultados.setId(UUID.randomUUID().toString());
                         resultados.setPorcentaje(todos5);
-                        resultados.setNivel(nivel);
+                        resultados.setNivel(nivel5);
                         resultados.setInvestigador(Menu_Principal.nombre_investigador);
                         resultados.setId_investigador(Menu_Principal.id_investigador);
                         resultados.setProducto(Menu_Principal.producto_investigador);
@@ -359,8 +337,66 @@ public class Trl5 extends AppCompatActivity {
                         resultados.setTipo_producto(Menu_Principal.tipo);
 
 
-                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                        String id_producto=Menu_Principal.id_producto_individual;
+                        String id_investigador=Menu_Principal.id_investigador;
+                        String nombre_producto=Menu_Principal.producto_investigador;
+                        todos5=resultadot5_1+resultado5_2+resultado5_3+resultado5_4+resultado5_5+resultado5_6+resultado5_7+resultado5_8;
+                        nivel5="Trl5";
+
+
+
+                        if(todos5>= 100) {
+                            //nivel = "Tlr5";
+                            updateData(nivel5,todos5,nombre_producto);
+                            Intent intent = new Intent(Trl5.this, Trl6.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl5.this, "Muy Bien, Sigues al siguiente nivel" + " " +  todos5, Toast.LENGTH_SHORT).show();
+
+                        }
+                        else{
+                            updateData1(id_investigador);
+                            nivel5 = "Tlr5";
+                            Intent intent = new Intent(Trl5.this, Error_Trl.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl5.this, "sus resultados "+ todos5 +"%", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
+                    private void updateData(String nivel3, int porcentaje,String nombre_producto) {
+
+                        HashMap resulttado = new HashMap();
+                        resulttado.put("nivel", nivel3);
+                        resulttado.put("porcentaje",porcentaje);
+
+                        myref.child("Respuestas").child(nombre_producto).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl5.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl5.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
+                    private void updateData1(String id_investigador) {
+                        HashMap resulttado = new HashMap();
+                        myref.child("Respuestas").child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl5.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl5.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
+
                 });
 
             }

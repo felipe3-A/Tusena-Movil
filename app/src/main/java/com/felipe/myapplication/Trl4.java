@@ -326,7 +326,7 @@ public class Trl4 extends AppCompatActivity {
 
                         if (todos4 >= 100) {
                             //nivel = "Tlr4";
-
+                            updateData(nivel4,todos4,nombre_producto);
                             Intent intent = new Intent(Trl4.this, Trl5.class);
                             startActivity(intent);
                             Toast.makeText(Trl4.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos4 + "%", Toast.LENGTH_SHORT).show();
@@ -338,49 +338,42 @@ public class Trl4 extends AppCompatActivity {
                             Toast.makeText(Trl4.this, "sus resultados " + todos4 + "%", Toast.LENGTH_SHORT).show();
                         }
                     }
+                    private void updateData(String nivel4, int porcentaje,String nombre_producto) {
 
-                });
-            }
-                    private void updateData(String nivel4,String producto_nombre,String id_investigador,String id_producto ) {
+                        HashMap resulttado = new HashMap();
+                        resulttado.put("nivel", nivel4);
+                        resulttado.put("porcentaje",porcentaje);
 
-                        HashMap resulttado =new HashMap();
-                        resulttado.put("nivel",nivel4);
-                        resulttado.put("porcentaje",todos4);
-
-
-                        myref.child("Respuestas").child(producto_nombre).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                        myref.child("Respuestas").child(nombre_producto).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
                             @Override
                             public void onComplete(@NonNull Task task) {
 
-                                if (task.isSuccessful()){
+                                if (task.isSuccessful()) {
                                     Toast.makeText(Trl4.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
-                                }else {
+                                } else {
                                     Toast.makeText(Trl4.this, "Err0r", Toast.LENGTH_SHORT).show();
                                 }
 
                             }
                         });
+                    }
+                    private void updateData1(String id_investigador) {
+                        HashMap resulttado = new HashMap();
+                        myref.child("Respuestas").child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
 
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl4.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl4.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
                     }
 
-                    private void updateData1(String id_investigador) {
-                        HashMap resulttado =new HashMap();
-
-
-                        myref.child("Respuestas").updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
-                            @Override
-                            public void onComplete(@NonNull Task task) {
-
-                                if (task.isSuccessful()){
-                                    Toast.makeText(Trl4.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
-                                }else {
-                                    Toast.makeText(Trl4.this, "Err0r", Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
-                        });
-
-
+                });
             }
 
             @Override

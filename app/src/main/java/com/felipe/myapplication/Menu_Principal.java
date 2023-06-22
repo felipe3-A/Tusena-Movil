@@ -204,7 +204,7 @@ public class Menu_Principal extends AppCompatActivity {
 
                     for (int i = 0; i < products.length(); i++) {
                         JSONObject datos = products.getJSONObject(i);
-                        String dato = datos.getString("producto_id");
+                        String dato = datos.getString("producto_titulo");
                         productList.add(dato);
                     }
                 }
