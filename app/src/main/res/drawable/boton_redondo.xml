@@ -6,7 +6,7 @@
         android:right="60dp"
         android:bottom="10dp" />
 
-    <corners android:radius="10px"/>
+    <corners android:radius="100px"/>
 
     <stroke android:dashGap="@dimen/cardview_compat_inset_shadow"
         android:dashWidth="@dimen/material_emphasis_disabled"

@@ -103,9 +103,6 @@ public class Admin2 extends AppCompatActivity {
                     startActivity(new Intent(Admin2.this,Admin_Menu.class));
                 }
 
-
-
-
             }
         });
 

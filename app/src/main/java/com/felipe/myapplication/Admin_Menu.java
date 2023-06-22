@@ -14,37 +14,29 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Admin_Menu extends AppCompatActivity {
 
-    Button ir_a_agregar_preguntas,ira_agregar_inv;
+    Button agregar_preguntas,exit_admin;
 
-    Button ir_a_agregar_investigadores,exit_admin,editar_preguntas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu);
-        refernciar();
+        agregar_preguntas=findViewById(R.id.agregar_preguntas);
+        exit_admin=findViewById(R.id.exit_admin);
 
-    }
-
-    private void refernciar() {
-        ir_a_agregar_preguntas=findViewById(R.id.go_agragar_preguntas);
-        ira_agregar_inv=findViewById(R.id.ira_agregar_inv);
-
-        ir_a_agregar_preguntas.setOnClickListener(new View.OnClickListener() {
+        agregar_preguntas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Admin_Menu.this,Admin2.class));
+                startActivity(new Intent(Admin_Menu.this,Admin.class));
             }
         });
-        ira_agregar_inv.setOnClickListener(new View.OnClickListener() {
+        exit_admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Admin_Menu.this,Admin2.class));
+                startActivity(new Intent(Admin_Menu.this, Login.class));
             }
         });
-
-
-
     }
+
 
 }

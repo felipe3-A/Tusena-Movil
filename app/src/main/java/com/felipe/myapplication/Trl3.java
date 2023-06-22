@@ -332,8 +332,6 @@ public class Trl3 extends AppCompatActivity {
                 btn_calcular3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
-
                         Resultados resultados = new Resultados();
                         resultados.setId(UUID.randomUUID().toString());
                         resultados.setPorcentaje(todos3);

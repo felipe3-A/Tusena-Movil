@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,7 +32,7 @@ public class Trl6 extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference myref;
-    public static String nivel;
+    public static String nivel6;
     Button btn_calcular6;
     TextView txt_trl6p1, txt_trl6p2, txt_trl6p3, txt_trl6p4, txt_trl6p5, txt_trl6p6, txt_trl6p7, txt_trl6p8, txt_trl6p9, txt_trl6p10;
 
@@ -336,28 +339,10 @@ public class Trl6 extends AppCompatActivity {
                 btn_calcular6.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        todos6=resultado6_1+resultado6_2+resultado6_3+resultado6_4+resultado6_5+resultado6_6+resultado6_7+resultado6_8+resultado6_9+resultado6_10;
-                        nivel="Trl6";
-                        cargarResultados();
-
-                        if (todos6>=100){
-                            Intent intent = new Intent(Trl6.this, Trl7.class);
-                            startActivity(intent);
-                            Toast.makeText(Trl6.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos6 + "%" ,Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            nivel = "Tlr6";
-                            Intent intent = new Intent(Trl6.this, Error_Trl.class);
-                            startActivity(intent);
-                            Toast.makeText(Trl6.this, "sus resultados "+ todos6 +"%", Toast.LENGTH_SHORT).show();
-                        }
-
-
-                    }
-                    private void cargarResultados() {
                         Resultados resultados = new Resultados();
+                        resultados.setId(UUID.randomUUID().toString());
                         resultados.setPorcentaje(todos6);
-                        resultados.setNivel(nivel);
+                        resultados.setNivel(nivel6);
                         resultados.setInvestigador(Menu_Principal.nombre_investigador);
                         resultados.setId_investigador(Menu_Principal.id_investigador);
                         resultados.setProducto(Menu_Principal.producto_investigador);
@@ -366,8 +351,63 @@ public class Trl6 extends AppCompatActivity {
                         resultados.setTipo_producto(Menu_Principal.tipo);
 
 
-                        myref.child("Respuestas").child(resultados.getId()).setValue(resultados); //insercion
+                        String id_producto=Menu_Principal.id_producto_individual;
+                        String id_investigador=Menu_Principal.id_investigador;
+                        String nombre_producto=Menu_Principal.producto_investigador;
+                        todos6=resultado6_1+resultado6_2+resultado6_3+resultado6_4+resultado6_5+resultado6_6+resultado6_7+resultado6_8+resultado6_9+resultado6_10;
+                        nivel6="Trl6";
+
+
+                        if (todos6>=100){
+                            updateData(nivel6,todos6,nombre_producto);
+                            Intent intent = new Intent(Trl6.this, Trl7.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl6.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos6 + "%" ,Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            nivel6 = "Tlr6";
+                            updateData1(id_investigador);
+                            Intent intent = new Intent(Trl6.this, Error_Trl.class);
+                            startActivity(intent);
+                            Toast.makeText(Trl6.this, "sus resultados "+ todos6 +"%", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
+                    private void updateData(String nivel6, int porcentaje,String nombre_producto) {
+
+                        HashMap resulttado = new HashMap();
+                        resulttado.put("nivel", nivel6);
+                        resulttado.put("porcentaje",porcentaje);
+
+                        myref.child("Respuestas").child(nombre_producto).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl6.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl6.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
+                    private void updateData1(String id_investigador) {
+                        HashMap resulttado = new HashMap();
+                        myref.child("Respuestas").child(id_investigador).updateChildren(resulttado).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Trl6.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Trl6.this, "Err0r", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
+
                 });
 
 
