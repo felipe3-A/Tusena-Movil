@@ -332,7 +332,7 @@ public class Tlr1_1 extends AppCompatActivity {
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos + "%", Toast.LENGTH_SHORT).show();
                         } else {
-                            Intent intent = new Intent(Tlr1_1.this, Error_Trl.class);
+                            Intent intent = new Intent(Tlr1_1.this, Buscador_Botones.class);
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "sus resultados " + todos + "%", Toast.LENGTH_SHORT).show();
 
@@ -361,7 +361,7 @@ public class Tlr1_1 extends AppCompatActivity {
 
                 myref.child("Respuestas").child(resultados.getProducto()).setValue(resultados); //insercion
 
-                Toast.makeText(Tlr1_1.this, "Nivel "+nivel, Toast.LENGTH_SHORT).show();
+
             }
 
 

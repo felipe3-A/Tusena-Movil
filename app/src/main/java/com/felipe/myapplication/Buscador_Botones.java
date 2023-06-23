@@ -82,7 +82,6 @@ public class Buscador_Botones extends AppCompatActivity {
     }
 
     private void buscar(String s) {
-        myref.child("Respuestas").orderByChild("nivel");
         ArrayList<Resultados> mylista = new ArrayList<>();
         for (Resultados obj : list) {
             if (obj.getProducto().toLowerCase().contains(s.toLowerCase())) {
