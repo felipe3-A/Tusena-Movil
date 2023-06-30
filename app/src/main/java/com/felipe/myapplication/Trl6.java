@@ -355,17 +355,20 @@ public class Trl6 extends AppCompatActivity {
                         String id_investigador=Menu_Principal.id_investigador;
                         String nombre_producto=Menu_Principal.producto_investigador;
                         todos6=resultado6_1+resultado6_2+resultado6_3+resultado6_4+resultado6_5+resultado6_6+resultado6_7+resultado6_8+resultado6_9+resultado6_10;
-                        nivel6="Trl6";
+
 
 
                         if (todos6>=100){
+                            Resultados.nivel=Resultados.nivel="Trl6";
+                            Resultados.porcentaje=Resultados.porcentaje=todos6;
                             updateData(nivel6,todos6,nombre_producto);
                             Intent intent = new Intent(Trl6.this, Trl7.class);
                             startActivity(intent);
                             Toast.makeText(Trl6.this, "Muy Bien, Sigues al siguiente nivel con " + " " +  todos6 + "%" ,Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            nivel6 = "Tlr6";
+                            Resultados.nivel=Resultados.nivel="Trl5";
+                            Resultados.porcentaje=Resultados.porcentaje=todos6;
                             updateData1(id_investigador);
                             Intent intent = new Intent(Trl6.this, Buscador_Botones.class);
                             startActivity(intent);

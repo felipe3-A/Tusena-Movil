@@ -32,14 +32,8 @@ public class Admin extends AppCompatActivity {
 
     public static String nivel;
 
-
     FirebaseDatabase database;
     DatabaseReference myRef;
-
-
-    //DatabaseReference database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tusena-c86eb-default-rtdb.firebaseio.com/");
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,15 +3,137 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="8dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Error_Trl"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bottom_rounded">
 
-    <Button
-        android:id="@+id/button"
+        <ImageView
+            android:layout_width="122dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/tusena_oscuro" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Volver al menu" />
+        android:orientation="vertical"
+        android:layout_weight="90"
+        android:layout_marginTop="20dp">
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_marginEnd="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginStart="10dp"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       app:cardCornerRadius="15dp"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="10dp">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:text="Reporte"
+               android:textSize="23sp"
+               android:textStyle="bold"
+               android:layout_gravity="center"
+               android:textColor="@color/black"
+               android:layout_marginTop="20dp"/>
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="108dp"
+               android:layout_gravity="center"
+               android:src="@drawable/logo_tusena" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:id="@+id/reporte_proyecto"
+               android:text="Nombre del proyecto"
+               android:textSize="23sp"
+               android:textStyle="italic"
+               android:layout_gravity="center"
+               android:textColor="@color/black"
+               android:layout_marginTop="20dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/reporte_nombre"
+               android:text="Nombre del investigador"
+               android:layout_marginTop="10dp"
+               android:textSize="18sp"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/reporte_producto"
+               android:text="Nombre del producto"
+               android:textSize="18sp"
+               android:layout_marginTop="10dp"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/reporte_nivel"
+               android:text="Nivel del producto"
+               android:layout_marginTop="10dp"
+               android:textSize="18sp"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/reporte_porcentaje"
+               android:layout_marginTop="10dp"
+               android:text="Porcentaje del producto"
+               android:textSize="18sp"/>
+           <Button
+               android:id="@+id/button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/ic_launcher_background"
+               android:layout_gravity="end"
+               android:layout_marginEnd="10dp"
+               android:layout_marginTop="20dp"
+               android:text="Guardar" />
+
+       </LinearLayout>
+
+   </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_gravity="center"
+        android:background="#205072"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/boton_volver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#389c9c"
+                app:icon="@drawable/baseline_home_24"
+                app:iconTint="@color/ic_launcher_background" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </LinearLayout>

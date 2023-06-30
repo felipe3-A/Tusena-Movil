@@ -307,14 +307,13 @@ public class Trl9 extends AppCompatActivity {
                         resultados.setProyecto(Menu_Principal.proyecto);
 
                         todos9=resultado9_1+resultado9_2+resultado9_3+resultado9_5+resultado9_6+resultado9_7;
-                        nivel9="Trl9";
                         String id_investigador=Menu_Principal.id_investigador;
                         String nombre_producto=Menu_Principal.producto_investigador;
 
 
                         if(todos9>= 100) {
-                            //nivel = "Tlr4";
-
+                            Resultados.nivel=Resultados.nivel="Trl9";
+                            Resultados.porcentaje=Resultados.porcentaje=todos9;
                             updateData(nivel9,todos9,nombre_producto);
                             Intent intent = new Intent(Trl9.this, Menu_Principal.class);
                             startActivity(intent);
@@ -322,9 +321,15 @@ public class Trl9 extends AppCompatActivity {
 
                         }
                         else{
+                            Resultados.nivel=Resultados.nivel="Trl8";
+                            Resultados.porcentaje=Resultados.porcentaje=todos9;
                             updateData1(id_investigador);
+<<<<<<< HEAD
                             nivel9 = "Tlr9";
                             Intent intent = new Intent(Trl9.this, Buscador_Botones.class);
+=======
+                            Intent intent = new Intent(Trl9.this, Error_Trl.class);
+>>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
                             startActivity(intent);
                             Toast.makeText(Trl9.this, "sus resultados "+ todos9 +"%", Toast.LENGTH_SHORT).show();
                         }

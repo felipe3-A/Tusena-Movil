@@ -42,7 +42,7 @@
     <RadioGroup
         android:id="@+id/rg9_respuestas1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         style="@style/respuestas"
         >
 
@@ -78,7 +78,7 @@
     <RadioGroup
         android:id="@+id/rd9_respuesta2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         style="@style/respuestas">
 
         <RadioButton
@@ -104,7 +104,7 @@
                 <TextView
                     android:id="@+id/txt_trl9p3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="10dp"
                     android:textSize="20dp"
                     style="@style/preguntas"
@@ -112,7 +112,7 @@
                 <RadioGroup
                     android:id="@+id/rg9_respuestas3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     style="@style/respuestas">
 
                     <RadioButton
@@ -146,7 +146,7 @@
                 <RadioGroup
                     android:id="@+id/rg9_respuestas4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     style="@style/respuestas">
 
                     <RadioButton
@@ -179,7 +179,7 @@
                <RadioGroup
                    android:id="@+id/rg9_respuestas5"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
+                   android:layout_height="match_parent"
                    style="@style/respuestas">
 
                    <RadioButton
@@ -213,7 +213,7 @@
                 <RadioGroup
                     android:id="@+id/rg9_respuestas6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     style="@style/respuestas">
 
                     <RadioButton
@@ -239,7 +239,7 @@
                <TextView
                    android:id="@+id/txt_trl9p7"
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
+                   android:layout_height="match_parent"
                    android:padding="10dp"
                   style="@style/preguntas"
                    android:textSize="20dp"

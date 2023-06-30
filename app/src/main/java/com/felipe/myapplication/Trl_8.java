@@ -301,13 +301,14 @@ public class Trl_8 extends AppCompatActivity {
                         resultados.setProyecto(Menu_Principal.proyecto);
                         resultados.setTipo_producto(Menu_Principal.tipo);
                         todos8=resultadot8_1+resultado8_2+resultado8_3+resultado8_4+resultado8_5+resultado8_6+resultado8_7;
-                        nivel8="Trl8";
+
                         String id_investigador=Menu_Principal.id_investigador;
                         String nombre_producto=Menu_Principal.producto_investigador;
 
 
                         if(todos8>= 100) {
-                            //nivel = "Tlr5";
+                            Resultados.nivel=Resultados.nivel="Trl8";
+                            Resultados.porcentaje=Resultados.porcentaje=todos8;
                             updateData(nivel8,todos8,nombre_producto);
                             Intent intent = new Intent(Trl_8.this, Trl9.class);
                             startActivity(intent);
@@ -315,7 +316,8 @@ public class Trl_8 extends AppCompatActivity {
 
                         }
                         else{
-                            nivel8 = "Tlr8";
+                            Resultados.nivel=Resultados.nivel="Trl7";
+                            Resultados.porcentaje=Resultados.porcentaje=todos8;
                             updateData1(id_investigador);
                             Intent intent = new Intent(Trl_8.this, Buscador_Botones.class);
                             startActivity(intent);
