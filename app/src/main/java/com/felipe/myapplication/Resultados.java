@@ -4,17 +4,10 @@ public class Resultados {
     public static String id;
     public  static String investigador;
     public static  String producto;
-
-<<<<<<< HEAD
+    public static int porcentaje;
+    public static String nivel;
     String id_producto;
     String proyecto;
-    String nivel;
-=======
-    public  static  String id_producto;
-    public  static  String proyecto;
-    public  static String nivel;
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
-    public static int porcentaje;
 
     String tipo_producto;
     String subtipo;

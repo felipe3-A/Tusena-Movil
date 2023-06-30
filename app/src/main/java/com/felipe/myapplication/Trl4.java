@@ -334,14 +334,13 @@ public class Trl4 extends AppCompatActivity {
                             Toast.makeText(Trl4.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos4 + "%", Toast.LENGTH_SHORT).show();
 
                         } else {
-<<<<<<< HEAD
+
                             nivel4 = "Tlr4";
-                            Intent intent = new Intent(Trl4.this, Buscador_Botones.class);
-=======
+
+
                             Resultados.porcentaje=Resultados.porcentaje=todos4;
                             Resultados.nivel=Resultados.nivel="Trl3";
-                            Intent intent = new Intent(Trl4.this, Error_Trl.class);
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
+                            Intent intent = new Intent(Trl4.this, Buscador_Botones.class);
                             startActivity(intent);
                             Toast.makeText(Trl4.this, "sus resultados " + todos4 + "%", Toast.LENGTH_SHORT).show();
                         }

@@ -39,11 +39,10 @@ public class Buscador_Botones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscador_botenes);
 
-<<<<<<< HEAD
+
         //database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
 
-=======
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
+
         myref = FirebaseDatabase.getInstance().getReference().child("Respuestas");
 
         rv = findViewById(R.id.rv);

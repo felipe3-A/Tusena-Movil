@@ -48,7 +48,7 @@ public class Error_Trl extends AppCompatActivity {
             }
         });
         reporte1.setText(Resultados.investigador);
-        reporte2.setText(Resultados.proyecto);
+      //  reporte2.setText(Resultados.proyecto);
         reporte3.setText("Nivel del producto: "+Resultados.nivel);
         reporte4.setText("Nombre de Producto : "+Resultados.producto);
         reporte5.setText("Porcentaje alcanzado : " + Resultados.porcentaje);

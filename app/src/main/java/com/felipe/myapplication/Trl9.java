@@ -324,12 +324,8 @@ public class Trl9 extends AppCompatActivity {
                             Resultados.nivel=Resultados.nivel="Trl8";
                             Resultados.porcentaje=Resultados.porcentaje=todos9;
                             updateData1(id_investigador);
-<<<<<<< HEAD
                             nivel9 = "Tlr9";
                             Intent intent = new Intent(Trl9.this, Buscador_Botones.class);
-=======
-                            Intent intent = new Intent(Trl9.this, Error_Trl.class);
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
                             startActivity(intent);
                             Toast.makeText(Trl9.this, "sus resultados "+ todos9 +"%", Toast.LENGTH_SHORT).show();
                         }

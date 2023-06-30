@@ -10,11 +10,6 @@
     <androidx.cardview.widget.CardView
         android:layout_margin="10dp"
         android:backgroundTint="@color/color_boton"
-<<<<<<< HEAD
-        app:cardCornerRadius="10dp"
-=======
-        app:cardCornerRadius="6dp"
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -51,10 +46,6 @@
                 android:text="Trl:"
                 android:textSize="25dp"
                 android:textColor="@color/ic_launcher_background"/>
-<<<<<<< HEAD
-=======
-
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
 
         </LinearLayout>
 

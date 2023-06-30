@@ -389,10 +389,9 @@ public class Trl2 extends AppCompatActivity {
                 todos2 = resultados1_1 + resultado2_2 + resultadop3_3 + resultadop4_4 + resultadop5_5 + resultadop6_6 + resultadop7_7 + resultadop8_8;
 
                 if(todos2>= 100) {
-<<<<<<< HEAD
-=======
+
                     Resultados.nivel=Resultados.nivel="Trl2";
->>>>>>> fc68081c294d879b74f5fd5be51a87ece6d4dccb
+
                     Resultados.porcentaje=Resultados.porcentaje=todos2;
                     updateData(nivel2,nombre_producto,id_investigador,id_producto);
                     Intent intent = new Intent(Trl2.this, Trl3.class);
