@@ -66,7 +66,7 @@ public class Register extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             //compruebe si identificacion no está registrado antes
                             if (snapshot.hasChild(numberTxt)) {
-                                Toast.makeText(Register.this, "Lo sentimos, Identificacion ya esta registrada", Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(Register.this, "Lo sentimos, Identificacion ya esta registrada", Toast.LENGTH_SHORT).show();
 
                             } else {
                                 //enviado datos a la bd

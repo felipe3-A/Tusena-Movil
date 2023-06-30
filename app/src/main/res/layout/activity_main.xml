@@ -27,33 +27,37 @@
             android:text="Guias y Conceptos"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="90">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recicleview"
         android:layout_width="match_parent"
         android:layout_height="490dp"
         android:layout_marginTop="30dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
+</LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|bottom"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_weight="10"
         android:background="#205072"
         android:orientation="vertical"
         android:padding="20dp">
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btn_volver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#389c9c"
                 app:icon="@drawable/baseline_home_24"
                 app:iconTint="@color/ic_launcher_background" />
-
-
     </LinearLayout>
 
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,12 +16,11 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Buscador_Botones extends AppCompatActivity {
+public class Buscador_Botones_admin extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myref;
     ArrayList<Resultados> list;
@@ -37,9 +35,10 @@ public class Buscador_Botones extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buscador_botenes);
+        setContentView(R.layout.activity_buscador_botenes_admin);
 
         //database = FirebaseDatabase.getInstance();//CAPTURAR LA CONEXION
+        //myref = database.getReference();//OBTENER LA REFERNCIA DE LA CONEXION
 
         myref = FirebaseDatabase.getInstance().getReference().child("Respuestas");
         rv = findViewById(R.id.rv);
@@ -53,7 +52,7 @@ public class Buscador_Botones extends AppCompatActivity {
         volver_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Buscador_Botones.this,Menu_Principal.class));
+                startActivity(new Intent(Buscador_Botones_admin.this,Admin_Menu.class));
             }
         });
 

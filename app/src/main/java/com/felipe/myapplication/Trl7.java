@@ -316,7 +316,7 @@ public class Trl7 extends AppCompatActivity {
                          }
                          else{
                              updateData1(id_investigador);
-                             Intent intent = new Intent(Trl7.this, Error_Trl.class);
+                             Intent intent = new Intent(Trl7.this, Buscador_Botones.class);
                              startActivity(intent);
                              Toast.makeText(Trl7.this, "sus resultados "+ todos7 +"%", Toast.LENGTH_SHORT).show();
                          }
@@ -332,7 +332,7 @@ public class Trl7 extends AppCompatActivity {
                              public void onComplete(@NonNull Task task) {
 
                                  if (task.isSuccessful()) {
-                                     Toast.makeText(Trl7.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                     Toast.makeText(Trl7.this, "Datos actualizados", Toast.LENGTH_SHORT).show();
                                  } else {
                                      Toast.makeText(Trl7.this, "Err0r", Toast.LENGTH_SHORT).show();
                                  }
@@ -347,7 +347,7 @@ public class Trl7 extends AppCompatActivity {
                              public void onComplete(@NonNull Task task) {
 
                                  if (task.isSuccessful()) {
-                                     Toast.makeText(Trl7.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                                     Toast.makeText(Trl7.this, "Datos actualizados", Toast.LENGTH_SHORT).show();
                                  } else {
                                      Toast.makeText(Trl7.this, "Err0r", Toast.LENGTH_SHORT).show();
                                  }

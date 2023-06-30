@@ -8,7 +8,7 @@ public class Resultados {
     String id_producto;
     String proyecto;
     String nivel;
-    int porcentaje;
+    public static int porcentaje;
 
     String tipo_producto;
     String subtipo;

@@ -32,11 +32,11 @@ public class AdapterRespuestas extends RecyclerView.Adapter<AdapterRespuestas.vi
 
     @Override
     public void onBindViewHolder(@NonNull viewholderrespuestas holder, int position) {
-        Resultados rp = resultadolist.get(position);
-        holder.rc_proyecto.setText(rp.getProyecto());
-        holder.rc_producto.setText(rp.getProducto());
-        holder.rc_nombre_investigador.setText(rp.getInvestigador());
-        holder.rc_niveltrl.setText(rp.getNivel());
+        Resultados rp =  resultadolist.get(position);
+        holder.rc_proyecto.setText("Proyecto :"+" "+rp.getProyecto());
+        holder.rc_producto.setText("Producto :"+" "+rp.getProducto());
+        holder.rc_nombre_investigador.setText("Autor :"+" "+rp.getInvestigador());
+        holder.rc_niveltrl.setText("Nivel:"+" "+rp.getNivel());
     }
 
 

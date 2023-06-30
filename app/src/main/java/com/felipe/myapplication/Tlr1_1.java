@@ -328,9 +328,11 @@ public class Tlr1_1 extends AppCompatActivity {
                         cargarResultados();
 
                         if (todos >= 100) {
+                            Resultados.porcentaje=Resultados.porcentaje=todos;
                             Intent intent = new Intent(Tlr1_1.this, Trl2.class);
                             startActivity(intent);
                             Toast.makeText(Tlr1_1.this, "Muy Bien, Sigues al siguiente nivel con " + " " + todos + "%", Toast.LENGTH_SHORT).show();
+                            todos=0;
                         } else {
                             Intent intent = new Intent(Tlr1_1.this, Buscador_Botones.class);
                             startActivity(intent);

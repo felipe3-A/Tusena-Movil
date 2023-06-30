@@ -392,6 +392,7 @@ public class Trl2 extends AppCompatActivity {
 
 
                 if(todos2>= 100) {
+                    Resultados.porcentaje=Resultados.porcentaje=todos2;
                     updateData(nivel2,nombre_producto,id_investigador,id_producto);
                     Intent intent = new Intent(Trl2.this, Trl3.class);
                     startActivity(intent);
@@ -400,7 +401,7 @@ public class Trl2 extends AppCompatActivity {
                 } else {
                     nivel2 = "Trl2";
                     updateData1(id_investigador);
-                    Intent intent = new Intent(Trl2.this, Error_Trl.class);
+                    Intent intent = new Intent(Trl2.this, Buscador_Botones.class);
                     startActivity(intent);
                     Toast.makeText(Trl2.this, "sus resultados " + todos2 + "%", Toast.LENGTH_SHORT).show();
                 }
@@ -440,7 +441,7 @@ public class Trl2 extends AppCompatActivity {
                     public void onComplete(@NonNull Task task) {
 
                         if (task.isSuccessful()) {
-                            Toast.makeText(Trl2.this, "Datos actualixados", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Trl2.this, "Datos actualizados", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(Trl2.this, "Err0r", Toast.LENGTH_SHORT).show();
                         }

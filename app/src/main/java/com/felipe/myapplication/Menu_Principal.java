@@ -80,11 +80,17 @@ public class Menu_Principal extends AppCompatActivity {
 
         binding = ActivityMenuPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        binding.recargar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Menu_Principal.this,Menu_Principal.class));
+            }
+        });
 
         new obtener().start();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://nodejs-deploy-render-e0el.onrender.com/")
+                .baseUrl("https://desploy-innovatec.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -157,7 +163,7 @@ public class Menu_Principal extends AppCompatActivity {
                     Toast.makeText(Menu_Principal.this, "Bienvenid@" + " " + listproducto.get(0).getFuncionario_nombre() + " " + "" + listproducto.get(0).getFuncionario_apellido(), Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(Menu_Principal.this, "Este usuario no existe o se ha borrado de la base de datos" + response.errorBody(), Toast.LENGTH_SHORT).show();
+
                 }
             }
 
@@ -185,7 +191,7 @@ public class Menu_Principal extends AppCompatActivity {
             });
 
             try {
-                URL url = new URL("https://nodejs-deploy-render-e0el.onrender.com/productos/"+Login.identificacion);
+                URL url = new URL("https://desploy-innovatec.onrender.com/productos/"+Login.identificacion);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
